@@ -19,11 +19,23 @@ export function AppointmentForm({ title = "Book Your Appointment / Assessment" }
     e.preventDefault();
     setLoading(true);
 
-    // Simulate Server Action submission
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 800);
+    const message = [
+      "New Appointment Request",
+      `Name: ${formData.name}`,
+      `Mobile: ${formData.phone}`,
+      formData.age && `Age: ${formData.age}`,
+      `Department: ${formData.department}`,
+      formData.preferredDate && `Preferred Date: ${formData.preferredDate}`,
+      formData.message && `Message: ${formData.message}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const whatsappUrl = `https://wa.me/919820072543?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+
+    setLoading(false);
+    setSubmitted(true);
   };
 
   return (

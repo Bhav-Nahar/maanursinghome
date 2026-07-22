@@ -12,8 +12,114 @@ export const metadata = {
     "Charitable initiatives, free eye screening camps, and subsidized cataract operations conducted by Dr. Jugal Shah and Maa Nursing Home.",
 };
 
+type CampEntry = {
+  image: number;
+  description: string;
+};
+
+type CampYear = {
+  year: string;
+  camps: CampEntry[];
+};
+
 export default function CharityPage() {
-  // All 29 charity camp images from assets/img/charity/
+  // Year-by-year timeline of charity eye camps, sourced from the original
+  // Charity.html record. Images reference the 29 photos in
+  // /assets/img/charity/.
+  const timeline: CampYear[] = [
+    {
+      year: "2024",
+      camps: [
+        {
+          image: 4,
+          description:
+            "On 10th March 2024, Dr. Jugal Shah conducted free eye check-ups, cataract surgeries and distributed reading spectacles. Over 200 patients benefitted from this initiative.",
+        },
+      ],
+    },
+    {
+      year: "2023",
+      camps: [
+        {
+          image: 9,
+          description:
+            "Diagnostic eye camp at Maa Nursing Home on 3rd September 2023. 312 patients screened, 97 cataracts detected, 16 glaucoma cases diagnosed and 67 spectacles dispensed.",
+        },
+        {
+          image: 7,
+          description:
+            "Surgical eye camps at Vatsalyagram, Vrindavan and Bhaktivedanta Hospital where over 254 cataract and complex eye surgeries were performed successfully.",
+        },
+      ],
+    },
+    {
+      year: "2022",
+      camps: [
+        {
+          image: 13,
+          description:
+            "Free eye check-up camp on Gandhi Jayanti, 2nd October 2022. 183 patients screened and 56 cataract cases diagnosed for surgery.",
+        },
+      ],
+    },
+    {
+      year: "2021",
+      camps: [
+        {
+          image: 8,
+          description:
+            "On October 18, 2021, Dr. Jugal Shah operated on over 100 cataract patients free of cost at a charitable camp in Vrindavan.",
+        },
+      ],
+    },
+    {
+      year: "2020",
+      camps: [
+        {
+          image: 16,
+          description:
+            "On 3rd January 2020, 302 cataract and complex eye surgeries were successfully performed at Vrindavan (Mathura) under the guidance of Dr. Jugal Shah.",
+        },
+        {
+          image: 17,
+          description:
+            "Continued commitment to Barsana included 32 difficult surgeries such as one-eyed patients, paediatric cataracts, advanced glaucoma and subluxated cataracts.",
+        },
+      ],
+    },
+    {
+      year: "2019",
+      camps: [
+        {
+          image: 3,
+          description:
+            "School eye screening camps conducted under Moldex Composites at Malad and Kandivali municipal schools, screening over 1,100 students.",
+        },
+      ],
+    },
+    {
+      year: "2018",
+      camps: [
+        {
+          image: 21,
+          description:
+            "Diagnostic and surgical eye camps were conducted for rural communities and Jain monks, providing free spectacles and treatment.",
+        },
+      ],
+    },
+    {
+      year: "2017",
+      camps: [
+        {
+          image: 3,
+          description:
+            "Free eye camps were conducted under CALIX Pharma and SUN Pharma at Maa Nursing Home, Malad, benefiting hundreds of patients through free screenings and referrals.",
+        },
+      ],
+    },
+  ];
+
+  // All 29 charity camp images from assets/img/charity/, for the photo gallery
   const charityImages = Array.from({ length: 29 }, (_, i) => i + 1);
 
   const keyStats = [
@@ -65,12 +171,62 @@ export default function CharityPage() {
           </div>
         </section>
 
+        {/* YEAR-BY-YEAR CAMP TIMELINE */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div className="text-center space-y-2">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">
+                A Timeline of Free Eye Camps (2017–2024)
+              </h2>
+              <p className="text-slate-600 text-sm max-w-xl mx-auto">
+                A record of the charitable eye camps, surgeries, screenings and outreach programs conducted by Maa Nursing Home &amp; NetraJyoti Eyecare Centre over the years.
+              </p>
+            </div>
+
+            <div className="space-y-12">
+              {timeline.map((yearGroup) => (
+                <div key={yearGroup.year}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="font-heading font-extrabold text-2xl text-rose-600">
+                      {yearGroup.year}
+                    </span>
+                    <div className="flex-1 h-px bg-slate-200" />
+                  </div>
+
+                  <div className="space-y-6">
+                    {yearGroup.camps.map((camp, idx) => (
+                      <div
+                        key={idx}
+                        className="flex flex-col sm:flex-row gap-5 rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white"
+                      >
+                        <div className="sm:w-2/5 flex-shrink-0">
+                          <img
+                            src={`/assets/img/charity/charity (${camp.image}).jpeg`}
+                            alt={`Free Eye Camp ${yearGroup.year}`}
+                            className="w-full h-56 sm:h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="p-5 sm:py-6 sm:pr-6 flex items-center">
+                          <p className="text-slate-700 text-sm leading-relaxed">
+                            {camp.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* PHOTO GALLERY OF CAMPS */}
         <section className="py-16 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">
-                Charity Camps Photo Gallery (2018–2024)
+                Charity Camps Photo Gallery
               </h2>
               <p className="text-slate-600 text-sm max-w-xl mx-auto">
                 Moments captured from our diagnostic camps, cataract screening drives, and community health initiatives.
