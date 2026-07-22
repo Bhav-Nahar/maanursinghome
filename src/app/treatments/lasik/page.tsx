@@ -113,6 +113,22 @@ export default function LasikLandingPage() {
           </div>
         </section>
 
+        {/* WHAT IS LASIK */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <h2 className="font-heading text-3xl font-bold text-slate-900">What is LASIK?</h2>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              LASIK (Laser-Assisted In Situ Keratomileusis) is a painless, day-care LASER procedure that reshapes the cornea using an excimer LASER to correct refractive errors such as myopia (short-sight), hypermetropia (long-sight), and astigmatism.
+            </p>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              In a normal eye, light passes through the cornea and lens and focuses sharply on the retina, giving clear vision. When light focuses in front of the retina (myopia), behind it (hypermetropia), or at different points (astigmatism), vision becomes blurred. LASIK corrects this focusing power by reshaping the cornea.
+            </p>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              At Maa Nursing Home and NetraJyoti Eyecare Centre, we have a dedicated LASIK clinic and have successfully treated thousands of patients, offering both <strong>Contoura LASIK</strong> and <strong>Bladeless Femto-LASIK</strong>, performed by Dr. Jugal Shah. LASIK can typically correct myopia up to –18.0 D, hypermetropia from +1.0 D to +6.0 D, and astigmatism from –1.0 D to –6.0 D.
+            </p>
+          </div>
+        </section>
+
         {/* ELIGIBILITY SECTION */}
         <section className="py-16 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,11 +192,66 @@ export default function LasikLandingPage() {
           </div>
         </section>
 
+        {/* PRE-LASIK EVALUATION */}
+        <section className="py-16 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <h2 className="font-heading text-3xl font-bold text-slate-900">Pre-LASIK Evaluation</h2>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              Before surgery, a detailed assessment is done to ensure safety, including a routine eye examination, <strong>Keratometry</strong> (to measure the shape and curvature of the cornea), and <strong>Pachymetry</strong> (to measure corneal thickness). Based on these measurements, the surgeon plans exactly where and how much of the cornea needs reshaping.
+            </p>
+          </div>
+        </section>
+
+        {/* HOW LASIK IS PERFORMED */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <h2 className="font-heading text-3xl font-bold text-slate-900">How is LASIK Performed?</h2>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              The cornea accounts for about 70% of the eye's focusing power. LASIK uses a computer-controlled excimer LASER (a cool ultraviolet LASER) to reshape the cornea precisely. Local anaesthetic eye drops are used — no injections. A suction ring is applied, and a thin corneal flap is created (either manually or with a Femto-second LASER). The flap is lifted, and the excimer LASER reshapes the underlying corneal tissue. The flap is then repositioned and naturally adheres without stitches.
+            </p>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              At our centre, LASIK is performed using <strong>Contoura LASIK</strong> (topography-guided LASIK with a manually created flap) or <strong>Bladeless LASIK</strong> (flap created using Femto-second LASER for enhanced precision). The entire procedure usually takes about 15–20 minutes. Both eyes can often be treated in the same sitting, and no hospitalization is required.
+            </p>
+          </div>
+        </section>
+
+        {/* RISKS & PRECAUTIONS */}
+        <section className="py-16 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-4">
+              <h3 className="font-heading font-bold text-xl text-slate-900">Risks & Temporary Side Effects</h3>
+              <p className="text-slate-700 text-sm leading-relaxed">
+                LASIK is a safe and widely performed procedure, but as with any surgery some patients may experience temporary dry eyes (managed with lubricating drops), glare, halos or increased light sensitivity, and occasional double or fluctuating vision in the early days. Serious complications or permanent loss of vision are rare — your doctor will discuss all pros and cons before surgery.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-4">
+              <h3 className="font-heading font-bold text-xl text-slate-900">Precautions Before & After LASIK</h3>
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li>• Stop soft contact lenses 48–72 hours before surgery; RGP lenses at least 15 days before</li>
+                <li>• On the day: avoid eye makeup, creams, perfumes and deodorants</li>
+                <li>• Wear sunglasses for about 1 week after surgery</li>
+                <li>• Avoid splashing water directly in the eyes for ~1 month; no head bath for 1 week</li>
+                <li>• No swimming for at least 1 month; use prescribed eye drops exactly as advised</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* RECOVERY & RESULTS */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <h2 className="font-heading text-3xl font-bold text-slate-900">Recovery & Results</h2>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              Most patients notice clearer vision within the first 24 hours, with vision typically stabilising within about 2 weeks. You can usually return to routine work in 2–3 days after the procedure, depending on your job profile. While glasses or contact lenses can improve vision, LASIK corrects the underlying focusing issue by reshaping the cornea — addressing the root cause of the refractive error.
+            </p>
+          </div>
+        </section>
+
         {/* DR JUGAL SHAH PROFILE */}
         <section className="py-16 bg-white border-t border-slate-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
             <div className="w-48 h-48 rounded-2xl bg-slate-100 border-2 border-primary-700 shrink-0 overflow-hidden">
-              <img src="/dr-jugal-shah.png" alt="Dr. Jugal Shah" className="w-full h-full object-cover" />
+              <img src="/assets/img/images/dr jugal.jpg" alt="Dr. Jugal Shah" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-4 text-center md:text-left">
               <span className="text-xs font-bold text-primary-700 uppercase tracking-wider bg-primary-50 px-3 py-1 rounded-full border border-primary-100">

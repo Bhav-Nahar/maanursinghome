@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
+import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -110,6 +111,7 @@ export default function RootLayout({
         <div id="main-content" className="flex-1 flex flex-col">
           {children}
         </div>
+        <WhatsAppFloat />
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { AppointmentForm } from "@/components/ui/AppointmentForm";
-import { HeartPulse, ShieldCheck, Users, Phone, CheckCircle2 } from "lucide-react";
+import { HeartPulse, ShieldCheck, Users, Phone, CheckCircle2, Clock } from "lucide-react";
 
 export const metadata = {
   title: "Dr. Jyoti Shah | Senior Gynaecologist & IVF Specialist in Malad, Mumbai",
@@ -139,6 +139,45 @@ export default function DrJyotiPage() {
                       <span>Minimally invasive laparoscopic hysterectomy & cystectomy</span>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LEGACY OF CARE SECTION */}
+        <section className="py-16 bg-white border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <div className="lg:col-span-8 space-y-4">
+                <h3 className="font-heading font-bold text-2xl text-slate-900">A Legacy of Care & Service</h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Deeply committed to community welfare, Dr. Jyoti Shah works to make IVF accessible to economically weaker sections. Every year, she travels to Kutch to conduct free hysterectomy surgeries in charitable camps.
+                </p>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Soft-spoken and disciplined, she balances clinical excellence with family life, Kathak dance practice and daily yoga. Guided by the philosophy of Swami Vivekananda, she believes total dedication to one's purpose is the true path to success.
+                </p>
+              </div>
+
+              <div className="lg:col-span-4">
+                <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-3">
+                  <h4 className="font-heading font-bold text-lg text-slate-900 flex items-center">
+                    <Clock className="w-5 h-5 text-primary-700 mr-2" /> Consultation Hours
+                  </h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <div className="flex justify-between border-b border-slate-200 pb-2">
+                      <span>Monday - Friday</span>
+                      <span className="font-semibold">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div className="flex justify-between border-b border-slate-200 pb-2">
+                      <span>Saturday</span>
+                      <span className="font-semibold">9:00 AM - 2:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday</span>
+                      <span className="font-semibold">Emergency & Camps</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -13,6 +13,12 @@ const config: Config = {
         heading: ["var(--font-manrope)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
       },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(8px) scale(0.98)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+      },
       colors: {
         primary: {
           900: "#0f172a",

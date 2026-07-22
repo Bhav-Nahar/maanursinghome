@@ -5,7 +5,7 @@ import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { AppointmentForm } from "@/components/ui/AppointmentForm";
-import { Eye, Zap, FileText, CheckCircle2, Phone, Calendar } from "lucide-react";
+import { Eye, Zap, FileText, CheckCircle2, Phone, Calendar, Clock } from "lucide-react";
 
 export const metadata = {
   title: "Dr. Jugal Shah | Best Eye Surgeon & Cataract Surgeon in Malad, Mumbai",
@@ -140,6 +140,60 @@ export default function DrJugalPage() {
                       <span>Philosophy: “Service before self” — serving all economic sections</span>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* EXPERT CARE / DEPARTMENT DETAILS SECTION */}
+        <section className="py-16 bg-white border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <div className="lg:col-span-8 space-y-4">
+                <h3 className="font-heading font-bold text-2xl text-slate-900">Expert Care You Can Trust</h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Our hospital combines advanced diagnostics, fully-automated operation theatres and a visiting panel of specialists to deliver high-quality eye care. Supported by NABH and ISO 9001:2015 accreditations, we are also a registered centre for Keratoplasty (Eye Donation Surgery).
+                </p>
+                <ul className="space-y-3 text-sm text-slate-700 pt-2">
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2.5 shrink-0" />
+                    State-of-the-art Micro-Phaco & LASIK suites
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2.5 shrink-0" />
+                    Advanced imaging: OCT, Fundus photography, Visual fields
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2.5 shrink-0" />
+                    Paediatric ophthalmology & strabismus management
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2.5 shrink-0" />
+                    Comprehensive post-operative rehabilitation & follow-up
+                  </li>
+                </ul>
+              </div>
+
+              <div className="lg:col-span-4">
+                <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-3">
+                  <h4 className="font-heading font-bold text-lg text-slate-900 flex items-center">
+                    <Clock className="w-5 h-5 text-primary-700 mr-2" /> Department Hours
+                  </h4>
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <div className="flex justify-between border-b border-slate-200 pb-2">
+                      <span>Monday - Friday</span>
+                      <span className="font-semibold">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div className="flex justify-between border-b border-slate-200 pb-2">
+                      <span>Saturday</span>
+                      <span className="font-semibold">9:00 AM - 2:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday</span>
+                      <span className="font-semibold">Emergency & Camps</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
