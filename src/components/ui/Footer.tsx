@@ -1,136 +1,95 @@
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <footer id="footer" className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800 font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
-          {/* Col 1: About */}
+          
+          {/* Col 1: About & Contact */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-lg bg-primary-700 text-white flex items-center justify-center font-heading font-bold text-lg">
-                M
-              </div>
+            <Link href="/" className="flex items-center space-x-3">
               <span className="font-heading font-bold text-white text-lg">
-                Maa Nursing Home
+                Maa Nursing Home & NetraJyoti Eyecare Centre
               </span>
+            </Link>
+            <div className="space-y-3 text-xs text-slate-400 leading-relaxed">
+              <div className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <span>Himachal Building S.V Road, Opp Sundar Nagar, Malad West, Mumbai 400064</span>
+              </div>
+              <p className="text-slate-400 leading-normal">
+                Serving patients looking for the <strong>Best eye surgeon, Ophthalmologist, Cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz</strong>.
+              </p>
+              <div className="space-y-1 text-slate-300">
+                <p className="flex items-center space-x-2">
+                  <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span><strong>Phone:</strong> <a href="tel:+919820072543" className="hover:text-white transition-colors">9820072543</a> / <a href="tel:+918850118725" className="hover:text-white transition-colors">8850118725</a></span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <Mail className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span><strong>Email:</strong> <a href="mailto:jugalshah@hotmail.com" className="hover:text-white transition-colors">jugalshah@hotmail.com</a></span>
+                </p>
+              </div>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Established in 2002, Maa Nursing Home & NetraJyoti Eyecare Centre is a premier medical facility in Malad West, Mumbai, specializing in Eye Surgery, IVF, Gynecology, and Advanced Laparoscopy.
-            </p>
-            <div className="text-xs text-slate-400 pt-2">
-              <span className="font-semibold text-slate-300">Reg No:</span> MUM/W-1234/2002 | NABH Accredited
+
+            {/* Social Links */}
+            <div className="flex space-x-3 pt-2">
+              <a href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-colors">
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a href="https://www.instagram.com/maa_nursing_home_/" target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-colors">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-colors">
+                <Youtube className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
           {/* Col 2: Quick Links */}
           <div className="space-y-3">
             <h4 className="font-heading font-bold text-white text-base">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/" className="hover:text-emerald-400 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-emerald-400 transition-colors">
-                  About Dr. Jugal Shah & Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/doctors" className="hover:text-emerald-400 transition-colors">
-                  Our Specialists
-                </Link>
-              </li>
-              <li>
-                <Link href="/treatments/lasik" className="hover:text-emerald-400 font-medium text-emerald-400 transition-colors">
-                  LASIK Eligibility Assessment
-                </Link>
-              </li>
-              <li>
-                <Link href="/blogs" className="hover:text-emerald-400 transition-colors">
-                  Health Blogs & Articles
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-emerald-400 transition-colors">
-                  Contact & Location
-                </Link>
-              </li>
+            <ul className="space-y-2 text-xs">
+              <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link></li>
+              <li><Link href="/appointment" className="hover:text-emerald-400 transition-colors">Book Appointment</Link></li>
+              <li><Link href="/insurance-companies" className="hover:text-emerald-400 transition-colors">Insurance Panel</Link></li>
+              <li><Link href="/blogs" className="hover:text-emerald-400 transition-colors">Blogs</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Departments & Treatments */}
+          {/* Col 3: Eye Care Services */}
           <div className="space-y-3">
-            <h4 className="font-heading font-bold text-white text-base">Medical Specialties</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/departments/eye-care" className="hover:text-emerald-400 transition-colors">
-                  Cataract Surgery (MICS)
-                </Link>
-              </li>
-              <li>
-                <Link href="/treatments/lasik" className="hover:text-emerald-400 transition-colors">
-                  Contoura & Bladeless LASIK
-                </Link>
-              </li>
-              <li>
-                <Link href="/departments/ivf" className="hover:text-emerald-400 transition-colors">
-                  IVF & ICSI Fertility Treatment
-                </Link>
-              </li>
-              <li>
-                <Link href="/departments/gynecology" className="hover:text-emerald-400 transition-colors">
-                  Gynecology & Normal Delivery
-                </Link>
-              </li>
-              <li>
-                <Link href="/departments/laparoscopy" className="hover:text-emerald-400 transition-colors">
-                  Laparoscopic Hysterectomy
-                </Link>
-              </li>
+            <h4 className="font-heading font-bold text-white text-base">Eye Care Services</h4>
+            <ul className="space-y-2 text-xs">
+              <li><Link href="/treatments/cataract" className="hover:text-emerald-400 transition-colors">Cataract</Link></li>
+              <li><Link href="/treatments/glaucoma" className="hover:text-emerald-400 transition-colors">Glaucoma</Link></li>
+              <li><Link href="/treatments/retina" className="hover:text-emerald-400 transition-colors">Retina</Link></li>
+              <li><Link href="/treatments/paediatric-eye" className="hover:text-emerald-400 transition-colors">Paediatric Eye Care</Link></li>
+              <li><Link href="/treatments/lasik" className="hover:text-emerald-400 transition-colors">LASIK Clinic</Link></li>
             </ul>
           </div>
 
-          {/* Col 4: Contact Info */}
+          {/* Col 4: Gynaecology & Fertility */}
           <div className="space-y-3">
-            <h4 className="font-heading font-bold text-white text-base">Visit Hospital</h4>
-            <div className="space-y-3 text-sm text-slate-300">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                <span>
-                  Himachal Building, S.V. Road, Opposite Sundar Nagar, Malad West, Mumbai 400064
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a href="tel:+919820072543" className="hover:text-white transition-colors">
-                  +91 98200 72543
-                </a>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Clock className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span>
-                  Mon - Fri: 9:00 AM - 6:00 PM<br />
-                  Sat: 9:00 AM - 2:00 PM
-                </span>
-              </div>
-              <a
-                href="https://maps.google.com/?q=Maa+Nursing+Home+Malad+West"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-xs font-semibold text-emerald-400 hover:underline pt-1"
-              >
-                Open in Google Maps <ExternalLink className="w-3.5 h-3.5 ml-1" />
-              </a>
-            </div>
+            <h4 className="font-heading font-bold text-white text-base">Gynaecology & Fertility</h4>
+            <ul className="space-y-2 text-xs">
+              <li><Link href="/treatments/pcod" className="hover:text-emerald-400 transition-colors">PCOD / PCOS</Link></li>
+              <li><Link href="/treatments/amenorrhea" className="hover:text-emerald-400 transition-colors">Amenorrhea</Link></li>
+              <li><Link href="/treatments/endometriosis" className="hover:text-emerald-400 transition-colors">Endometriosis</Link></li>
+              <li><Link href="/treatments/obstetrics" className="hover:text-emerald-400 transition-colors">Maternity Care</Link></li>
+              <li><Link href="/treatments/iui" className="hover:text-emerald-400 transition-colors">IUI Treatment</Link></li>
+              <li><Link href="/treatments/ivf" className="hover:text-emerald-400 transition-colors">IVF & ICSI</Link></li>
+            </ul>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} Maa Nursing Home & NetraJyoti Eyecare Centre. All rights reserved.</p>
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4 text-center md:text-left">
+          <p>© {new Date().getFullYear()} <strong>Maa Nursing Home & NetraJyoti Eyecare Centre</strong> — All Rights Reserved</p>
           <div className="flex space-x-6">
             <Link href="/terms" className="hover:text-slate-400">
               Privacy Policy & Terms

@@ -13,7 +13,11 @@ export const metadata = {
 };
 
 export default function CertificatesPage() {
-  const images = Array.from({ length: 18 }, (_, i) => i + 1);
+  // All 19 certificates (1 to 18 as .jpg, 19 as .svg)
+  const certificates = [
+    ...Array.from({ length: 18 }, (_, i) => `/assets/img/certificates/${i + 1}.jpg`),
+    "/assets/img/certificates/19.svg"
+  ];
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-body">
@@ -43,14 +47,14 @@ export default function CertificatesPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {images.map((num) => (
+              {certificates.map((imgSrc, idx) => (
                 <div 
-                  key={num} 
+                  key={idx} 
                   className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 bg-slate-50 p-2 group"
                 >
                   <img
-                    src={`/assets/img/certificates/${num}.jpg`}
-                    alt={`Maa Nursing Home Certificate ${num}`}
+                    src={imgSrc}
+                    alt={`Maa Nursing Home Certificate ${idx + 1}`}
                     className="w-full h-auto object-contain rounded-xl group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
