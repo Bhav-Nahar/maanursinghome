@@ -11,7 +11,7 @@ import { CheckCircle2, ShieldCheck, ChevronRight, Stethoscope, AlertCircle, Help
 
 export const revalidate = 31536000; // 1 year ISR
 
-const CUSTOM_STATIC_SLUGS = ["cataract", "diabetic-retinopathy", "glaucoma", "ivf", "lasik", "pcod"];
+const CUSTOM_STATIC_SLUGS = ["cataract", "diabetic-retinopathy", "glaucoma", "ivf", "lasik", "pcod", "computer-vision-syndrome"];
 
 export async function generateStaticParams() {
   return Object.keys(TREATMENTS_DATA)
