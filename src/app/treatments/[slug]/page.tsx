@@ -11,14 +11,19 @@ import { CheckCircle2, ShieldCheck, ChevronRight, Stethoscope, AlertCircle, Help
 
 export const revalidate = 31536000; // 1 year ISR
 
+const CUSTOM_STATIC_SLUGS = ["cataract", "diabetic-retinopathy", "glaucoma", "ivf", "lasik", "pcod"];
+
 export async function generateStaticParams() {
-  return Object.keys(TREATMENTS_DATA).map((slug) => ({
-    slug,
-  }));
+  return Object.keys(TREATMENTS_DATA)
+    .filter((slug) => !CUSTOM_STATIC_SLUGS.includes(slug))
+    .map((slug) => ({
+      slug,
+    }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (CUSTOM_STATIC_SLUGS.includes(slug)) return {};
   const treatment = TREATMENTS_DATA[slug];
   if (!treatment) return {};
 
@@ -30,6 +35,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function TreatmentDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (CUSTOM_STATIC_SLUGS.includes(slug)) {
+    notFound();
+  }
   const treatment = TREATMENTS_DATA[slug];
 
   if (!treatment) {
