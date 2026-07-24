@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { ChevronRight, Star, Quote } from "lucide-react";
 
 export const metadata = {
-  title: "Patient Reviews | Best Eye & IVF Clinic in Malad, Mumbai",
+  title:
+    "Patient Reviews | Best Eye & IVF Clinic in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz",
   description:
-    "Read what our patients say about their experience at Maa Nursing Home and NetraJyoti Eyecare Centre. Real stories of successful eye and gynaecological treatments in Malad West.",
+    "Read what our patients say about their experience at Maa Nursing Home and NetraJyoti Eyecare Centre. Real stories of successful eye and gynaecological treatments in Malad West. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 const testimonials = [

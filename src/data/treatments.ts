@@ -2,7 +2,7 @@ export interface Treatment {
   slug: string;
   title: string;
   department: string;
-  category: "Eye Care" | "IVF & Infertility" | "Gynecology & Obstetrics" | "Laparoscopy & Surgery";
+  category: "Eye Care" | "IVF & Infertility" | "Gynecology & Obstetrics" | "Gynaec Care" | "Laparoscopy & Surgery";
   summary: string;
   image?: string;
   content: string[];
@@ -14,31 +14,77 @@ export interface Treatment {
 }
 
 export const TREATMENTS_DATA: Record<string, Treatment> = {
-  cataract: {
-    slug: "cataract",
-    title: "Micro-Incision Cataract Surgery (MICS)",
+  "cornea-dsaek": {
+    slug: "cornea-dsaek",
+    title: "Cornea DSAEK",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Advanced stitchless cataract removal with premium monofocal, multifocal, and toric Intraocular Lens (IOL) implants by Dr. Jugal Shah.",
-    image: "/assets/img/images/cataracts.jpg",
+    summary:
+      "Advanced corneal transplant surgery (DSAEK) for corneal disorders — restoring vision with precision, safety and faster recovery.",
+    image: "/assets/img/images/Cornea DSAEK.jpg",
     content: [
-      "Cataract is a clouding of the eye's natural crystalline lens, leading to blurred or dimmed vision. Micro-Incision Cataract Surgery (MICS) is the modern, stitchless, painless surgical standard.",
-      "During the 15-minute procedure under topical anesthesia, the clouded lens is emulsified using ultrasonic energy and replaced with a foldable intraocular lens (IOL).",
-      "Patients experience rapid visual recovery and can return to light daily activities within 24-48 hours."
+      "A modern, minimally invasive corneal transplant that replaces only the damaged inner layer of the cornea.",
+      "Research studies in India show that corneal blindness is one of the leading causes of blindness, with more than 10 lakh people blind in both eyes. Corneal blindness can often be restored with a corneal transplant.",
+      "Healthy donor corneas, donated soon after death, are transplanted to replace the damaged cornea. As noted by Dr. Jugal Shah, corneal transplants are highly successful, but eye donation awareness remains low in the country.",
+      "Traditionally, full-thickness corneal transplants were performed. Today, DSAEK (Descemet’s Stripping Automated Endothelial Keratoplasty) allows selective replacement of only the damaged endothelial layer, preserving healthy corneal tissue."
     ],
     symptoms: [
-      "Cloudy, blurry, or dim vision",
-      "Increasing difficulty with vision at night",
-      "Sensitivity to light and glare; seeing 'halos' around lights",
-      "Fading or yellowing of colors",
-      "Frequent changes in eyeglass or contact lens prescriptions"
+      "Swollen, scarred or cloudy cornea resulting in reduced or lost vision",
+      "Blurred vision that gradually improves post-procedure",
+      "Corneal endothelial dysfunction symptoms"
     ],
     causes: [
-      "Aging (most common factor)",
-      "Diabetes and high blood pressure",
-      "Prolonged exposure to ultraviolet light",
-      "Previous eye injury or inflammation",
-      "Long-term use of steroid medications"
+      "Fuchs’ endothelial dystrophy",
+      "Posterior polymorphous membrane dystrophy",
+      "Congenital hereditary endothelial dystrophy",
+      "Bullous keratopathy",
+      "Iridocorneal endothelial (ICE) syndrome",
+      "Failed previous corneal transplants"
+    ],
+    diagnosis: [
+      "Corneal Pachymetry and Endothelial Cell Density (Specular Microscopy)",
+      "Slit-lamp examination to evaluate corneal clarity and Descemet's layer"
+    ],
+    treatmentSteps: [
+      { title: "Endothelial Layer Preparation", description: "A thin donor graft containing healthy endothelial cells is micro-cut and prepared." },
+      { title: "Descemet's Stripping", description: "The diseased endothelial layer is removed through a micro-incision." },
+      { title: "Tissue Insertion & Air Bubble Positioning", description: "The donor graft is inserted and held in place against the patient's cornea using an air bubble." }
+    ],
+    benefits: [
+      "Minimally invasive selective layer transplantation preserving healthy corneal tissue",
+      "Smaller incision with fewer stitches compared to full-thickness transplants",
+      "Faster visual rehabilitation and higher long-term success rates"
+    ]
+  },
+  cataract: {
+    slug: "cataract",
+    title: "Cataract",
+    department: "Eye Care (Ophthalmology)",
+    category: "Eye Care",
+    summary:
+      "Cataract diagnosis, modern laser phacoemulsification surgery and intraocular lens (IOL) options — evidence-based care with fast recovery and compassionate support.",
+    image: "/assets/img/images/carastact.png",
+    content: [
+      "Clouding of the eye’s natural lens that progressively blurs vision — common with ageing but can affect younger people too.",
+      "The lens inside the eye focuses light on the retina to produce clear images. Over years (or sometimes rapidly), insoluble proteins can cloud the lens and cause hazy vision — this condition is called a cataract. No diet, medicine or exercise prevents cataracts; regular eye checks ensure early detection and timely treatment.",
+      "At Maa Nursing Home and NetraJyoti Eyecare Centre we offer advanced micro-incision phacoemulsification. The cloudy lens is broken into tiny pieces using ultrasonic energy and aspirated through a 1.5–3 mm incision (often stitchless). The natural lens is replaced with a clear synthetic intraocular lens (IOL). The procedure is a day-care surgery (often 5 minutes) under topical anaesthesia (eye drops) with quick recovery."
+    ],
+    symptoms: [
+      "An increasing glare in sunlight or at night (difficult driving).",
+      "Hazy or blurred vision and difficulty reading small print.",
+      "Double vision or image distortion in one eye.",
+      "Perception of unequal brightness between eyes.",
+      "Frequent changes in spectacle prescription.",
+      "Poor depth perception (difficulty with stairs)."
+    ],
+    causes: [
+      "Ageing (most common).",
+      "Eye injury or trauma.",
+      "Metabolic illnesses like diabetes.",
+      "Infection or chronic inflammation of the eye.",
+      "Prolonged steroid medication.",
+      "Congenital cataract (present at birth) or strong family history.",
+      "Secondary to glaucoma or chronic inflammation."
     ],
     diagnosis: [
       "Visual Acuity Test to measure vision distance",
@@ -47,91 +93,109 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Applanation Tonometry to measure fluid pressure inside the eye"
     ],
     treatmentSteps: [
-      { title: "Pre-Operative Biometry", description: "Computerized calculation of the exact power of Intraocular Lens (IOL) required." },
-      { title: "Topical Anesthesia", description: "Eye drops are applied to numb the eye without needles or painful injections." },
-      { title: "Micro-Emulsification", description: "A 2.2mm micro-incision is made to gently break up and remove the cloudy lens." },
-      { title: "Foldable IOL Implantation", description: "A high-precision premium IOL (Monofocal/Multifocal/Toric) is inserted." }
+      { title: "Standard Micro-Incision Phacoemulsification", description: "Ultrasonic emulsification through a 1.5–3 mm incision with foldable IOL implantation under topical drops." },
+      { title: "Femto LASER-Assisted Surgery (FLACS)", description: "Bladeless, automated step increasing precision for faster recovery and excellent visual results." },
+      { title: "Premium IOL Selection", description: "Toric (astigmatism correction), Multifocal (bi-focal/tri-focal), or EDOF (Extended Depth of Focus) lens implants." }
     ],
     benefits: [
-      "No stitches, no injections, no eye patch required in most cases",
-      "Rapid visual rehabilitation within 24-48 hours",
-      "Premium IOL options (Monofocal, Multifocal, EOF, Toric)",
-      "Performed in ultra-sterile modular operation theatres"
+      "Stitchless, micro-incision operation (minimal cut).",
+      "Faster healing and early return to work.",
+      "Less ocular trauma and reduced infection risk.",
+      "Topical anaesthesia (drops) — safe for most patients.",
+      "Better night and low-light vision with good quality IOLs."
     ]
   },
   glaucoma: {
     slug: "glaucoma",
-    title: "Glaucoma Screening & Laser Surgery",
+    title: "Glaucoma",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Early diagnosis and medical/laser management of Intraocular Pressure (IOP) to prevent irreversible optical nerve damage.",
+    summary:
+      "A progressive disease that damages the optic nerve—usually due to high eye pressure. Early detection prevents vision loss.",
     image: "/assets/img/images/Glaucoma.jpg",
     content: [
-      "Glaucoma is often termed the 'silent thief of sight' because it gradually damages the optic nerve without early pain or warning symptoms.",
-      "We provide comprehensive screening including Tonometry, Gonioscopy, Visual Field Analysis (Perimetry), and OCT nerve evaluation.",
-      "Treatment options include targeted pressure-lowering eye drops, Selective Laser Trabeculoplasty (SLT), and Trabeculectomy surgery when required."
+      "A group of eye conditions that damage the optic nerve, often due to increased eye pressure — a major cause of irreversible blindness.",
+      "The optic nerve acts like a cable containing over a million nerve fibres, transmitting visual information from the eye to the brain. When eye pressure rises or the nerve becomes weak, these fibres get damaged. If untreated, glaucoma can cause permanent vision loss or total blindness.",
+      "With timely diagnosis and proper treatment, further damage can be prevented. Regular eye check-ups after age 40 are crucial.",
+      "A clear fluid called aqueous humour circulates inside the eye. When drainage channels get blocked, fluid builds up and increases pressure. This pressure damages the optic nerve gradually or suddenly depending on the type of glaucoma."
     ],
     symptoms: [
-      "Loss of peripheral or side vision (tunnel vision)",
-      "Severe eye pain accompanied by nausea (in acute glaucoma)",
-      "Halos around lights",
-      "Blurred vision and eye redness"
+      "Gradual dimming or blurred vision",
+      "Chronic mild headache",
+      "Reduced side vision (tunnel vision)",
+      "Coloured halos around lights",
+      "Severe eye pain, headache, sudden blurred vision, and red eye (in acute closed-angle glaucoma)"
     ],
     causes: [
-      "Elevated internal eye pressure (Intraocular Pressure - IOP)",
-      "Family history of glaucoma",
-      "High myopia (nearsightedness) or hyperopia",
-      "Poor blood supply to the optic nerve"
+      "Ageing",
+      "Diabetes",
+      "Family history",
+      "High blood pressure",
+      "Nearsightedness (myopia) or farsightedness (hyperopia)",
+      "Long-term use of corticosteroids",
+      "Eye injuries (chemical or blunt trauma)",
+      "Eye inflammation",
+      "Blocked eye blood vessels",
+      "After other eye surgeries"
     ],
     diagnosis: [
-      "Tonometry to measure intraocular pressure",
-      "Ophthalmoscopy & OCT to inspect optic nerve damage",
-      "Perimetry (Visual Field Test) to check for areas of vision loss",
-      "Gonioscopy to inspect the drainage angle of the eye"
+      "Intraocular Pressure (IOP): Measures eye pressure; values above 21mmHg require further evaluation.",
+      "Gonioscopy: Examines the drainage angle.",
+      "Pachymetry: Measures corneal thickness which affects pressure readings.",
+      "Perimetry / Visual Field: Detects early peripheral vision loss.",
+      "Ophthalmoscopy: Assesses optic nerve damage.",
+      "HRT (Heidelberg Retinal Tomography): Advanced imaging for progression tracking."
     ],
     treatmentSteps: [
-      { title: "Medication & Eye Drops", description: "Daily prescription drops to reduce fluid production or increase drainage." },
-      { title: "Laser Trabeculoplasty", description: "Quick outpatient laser therapy to unclog drainage channels." },
-      { title: "Filtering Surgery (Trabeculectomy)", description: "Creating a new drainage pathway when medications are insufficient." }
+      { title: "Eye Drops", description: "Long-term or lifelong prescription drops to reduce fluid production or increase drainage." },
+      { title: "LASER Peripheral Iridotomy", description: "For narrow-angle glaucoma to create a drainage opening." },
+      { title: "LASER Trabeculoplasty", description: "Opens blocked passages in open-angle glaucoma." },
+      { title: "Trabeculectomy (Surgery)", description: "Creates a new drainage pathway when drops or laser are insufficient." }
     ],
     benefits: [
-      "Early optical nerve preservation",
-      "In-house computerized visual field testing",
-      "Laser and surgical intraocular pressure control"
+      "Advanced glaucoma diagnostics (IOP, Gonioscopy, Perimetry, HRT)",
+      "Laser & surgical treatment options (Peripheral Iridotomy, Trabeculoplasty, Trabeculectomy)",
+      "Long-term intraocular pressure monitoring & vision preservation"
     ]
   },
   retina: {
     slug: "retina",
-    title: "Retina Care & Vitreoretinal Procedures",
+    title: "Retina Care & Surgery",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Specialized examination and treatment for diabetic retinal damage, macular degeneration, and retinal tears.",
+    summary:
+      "A diabetes-related eye disease that damages the retina — if untreated, it can lead to severe vision loss or blindness.",
     image: "/assets/img/images/Retinal Detachment.jpg",
     content: [
-      "The retina is the light-sensitive neural tissue lining the back of the eye. Diabetes and high blood pressure can cause retinal swelling and bleeding.",
-      "Dr. Jugal Shah provides detailed Fundus examination, OCT imaging, anti-VEGF intravitreal injections, and retinal laser photocoagulation."
+      "Damage to the tiny blood vessels of the retina caused by long-standing or uncontrolled diabetes.",
+      "Diabetic Retinopathy is an eye condition where high blood sugar levels damage the blood vessels of the retina — the light-sensitive layer at the back of the eye that sends images to the brain via the optic nerve.",
+      "In diabetic patients, prolonged uncontrolled sugar levels cause these vessels to leak fluid, proteins, and fats, or become blocked. If left untreated, Diabetic Retinopathy can lead to severe visual loss or complete blindness.",
+      "Maa Nursing Home and NetraJyoti Eyecare Centre offers advanced treatment for this condition."
     ],
     symptoms: [
-      "Sudden appearance of floaters or specks in vision",
-      "Flashes of light in one or both eyes",
-      "Distorted or wavy central vision",
-      "A dark curtain or shadow over part of the visual field"
+      "Blurred or fluctuating vision",
+      "Dark spots or patches in the field of vision",
+      "Difficulty reading or seeing fine details",
+      "Sudden loss of vision due to bleeding in the eye"
     ],
     causes: [
-      "Diabetic micro-vascular complications",
-      "High blood pressure and vascular occlusion",
-      "Age-related macular degeneration",
-      "High myopia and axial eye lengthening"
+      "Long-standing or poorly controlled diabetes mellitus",
+      "High blood pressure and elevated cholesterol levels",
+      "Prolonged high blood sugar causing microvascular leakage in the retina"
     ],
     diagnosis: [
-      "Dilated Fundus Examination",
-      "Optical Coherence Tomography (OCT) cross-sectional imaging",
-      "Fundus Fluorescein Angiography (FFA)"
+      "Dilated eye examination to evaluate the retina and macular area",
+      "OCT scanning and Fundus Fluorescein Angiography for vascular leakage assessment"
+    ],
+    treatmentSteps: [
+      { title: "LASER Photocoagulation Treatment", description: "Safe, painless, day-care LASER procedure to seal leaking vessels and destroy abnormal new blood vessels." },
+      { title: "Intravitreal Anti-VEGF Injections", description: "Targeted injections into the eye to reduce macular edema and clear vitreous fluid accumulation." },
+      { title: "Vitrectomy Surgery", description: "Surgical removal of blood-filled vitreous gel and scar tissue in advanced proliferative stages." }
     ],
     benefits: [
-      "Comprehensive diabetic eye screening",
-      "Intravitreal injection protocols",
-      "Retinal laser photocoagulation"
+      "Comprehensive retinal evaluation and regular 2–4 month screening",
+      "Painless LASER photocoagulation to seal leaking retinal vessels",
+      "Prevention of severe visual impairment, macular edema, and neovascular glaucoma"
     ]
   },
   "diabetic-retinopathy": {
@@ -179,62 +243,70 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   },
   "computer-vision-syndrome": {
     slug: "computer-vision-syndrome",
-    title: "Computer Vision Syndrome (CVS)",
+    title: "Computer Vision Syndrome",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Diagnosis and relief for digital eye strain, dryness, fatigue, and headaches caused by prolonged screen exposure.",
+    summary:
+      "Diagnosis and management of digital eye strain, dryness and vision fatigue — tailored solutions for prolonged screen use and modern lifestyles.",
     image: "/assets/img/images/Computer Vision Syndrome.jpg",
     content: [
-      "Computer Vision Syndrome (CVS), also known as Digital Eye Strain, is a collection of eye and musculoskeletal problems resulting from extended use of computers, laptops, mobile phones, tablets and other digital devices. With screens now central to work and daily life, the eyes are subjected to constant strain that can become chronic and distressing if not addressed early.",
-      "Viewing digital screens is visually more demanding than reading printed text — letters on screens lack sharp contrast and are affected by glare, reflections and poor lighting. Continuous focusing, improper screen distance, incorrect posture and uncorrected or under-corrected vision problems increase the strain on the eyes, while poor ergonomics often leads to muscle strain in the neck, shoulders and back that worsens symptoms further.",
-      "While symptoms may initially ease with rest, persistent screen exposure without corrective measures can worsen the condition. Fortunately, CVS can be effectively prevented and managed through simple habit changes and professional guidance, and early diagnosis with lifestyle correction significantly reduces symptoms and prevents long-term eye discomfort."
+      "A group of eye and vision-related problems caused by prolonged use of digital screens.",
+      "Computer Vision Syndrome (CVS), also known as Digital Eye Strain, refers to a collection of eye and musculoskeletal problems resulting from extended use of computers, laptops, mobile phones, tablets and other digital devices.",
+      "With screens becoming an essential part of work and daily life, the eyes are subjected to constant strain. Over time, this strain can lead to chronic and distressing symptoms if not addressed early.",
+      "While symptoms may initially reduce with rest, persistent screen exposure without corrective measures can worsen the condition. Fortunately, CVS can be effectively prevented and managed with simple changes and professional guidance."
     ],
     symptoms: [
-      "Eyestrain, eye fatigue, burning sensation, itching or irritation",
-      "Blurred or fluctuating vision; double vision",
+      "Eyestrain and eye fatigue",
+      "Burning sensation, itching or irritation",
+      "Blurred or fluctuating vision",
+      "Double vision",
       "Dry or red eyes",
       "Frequent headaches",
       "Neck, shoulder and back pain"
     ],
     causes: [
-      "Reduced blink rate during screen usage (from 18 blinks/min down to 4-5)",
-      "Uncorrected refractive errors and improper spectacles or contact lenses",
-      "Poor room lighting, screen glare and reflections",
-      "Improper viewing distance and posture (poor ergonomics)"
+      "Viewing digital screens is visually more demanding than reading printed text",
+      "Letters on digital screens lack sharp contrast and are affected by glare, reflections and poor lighting conditions",
+      "Continuous focusing, improper screen distance, incorrect posture and uncorrected or under-corrected vision problems",
+      "Wearing improper spectacles or contact lenses",
+      "Poor ergonomics leading to muscle strain in the neck, shoulders and back"
     ],
     diagnosis: [
-      "Comprehensive eye examination evaluating vision, focusing ability and eye coordination",
-      "Detailed history of screen usage, work habits, posture, medical conditions and medications"
+      "Comprehensive eye examination evaluating vision, eye focusing ability, and eye coordination",
+      "Detailed history of screen usage, work habits, posture, medical conditions, and medications"
     ],
     treatmentSteps: [
-      { title: "The 20-20-20 Rule", description: "Every 20 minutes, look away from the screen and focus on an object 20 feet away for at least 20 seconds." },
-      { title: "Corrective & Protective Eyewear", description: "Anti-glare or computer-specific eyeglasses, special lens coatings, or blue-light filters as needed." },
-      { title: "Vision Therapy", description: "Targeted exercises for focusing and eye coordination issues where indicated." },
-      { title: "Ergonomic & Habit Correction", description: "Proper screen height, distance and posture, controlled room lighting, clean screens, frequent breaks, and regular eye check-ups." }
+      { title: "The 20–20–20 Rule", description: "Every 20 minutes, look away from the screen and focus on an object 20 feet away for at least 20 seconds." },
+      { title: "Anti-Glare & Computer Glasses", description: "Use anti-glare or computer-specific eyeglasses with special lens coatings or blue-light filters." },
+      { title: "Vision Therapy", description: "Targeted exercises for focusing and coordination issues where indicated." },
+      { title: "Ergonomic & Workplace Adjustments", description: "Maintain proper screen height, distance, posture, controlled room lighting, clean screens, and frequent breaks." }
     ],
     benefits: [
-      "Comprehensive digital eye strain evaluation and tear film assessment",
-      "Custom ergonomic & spectacle guidance including blue-light filters",
-      "Vision therapy for focusing and coordination issues",
-      "Relief from digital fatigue, headaches and screen-related discomfort"
+      "Relief from digital fatigue, eye strain, and screen-related headaches",
+      "Tailored blue-light filtering and computer spectacle prescriptions",
+      "Ergonomic guidance to protect vision and neck posture during long work hours"
     ]
   },
   "dry-eyes": {
     slug: "dry-eyes",
-    title: "Dry Eye Syndrome Evaluation & Treatment",
+    title: "Dry Eyes",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Comprehensive tear film analysis, punctal plug occlusion, and medical therapy for chronic eye dryness.",
+    summary:
+      "Advanced evaluation and treatment of dry eye disease — restoring comfort, clarity and long-term eye surface health.",
     image: "/assets/img/images/dry eyes.jpg",
     content: [
-      "Tears are essential for lubricating, nourishing and protecting the front surface of the eyes — a complex mixture of water, oils and mucus that spreads evenly across the eye surface with every blink, coating the cornea, reducing infection risk, washing away foreign particles and maintaining a smooth, clear surface. When the eyes do not produce enough tears, or when tear quality is poor, the eyes become dry and irritated — a condition known as Dry Eye Disease. It is more common in older individuals and is usually chronic in nature.",
-      "People with dry eyes may have reduced tear production, poor tear quality, or both. The goal of treatment is to restore and maintain adequate tear quantity and quality, with personalized treatment based on severity, combined with self-care measures such as conscious blinking, protective sunglasses, adequate hydration and increased indoor humidity."
+      "A chronic condition caused by insufficient or poor-quality tears leading to eye irritation and discomfort.",
+      "Tears are essential for lubricating, nourishing and protecting the front surface of the eyes. When the eyes do not produce enough tears, or when tear quality is poor, the eyes become dry and irritated. This condition is known as Dry Eye Disease.",
+      "Dry eyes are more common in older individuals and are usually chronic in nature. Tears are not just emotional responses — they are a complex mixture of water, oils and mucus that spreads evenly across the eye surface to keep it moist and prevent evaporation.",
+      "With every blink, tears coat the cornea, reduce the risk of infection, wash away foreign particles and maintain a smooth, clear eye surface."
     ],
     symptoms: [
-      "Stinging, burning or scratchy sensation in eyes",
+      "Stinging, burning or scratchy sensation in the eyes",
       "Sensitivity to light",
       "Foreign body sensation (feeling of something in the eye)",
-      "Excessive tearing (reflex tears) and difficulty wearing contact lenses",
+      "Excessive tearing (reflex tears)",
+      "Difficulty wearing contact lenses",
       "Blurred or fluctuating vision"
     ],
     causes: [
@@ -245,87 +317,96 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Reduced blinking while using computers, mobiles and digital screens for long periods"
     ],
     diagnosis: [
-      "Clinical evaluation of tear quantity and quality",
+      "Clinical evaluation of tear quantity and tear film quality",
       "Assessment of severity to determine personalized treatment"
     ],
     treatmentSteps: [
-      { title: "Artificial Tear Drops", description: "The primary treatment, used to supplement natural tear production." },
-      { title: "Conservation of Tears", description: "A minor surgical procedure that closes the tear ducts (punctal occlusion) to retain tears longer on the eye surface." },
-      { title: "Self-Care Measures", description: "Conscious blinking during screen use, protective sunglasses, adequate hydration and increased indoor humidity." }
+      { title: "Artificial Tear Drops", description: "Primary treatment to supplement natural tear production." },
+      { title: "Conservation of Tears", description: "A minor surgical procedure where tear ducts are closed (punctal occlusion) to retain tears longer on the eye surface." },
+      { title: "Self-Care & Lifestyle Measures", description: "Conscious blinking during screen use, protective sunglasses, hydration, increasing indoor humidity, and avoiding excessive AC exposure." }
     ],
     benefits: [
-      "Personalized treatment based on severity of dry eye disease",
-      "Artificial tear drops and punctal occlusion (tear conservation) options",
-      "Lifestyle and self-care guidance to reduce recurrence",
-      "Significant reduction in discomfort and improved eye surface health"
+      "Personalized treatment based on the severity of dry eye disease",
+      "Artificial tear drops and tear conservation (punctal occlusion) options",
+      "Significantly reduced discomfort, burning, and improved overall eye surface health"
     ]
   },
   "retinal-detachment": {
     slug: "retinal-detachment",
-    title: "Retinal Detachment Evaluation & Care",
+    title: "Retinal Detachment",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Urgent clinical assessment for sudden flashes of light, floaters, or curtain-like vision loss.",
+    summary:
+      "Emergency diagnosis and surgical management of retinal detachment — prompt intervention to preserve vision and prevent permanent loss.",
     image: "/assets/img/images/Retinal Detachment.jpg",
     content: [
-      "The retina is a thin, light-sensitive layer lining the back of the eye. Light entering the eye is focused onto the retina, which sends visual signals to the brain through the optic nerve. Retinal detachment occurs when the retina separates from the tissues that nourish it, disrupting these signals; if not treated promptly it can result in permanent loss of vision, making it a true medical emergency.",
-      "Detachment can occur in different ways: Rhegmatogenous, caused by a tear or break in the retina; Exudative (Secondary), caused by fluid accumulation without a retinal tear; and Tractional, caused by scar tissue pulling the retina away. It is usually painless, but warning signs often appear suddenly and require immediate evaluation.",
-      "Treatment depends on the type, size and severity of the detachment. Doctors at Maa Nursing Home and NetraJyoti Eyecare Centre offer advanced surgical treatments, and early intervention prevents permanent vision loss, has a higher success rate, and preserves both central and peripheral vision."
+      "A serious eye emergency where the retina separates from its underlying tissue, leading to vision loss.",
+      "The retina is a thin, light-sensitive layer lining the back of the eye. Light entering the eye is focused onto the retina, which then sends visual signals to the brain through the optic nerve.",
+      "When the retina becomes damaged or displaced from its normal position, these signals are disrupted and vision becomes blurred or lost. This condition is known as retinal detachment.",
+      "Retinal detachment occurs when the retina separates from the tissues that nourish it. If not treated promptly, it can result in permanent loss of vision. Therefore, retinal detachment is considered a medical emergency."
     ],
     symptoms: [
-      "Flashing lights, especially in peripheral vision",
-      "Floaters — black spots, threads, cobwebs or moving specks in vision",
-      "A shadow, curtain or dark area covering part of the vision"
+      "Flashing lights: Brief flashes of light, especially in peripheral vision",
+      "Floaters: Black spots, threads, cobwebs or moving specks in vision",
+      "Vision loss: A shadow, curtain or dark area covering part of the vision"
     ],
     causes: [
-      "Retinal tears or holes due to vitreous shrinkage",
       "Age above 40 years",
       "High myopia (severe nearsightedness)",
-      "Previous retinal detachment in one eye, or previous cataract surgery",
-      "Eye injuries (sports trauma such as boxing or bungee jumping)",
-      "Family history of retinal detachment; eye diseases such as retinoschisis, uveitis or lattice degeneration"
+      "Previous retinal detachment in one eye",
+      "Eye injuries (sports like boxing, bungee jumping, trauma)",
+      "Family history of retinal detachment",
+      "Previous cataract surgery",
+      "Eye diseases such as retinoschisis, uveitis or lattice degeneration"
     ],
     diagnosis: [
-      "Dilated pupil examination to thoroughly examine the retina",
-      "Ocular ultrasonography to confirm the diagnosis when suspected"
+      "Dilated pupil examination using eye drops to inspect the retina thoroughly",
+      "Ocular ultrasonography to confirm diagnosis when detachment is suspected"
     ],
     treatmentSteps: [
-      { title: "Cryopexy", description: "Used when detachment is caused by a retinal tear or hole; this freeze treatment seals the tear and reattaches the retina." },
-      { title: "Scleral Buckling", description: "A small synthetic band is placed permanently around the eye to gently push the eye wall against the detached retina." },
-      { title: "Pneumatic Retinopexy", description: "A gas bubble is injected into the eye to press the retina back into place while laser or cryotherapy seals the tear." },
-      { title: "Vitrectomy & LASER Photocoagulation", description: "Vitrectomy removes the vitreous gel (replaced with gas or silicone oil) for large or complex detachments; LASER seals retinal tears or holes to prevent progression." }
+      { title: "Cryopexy", description: "Freeze treatment used for retinal tears or holes to seal the tear and reattach the retina." },
+      { title: "Scleral Buckling", description: "A permanent synthetic band placed around the eye to gently push the eye wall against the detached retina." },
+      { title: "Pneumatic Retinopexy", description: "A gas bubble injected into the eye presses the retina back into place while laser or cryotherapy seals the tear." },
+      { title: "Vitrectomy & LASER Photocoagulation", description: "Removal of vitreous gel (replaced with gas or silicone oil) for large/complex detachments; LASER seals retinal tears to prevent progression." }
     ],
     benefits: [
-      "Emergency retinal screening and same-visit diagnosis",
-      "Full range of surgical options: cryopexy, scleral buckling, pneumatic retinopexy and vitrectomy",
-      "Laser photocoagulation for retinal breaks & tears",
-      "Higher success rates and vision preservation with prompt treatment"
+      "Emergency retinal evaluation and prompt surgical intervention",
+      "Advanced procedures including Cryopexy, Scleral Buckling, Pneumatic Retinopexy, and Vitrectomy",
+      "Preservation of visual fields and prevention of permanent blindness"
     ]
   },
-  squint: {
+  "squint": {
     slug: "squint",
-    title: "Squint (Strabismus) Correction",
+    title: "Squint (Strabismus)",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Surgical and non-surgical alignment of misaligned eyes for adults and children.",
+    summary:
+      "Misalignment of the eyes where both eyes do not look in the same direction — affecting vision, depth perception and confidence.",
     image: "/assets/img/images/Squint.jpg",
     content: [
-      "A squint, medically known as strabismus, occurs when both eyes do not look at the same object at the same time. While one eye looks straight, the other may turn inwards, outwards, upwards or downwards. Squint can be present from birth or develop later in life due to eye injury, nerve problems or other illnesses, and may be constant or intermittent (usually noticed when tired).",
-      "Apart from cosmetic concerns and social embarrassment, untreated squint can lead to reduced vision in one eye (amblyopia) and loss of 3D (binocular) vision. In the first few months of life, a baby learns to focus and use both eyes together — if proper visual impulses are not received, amblyopia and loss of binocular vision can result.",
-      "Squints can often be improved or corrected with a combination of non-surgical and surgical treatments depending on the cause and severity. Surgical planning uses nomograms — tables developed from the results of thousands of squint surgeries — to decide how much to tighten or loosen the eye muscles. Squint correction is available for both children and adults at Maa Nursing Home."
+      "A condition where the eyes are misaligned and do not point in the same direction, leading to cosmetic and visual problems.",
+      "A squint, medically known as strabismus, occurs when both eyes do not look at the same object at the same time. While one eye is looking straight, the other may turn inwards, outwards, upwards or downwards.",
+      "Squint can be present from birth or develop later in life due to eye injury, nerve problems or other illnesses. It may be constant (always visible) or intermittent (seen only at times, usually when tired).",
+      "Apart from cosmetic concerns and social embarrassment, untreated squint can lead to reduced vision in one eye (amblyopia) and loss of 3D (binocular) vision."
     ],
     symptoms: [
-      "Eyes looking in different directions at the same time; eyes that do not move together",
+      "Eyes looking in different directions at the same time",
+      "Eyes that do not move together",
       "Squinting or closing one eye, especially in bright sunlight",
-      "Poor side (peripheral) vision and poor depth perception",
-      "Double vision (diplopia), mainly in adults with recently developed squint"
+      "Poor side (peripheral) vision",
+      "Poor depth perception (difficulty judging distances)",
+      "Sometimes double vision (mainly in adults with recent squint)"
     ],
     causes: [
-      "Refractive errors such as hyperopia, myopia and astigmatism, or unequal power between the two eyes",
-      "Brain trauma or other neurological causes; Sixth Cranial Nerve palsy or Myasthenia gravis",
-      "Duane's Syndrome, Strabismus Fixus, or decompensation after previous squint surgery",
-      "Paralytic squint due to hypertension or diabetes; Thyroid Eye Disease",
-      "Family history of squint; significant hyperopia straining the eyes to turn inwards"
+      "Refractive errors such as hyperopia (long-sightedness), myopia and astigmatism",
+      "Unequal refractive error (difference in power) between the two eyes",
+      "Brain trauma or neurological causes",
+      "Myasthenia gravis or Sixth Cranial Nerve palsy in children (sudden esotropia)",
+      "Trauma to the eye",
+      "Duane’s Syndrome, Strabismus Fixus",
+      "Previous squint surgery with decompensation",
+      "Paralytic squint due to hypertension or diabetes",
+      "Thyroid Eye Disease and post-sinus surgery complications"
     ],
     diagnosis: [
       "Detailed eye examination to assess the direction and degree of eye deviation",
@@ -350,19 +431,14 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     title: "Age-Related Macular Degeneration (ARMD)",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Advanced diagnostic imaging and anti-VEGF treatment for dry and wet macular degeneration in senior citizens.",
+    summary:
+      "Diagnosis and advanced management of ARMD — slowing disease progression and preserving central vision with modern therapies.",
     image: "/assets/img/images/ARMD.jpg",
     content: [
-      "Age-related macular degeneration (ARMD) is a deterioration of the macula, the central part of the retina responsible for sharp, straight-ahead vision. The primary cause is ageing; as the macula degenerates, fine tasks such as reading, threading a needle, or recognising faces become difficult. ARMD usually begins in one eye and may gradually affect the other, and many people remain unaware of it until noticeable vision changes occur or during a routine eye examination.",
-      "There are two types: Dry ARMD (Atrophic), the most common form, caused by thinning of the macula and accumulation of drusen deposits, with slow and gradual vision loss; and Wet ARMD (Exudative), where abnormal blood vessels grow under the retina and leak fluid or blood, causing faster and more severe vision loss. ARMD alone rarely causes total blindness — most patients retain peripheral vision and can move around independently.",
-      "The exact cause of dry ARMD is unknown, but research points to a combination of heredity and environmental factors such as smoking, obesity and diet. If wet ARMD develops in one eye, there is an increased risk of it occurring in the other."
-    ],
-    symptoms: [
-      "Straight lines appearing bent, wavy or distorted — an important warning sign requiring immediate evaluation",
-      "Reduced or blurred central vision; dark or blank spots in central vision",
-      "Need for brighter light while reading; difficulty adapting to low light",
-      "Faded or dull colours; difficulty recognising faces",
-      "No symptoms at all in early and intermediate dry ARMD"
+      "A progressive retinal condition causing loss of central vision, commonly seen with ageing.",
+      "Age-related macular degeneration (ARMD) is a deterioration of the macula, the central part of the retina responsible for sharp, straight-ahead vision. The primary cause of ARMD is ageing.",
+      "When the macula degenerates, fine tasks such as reading, threading a needle, recognising faces or seeing details become difficult. Although the macula occupies a small portion of the retina, it is far more sensitive to detail than the peripheral retina, which provides side vision.",
+      "ARMD usually begins in one eye and may gradually affect the other. Many people remain unaware of the condition until noticeable vision changes occur or during a routine eye examination."
     ],
     causes: [
       "Ageing — the primary driver of macular degeneration",
@@ -385,68 +461,29 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     benefits: [
       "OCT and OCTA macular mapping for precise diagnosis",
       "Intravitreal injection protocols to preserve central vision",
-      "Prevention guidance covering diet, smoking cessation and blood pressure control",
-      "Low vision aids counseling for advanced cases"
-    ]
-  },
-  "cornea-dsaek": {
-    slug: "cornea-dsaek",
-    title: "Cornea Services & DSAEK Surgery",
-    department: "Eye Care (Ophthalmology)",
-    category: "Eye Care",
-    summary: "Specialized corneal ulcer management, keratoconus screening, and partial-thickness corneal transplantation (DSAEK).",
-    image: "/assets/img/images/Cornea DSAEK.jpg",
-    content: [
-      "The cornea is the thin, transparent tissue covering the front of the eye, responsible for nearly two-thirds of the eye's focusing power. For clear vision the cornea must remain smooth, compact and transparent; if it becomes swollen, scarred or cloudy due to disease or injury, vision can be severely reduced or completely lost, and a corneal transplant becomes the only way to restore vision. Corneal blindness is one of the leading causes of blindness in India, with more than 10 lakh people blind in both eyes as of 2019.",
-      "Traditionally, full-thickness corneal transplants were performed. Today, Descemet Stripping Automated Endothelial Keratoplasty (DSAEK) allows selective replacement of only the damaged endothelial cells (inner corneal layer), preserving the healthy outer cornea. This technique uses a much smaller incision, requires fewer stitches, and results in faster healing and better visual recovery compared to traditional transplants. A healthy donor cornea is obtained, a thin layer containing endothelial cells is carefully prepared and inserted into the patient's eye, and once positioned the donor tissue attaches and begins clearing corneal swelling and improving vision.",
-      "DSAEK is an outpatient procedure typically taking 45-60 minutes with no hospital stay required. Full recovery usually takes about three months, with vision gradually improving within one to two weeks; patients are advised to lie flat on their back for the first few days (typically 45 minutes out of every hour) to help the graft attach properly."
-    ],
-    symptoms: [
-      "Blurred, cloudy or reduced vision due to corneal swelling or scarring",
-      "Glare and light sensitivity from a cloudy cornea",
-      "Vision loss following previous corneal transplant failure"
-    ],
-    causes: [
-      "Fuchs' endothelial dystrophy",
-      "Posterior polymorphous membrane dystrophy",
-      "Congenital hereditary endothelial dystrophy",
-      "Bullous keratopathy and Iridocorneal endothelial (ICE) syndrome",
-      "Failed previous corneal transplants"
-    ],
-    diagnosis: [
-      "Corneal examination to assess the extent and layer of damage",
-      "Determination of whether damage is limited to the endothelial layer (suitable for DSAEK) or full-thickness (requiring full corneal transplant)"
-    ],
-    treatmentSteps: [
-      { title: "Donor Tissue Preparation", description: "A healthy donor cornea is obtained and a thin layer containing endothelial cells is carefully prepared." },
-      { title: "Graft Insertion", description: "The prepared endothelial layer is inserted into the patient's eye through a small incision requiring minimal stitches." },
-      { title: "Graft Attachment", description: "The donor tissue attaches to the patient's cornea and begins functioning like natural endothelial cells, clearing corneal swelling." },
-      { title: "Post-Operative Positioning & Recovery", description: "Patients lie flat on their back for the first few days to aid graft attachment, use prescribed antibiotic and steroid drops, and avoid rubbing, swimming or heavy lifting during the roughly three-month recovery." }
-    ],
-    benefits: [
-      "Minimally invasive partial-thickness corneal transplantation",
-      "Stitchless/minimal-stitch endothelial graft placement with a smaller incision",
-      "Faster visual recovery and higher success rate than full-thickness transplant",
-      "Preserves healthy corneal tissue; outpatient procedure with no hospital stay"
+      "Prevention guidance covering diet, smoking cessation and blood pressure control"
     ]
   },
   "paediatric-eye": {
     slug: "paediatric-eye",
-    title: "Paediatric Ophthalmology & Child Eye Care",
+    title: "Paediatric Ophthalmology",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Child-friendly eye exams, congenital cataract evaluation, refractive error correction, and amblyopia treatment.",
-    image: "/assets/img/images/imgi_4_woman-peeking-eyeglasses.jpg",
+    summary:
+      "Dedicated eye care for children and adolescents — ensuring healthy vision development through early detection and specialized treatment.",
+    image: "/assets/img/images/Paediatric.jpg",
     content: [
-      "Early childhood is the most critical period for vision development, and any eye problem during this time can have long-term consequences if not treated promptly. Children often do not complain about vision problems because they don't know what 'normal' vision is, so Maa Nursing Home and NetraJyoti Eyecare Centre specialize in child-friendly eye examinations and treatments tailored to young patients.",
-      "Common paediatric eye conditions include refractive errors (nearsightedness, farsightedness or astigmatism), amblyopia (lazy eye) caused by reduced vision in one eye during development, squint (strabismus), paediatric cataract present from birth or early childhood, ROP (Retinopathy of Prematurity) affecting premature infants, and allergic conjunctivitis. We offer comprehensive evaluation and management of all these disorders in a comforting environment, including amblyopia patching therapy, paediatric cataract surgery with IOL implantation, ROP screening, vision screening for school children, and both non-surgical and surgical squint correction.",
-      "Treatment is most effective when started early — the first eye exam is recommended by age 3, and regular screening is crucial for school-age children to ensure vision problems are not affecting academic performance or sports activities."
+      "Early childhood is the most critical period for vision development. Any eye problem during this time can have long-term consequences if not treated promptly.",
+      "Children often do not complain about vision problems because they don't know what 'normal' vision is. At Maa Nursing Home and NetraJyoti Eyecare Centre, we specialize in child-friendly eye examinations and treatments tailored to young patients.",
+      "We offer comprehensive evaluation and management of all paediatric eye disorders in a comforting environment."
     ],
     symptoms: [
-      "Child squints or tilts head to see",
-      "Frequent eye rubbing or watering",
-      "Difficulty reading or seeing the board at school",
-      "Family history of eye problems"
+      "Refractive Errors: Nearsightedness, farsightedness, or astigmatism in children",
+      "Amblyopia (Lazy Eye): Reduced vision in one eye due to lack of use during development",
+      "Squint (Strabismus): Misalignment of the eyes",
+      "Paediatric Cataract: Clouding of the lens present from birth or early childhood",
+      "ROP (Retinopathy of Prematurity): Eye disease affecting premature infants",
+      "Allergic Conjunctivitis: Chronic eye allergies common in children"
     ],
     causes: [
       "Congenital or developmental refractive errors (nearsightedness, farsightedness, astigmatism)",
@@ -476,47 +513,63 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   },
   oculoplasty: {
     slug: "oculoplasty",
-    title: "Oculoplasty & Eyelid Surgery",
+    title: "Oculoplasty & Ocular Oncology",
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
-    summary: "Reconstructive and aesthetic surgery of the eyelids, tear duct (dacrocystitis), and eye socket.",
-    image: "/assets/img/images/imgi_3_eye_intro.png",
+    summary:
+      "Specialized surgical care for eyelids, tear ducts, orbits, and eye tumors — combining functional restoration with aesthetic excellence.",
+    image: "/assets/img/images/Oculoplasty.jpg",
     content: [
-      "Oculoplasty is a specialized field of ophthalmology focusing on the structures around the eye — eyelids, tear ducts, and the eye socket (orbit). Oculoplastic surgery involves procedures that improve the function, comfort, and appearance of the eyes and surrounding areas, combining ophthalmic precision with plastic surgery principles.",
-      "Common conditions treated include ptosis (drooping upper eyelid that can block vision), entropion and ectropion (eyelids turning inwards or outwards causing irritation), blocked tear ducts leading to constant watering, eyelid tumors and cysts, orbital fractures after trauma, thyroid eye disease, and cases requiring enucleation/evisceration with prosthetic fitting.",
-      "Our specialized surgeons perform DCR (Dacryocystorhinostomy) to create a new drainage path for tears when the natural duct is blocked, ptosis correction to lift the drooping eyelid, cosmetic blepharoplasty to remove excess eyelid skin or fat, ocular oncology for tumor removal, and customized artificial eye (prosthesis) fitting for patients who have lost an eye."
-    ],
-    diagnosis: [
-      "Detailed evaluation of eyelid position, tear duct function, and orbital structures",
-      "Assessment for underlying causes such as thyroid eye disease or trauma"
-    ],
-    treatmentSteps: [
-      { title: "DCR (Dacryocystorhinostomy)", description: "Creates a new path for tears to drain into the nose when the natural duct is blocked, stopping chronic watering and infections." },
-      { title: "Ptosis Correction", description: "Surgery to lift a drooping eyelid — congenital or age-related — improving both vision and appearance." },
-      { title: "Cosmetic Oculoplasty (Blepharoplasty)", description: "Removal of excess skin or fat from the upper and/or lower eyelids for a more youthful, rested appearance." },
-      { title: "Ocular Oncology & Prosthesis", description: "Precise surgical removal of eyelid or orbital tumors, and customized artificial eye fitting matching natural color and movement." }
-    ],
-    benefits: [
-      "Experienced oculoplastic surgeons with an advanced surgical facility",
-      "Drooping eyelid (Ptosis) repair and DCR tear duct surgery",
-      "Cosmetic eyelid rejuvenation with personalized follow-up",
-      "Integration of both functional restoration and aesthetic outcomes"
-    ]
-  },
-  lasik: {
-    slug: "lasik",
-    title: "LASIK Vision Correction",
-    department: "Eye Care (Ophthalmology)",
-    category: "Eye Care",
-    summary: "Dump your glasses forever with safe Contoura and Bladeless Femto-LASIK procedures by Dr. Jugal Shah.",
-    image: "/assets/img/images/LASIK Clinic.jpg",
-    content: [
-      "LASIK (Laser-Assisted In Situ Keratomileusis) reshapes the cornea using an excimer LASER to correct refractive errors such as myopia (short-sight), hypermetropia (long-sight) and astigmatism. The cornea accounts for about 70% of the eye's focusing power; when light does not focus precisely on the retina, vision becomes blurred, and LASIK corrects this by reshaping the cornea. We offer both Contoura LASIK (topography-guided, with a manually created flap) and Bladeless Femto-LASIK (flap created with a Femto Second LASER for enhanced precision), performed by Dr Jugal Shah.",
-      "You may be suitable for LASIK if you are above 18 years of age, have had stable spectacle power for at least 6 months, and do not have uncontrolled diabetes or other major systemic issues. LASIK can typically correct myopia up to -18.0 D, hypermetropia from +1.0 D to +6.0 D, and astigmatism from -1.0 D to -6.0 D. It is usually not advised for those with corneal thinning disorders, very thin corneas, very large pupils, or advanced age-related eye changes.",
-      "During the procedure, local anaesthetic eye drops are used (no injections), a suction ring is applied, and a thin corneal flap is created either manually or with a Femto Second LASER. The flap is lifted, the excimer LASER reshapes the underlying corneal tissue, and the flap is repositioned, adhering naturally without stitches. The entire procedure takes about 15-20 minutes, both eyes can often be treated in the same sitting, and no hospitalization is required."
+      "A specialized field of ophthalmology focusing on the structures around the eye, including eyelids, tear ducts, and the eye socket (orbit).",
+      "Oculoplastic surgery involves procedures that improve the function, comfort, and appearance of the eyes and surrounding areas. At Maa Nursing Home and NetraJyoti Eyecare Centre, we provide expert care for both medical and cosmetic conditions."
     ],
     symptoms: [
-      "Blurred vision due to myopia, hypermetropia or astigmatism, corrected by reshaping the cornea"
+      "Ptosis: Drooping of the upper eyelid, which can block vision",
+      "Entropion & Ectropion: Eyelids turning inwards or outwards, causing irritation",
+      "Blocked Tear Ducts: Leading to constant watering (treated with DCR surgery)",
+      "Eyelid Tumors: Cysts or tumors requiring removal and reconstruction",
+      "Orbital Fractures: Bony socket damage after facial trauma",
+      "Thyroid Eye Disease: Bulging eyes or eyelid retraction"
+    ],
+    causes: [
+      "Age-related skin loosening or muscle weakness around the eye",
+      "Congenital weakness in eyelid muscles (congenital ptosis)",
+      "Nasolacrimal duct obstruction causing tearing and infection",
+      "Facial trauma and thyroid-related autoimmune conditions"
+    ],
+    diagnosis: [
+      "Clinical evaluation of eyelid position, levator muscle strength, and lacrimal duct patency",
+      "Orbital imaging (CT/MRI) and histopathological evaluation for ocular tumors"
+    ],
+    treatmentSteps: [
+      { title: "DCR (Dacryocystorhinostomy)", description: "Creates a new tear drainage path into the nose to stop chronic watering and infections." },
+      { title: "Ptosis Correction", description: "Surgical lifting of drooping eyelids to improve vision field and aesthetics." },
+      { title: "Blepharoplasty & Prosthetics", description: "Eyelid aesthetic rejuvenation and custom artificial eye fitting for non-functional eyes." }
+    ],
+    benefits: [
+      "Expert oculoplastic procedures combining functional restoration and cosmetic appearance",
+      "Treatment for ptosis, blocked tear ducts (DCR), eyelid tumors, and orbital trauma",
+      "Custom prosthetic eye fitting matching natural eye color and movement"
+    ]
+  },
+  "lasik": {
+    slug: "lasik",
+    title: "LASIK Clinic",
+    department: "Eye Care (Ophthalmology)",
+    category: "Eye Care",
+    summary:
+      "Modern, precise LASER vision correction to reduce dependence on spectacles and contact lenses — with personalised evaluation and advanced technology.",
+    image: "/assets/img/images/LASIK Clinic.jpg",
+    content: [
+      "A painless day-care LASER procedure to correct refractive errors and reduce or eliminate the need for glasses or contact lenses.",
+      "LASIK (Laser-Assisted In Situ Keratomileusis) reshapes the cornea using an excimer LASER to correct refractive errors such as myopia (short-sight), hypermetropia (long-sight) and astigmatism.",
+      "In a normal eye, light passes through the cornea and lens and focuses sharply on the retina, giving clear vision. When light focuses in front of the retina (myopia), behind the retina (hypermetropia) or at different points (astigmatism), vision becomes blurred. LASIK corrects this focusing power by reshaping the cornea.",
+      "At Maa Nursing Home and NetraJyoti Eyecare Centre, we have a dedicated LASIK clinic and have successfully treated thousands of patients. We offer both Contoura LASIK and Bladeless Femto-LASIK, performed by Dr Jugal Shah."
+    ],
+    symptoms: [
+      "Myopia (nearsightedness) up to –18.0 D",
+      "Hypermetropia (farsightedness) from +1.0 D to +6.0 D",
+      "Astigmatism from –1.0 D to –6.0 D"
     ],
     causes: [
       "Myopia — light focuses in front of the retina",
@@ -543,119 +596,160 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   },
   ivf: {
     slug: "ivf",
-    title: "In-Vitro Fertilization (IVF) & ICSI",
+    title: "In-Vitro Fertilization (IVF)",
     department: "IVF & Fertility Wing",
     category: "IVF & Infertility",
-    summary: "Advanced assisted reproductive technology (ART) led by Dr. Jyoti Shah to help couples achieve successful pregnancies.",
+    summary:
+      "Advanced, ethical and affordable fertility treatments to help couples achieve their dream of parenthood.",
     image: "/assets/img/images/IVF.jpg",
     content: [
-      "IVF (In-Vitro Fertilization), commonly known as the 'test-tube baby' technique, is one of the most successful and widely used infertility treatments. Eggs and sperm are combined in a controlled laboratory environment, and the resulting embryos are transferred into the woman's uterus to achieve pregnancy. Maa Nursing Home offers advanced IVF technology, strict quality protocols and experienced specialists to maximise success rates.",
-      "IVF is recommended for blocked, damaged or absent fallopian tubes, endometriosis, unexplained infertility, failed IUI cycles, male factor infertility, age-related infertility, low ovarian reserve, premature menopause, or when pre-implantation genetic testing is needed.",
-      "Intracytoplasmic Sperm Injection (ICSI) is used within the IVF lab in cases of severe male infertility, injecting a single healthy sperm directly into the egg cell when sperm quality is low."
+      "A scientifically proven fertility treatment where fertilization takes place outside the body.",
+      "IVF (In-Vitro Fertilization), commonly known as the “test-tube baby” technique, is one of the most successful and widely used infertility treatments. In this procedure, eggs and sperms are combined in a controlled laboratory environment. The resulting embryos are then transferred into the woman’s uterus to achieve pregnancy.",
+      "Maa Nursing Home and NetraJyoti Eyecare Centre offers advanced IVF technology, strict quality protocols and experienced specialists to maximise success rates.",
+      "Recommended for tubal blockages, severe endometriosis, failed IUI cycles, male factor infertility, low ovarian reserve, and age-related infertility."
+    ],
+    symptoms: [
+      "Inability to conceive after 12 months of regular unprotected intercourse",
+      "Blocked, damaged, or absent fallopian tubes",
+      "Endometriosis and low ovarian reserve",
+      "Failed IUI cycles or severe male factor subfertility"
+    ],
+    causes: [
+      "Tubal pathology, endometriosis, male factor subfertility",
+      "Unexplained infertility or diminished ovarian reserve"
     ],
     diagnosis: [
-      "Male investigations: semen analysis, semen culture, sperm function test, routine blood tests",
-      "Female investigations: ultrasound (USG), HSG (tube testing), hormonal profile, routine blood tests"
+      "Female workup: USG pelvic sonography, HSG tubal testing, hormone profile, routine blood panel",
+      "Male workup: Semen analysis, semen culture, sperm function tests, routine blood panel"
     ],
     treatmentSteps: [
-      { title: "Counselling & Investigations", description: "The fertility specialist reviews medical history, identifies the cause of infertility, and both partners undergo relevant tests." },
-      { title: "Ovarian Stimulation", description: "Fertility injections stimulate the ovaries to produce multiple eggs, monitored through ultrasound and hormonal tests." },
-      { title: "Egg & Sperm Collection", description: "Mature eggs are retrieved under short anaesthesia via a guided needle; the male partner provides a semen sample and the best-quality sperm is selected." },
-      { title: "Embryo Culture & Transfer", description: "Eggs and sperm are combined in the IVF lab (with ICSI used if sperm quality is low); after 2-5 days, healthy embryos are transferred into the uterus using a thin catheter, with extras frozen for future use." }
+      { title: "Counselling & Ovarian Stimulation", description: "Injections stimulate ovaries to produce eggs, tracked via ultrasound and blood hormone tests." },
+      { title: "Egg Retrieval & Sperm Processing", description: "Mature eggs retrieved under short anesthesia needle guidance; sperm processed and selected." },
+      { title: "Embryo Culture & Transfer", description: "Eggs & sperms combined (or ICSI performed); healthy embryos transferred 2–5 days later, with extra embryos frozen." }
     ],
     benefits: [
-      "High success rate protocols with personalised treatment plans",
-      "State-of-the-art IVF laboratory environment with strict quality control",
-      "Comprehensive male & female fertility evaluation and counselling at every step",
-      "Affordable, transparent IVF packages; day-care procedure with pregnancy confirmed 14 days after transfer"
+      "State-of-the-art IVF laboratory with strict quality control led by Dr. Jyoti Shah",
+      "High success rate protocols with ethical, transparent, and affordable IVF packages",
+      "Complete under-one-roof care from fertility screening to delivery"
     ]
   },
   infertility: {
     slug: "infertility",
-    title: "Comprehensive Infertility Evaluation",
+    title: "Infertility Care",
     department: "IVF & Fertility Wing",
     category: "IVF & Infertility",
-    summary: "Detailed diagnostic evaluation for male and female fertility factors led by Dr. Jyoti Shah.",
+    summary:
+      "Comprehensive evaluation, personalized treatment plans, and advanced reproductive solutions to help couples achieve parenthood.",
     image: "/assets/img/images/Infertility.jpg",
     content: [
-      "Infertility is defined by WHO as the inability to conceive after 12 months of regular, unprotected intercourse. It is rising globally among both men and women. Our dedicated Infertility Clinic, led by Dr. Jyoti Shah — senior gynaecologist, obstetrician and infertility specialist — uses advanced technology and strict safety protocols to deliver some of the highest success rates in the country, with a customized plan for each couple.",
-      "You should seek evaluation if unable to conceive after a year of regular unprotected intercourse, if there are erection, ejaculation, or testicular pain/swelling issues, a history of groin or scrotal surgery, if the female partner is over 35, or if menstrual cycles are irregular or severely problematic. Infertility must be evaluated in both partners, since the cause cannot be determined until both are thoroughly examined.",
-      "Causes in women include ovulatory dysfunction, endometriosis, advanced maternal age, luteal phase defects, uterine or cervical abnormalities, and fibroids. Causes in men include low sperm production, poor motility or abnormal morphology, anti-sperm antibodies, blockages, hormonal or chromosomal abnormalities, chronic illness, and lifestyle factors such as alcohol, smoking, obesity and stress."
+      "Infertility is defined by WHO as the inability to conceive after 12 months of regular, unprotected intercourse.",
+      "Infertility is rising globally among both men and women. At Maa Nursing Home and NetraJyoti Eyecare Centre, we offer a complete range of diagnostic and treatment options through our dedicated Infertility Clinic, led by Dr. Jyoti Shah — senior gynaecologist, obstetrician and infertility specialist.",
+      "Our highly trained IVF and fertility experts use advanced technology and strict safety protocols, ensuring some of the highest success rates in the country.",
+      "Each couple receives a customized treatment plan tailored to their medical history, diagnosis and personal needs."
+    ],
+    symptoms: [
+      "Unable to conceive after 1 year of regular unprotected intercourse",
+      "Female partner age over 35 years",
+      "Irregular menstrual cycles or severe period-related issues",
+      "Erection/ejaculation issues or pain/swelling in testicles",
+      "History of scrotal, testicular, or pelvic surgeries"
+    ],
+    causes: [
+      "Female: Ovulatory dysfunction, Endometriosis, advanced maternal age, fibroids, uterine abnormalities",
+      "Male: Low sperm count (<15M/mL), poor motility, abnormal morphology, blockages, anti-sperm antibodies",
+      "Lifestyle: Smoking, alcohol, obesity, stress, and environmental exposures"
     ],
     diagnosis: [
-      "Medical history and physical examination of both partners",
-      "Assessment of menstrual cycle and ovulation; semen analysis for the male partner",
-      "Ultrasound (pelvic sonography) and hormonal testing",
-      "Evaluation for erectile or ejaculation issues; additional imaging, laparoscopy or hysteroscopy if required"
+      "Comprehensive couple evaluation, semen analysis, and pelvic ultrasound",
+      "Hormone blood assays, ovulation tracking, and diagnostic laparoscopy/hysteroscopy"
     ],
     treatmentSteps: [
-      { title: "Comprehensive Workup", description: "Both partners undergo history, physical examination, semen analysis, ultrasound and hormonal testing to identify the cause." },
-      { title: "Personalized Treatment Plan", description: "Based on the diagnosis, a plan is created ranging from ovulation induction to IUI, IVF & ICSI." },
-      { title: "Donor & Surrogacy Options", description: "Egg donation, sperm donation, embryo donation or surrogacy are offered where medically indicated." },
-      { title: "Ongoing Support", description: "The team supports couples from diagnosis through treatment and into pregnancy care." }
+      { title: "Fertility Screening & Ovulation Tracking", description: "Comprehensive couple evaluation and follicular monitoring." },
+      { title: "Assisted Reproductive Technology (IUI / IVF / ICSI)", description: "IUI, IVF, ICSI, and donor programs (Egg/Sperm/Embryo donation) tailored to the couple." },
+      { title: "Surrogacy & Surgical Correction", description: "Minimal access fertility surgery and legal surrogacy pathways." }
     ],
     benefits: [
-      "Comprehensive evaluation of both partners under one clinic",
-      "Follicular monitoring & ovulation tracking with advanced fertility technologies",
-      "Affordable, transparent and ethical fertility treatment packages",
-      "High success rates under the personal care of Dr. Jyoti Shah"
+      "Led by senior fertility specialist Dr. Jyoti Shah with state-of-the-art IVF labs",
+      "Full spectrum of fertility options: IUI, IVF, ICSI, Donor Programs, and Laparoscopy",
+      "High success rates with personalized compassionate care for both partners"
     ]
   },
   iui: {
     slug: "iui",
-    title: "Intrauterine Insemination (IUI)",
+    title: "IUI (Intrauterine Insemination)",
     department: "IVF & Fertility Wing",
     category: "IVF & Infertility",
-    summary: "Less invasive assisted conception procedure washing and placing active sperm directly into the uterus during ovulation.",
+    summary:
+      "A simple, effective fertility treatment where highly motile sperm is placed directly into the uterus to improve chances of conception.",
     image: "/assets/img/images/IUI.png",
     content: [
-      "In IUI (Intrauterine Insemination), highly motile and processed sperm is placed directly into the woman's uterus, increasing the chances of sperm meeting the egg naturally. The sperm used may be from the woman's partner or a screened donor depending on the medical condition. It is recommended for difficult or painful intercourse, male subfertility, cervical or immunological infertility, endometriosis, ejaculatory problems, or when donor sperm is needed.",
-      "Donor sperm may be advised where the male partner has azoospermia (zero sperm count), poor sperm quality, genetic disorders that could be passed on, or non-obstructive sperm production problems. Donor sperm is quarantined for 6 months to ensure it is free of infections such as HIV.",
-      "Typically 3 IUI cycles are attempted before considering IVF or ICSI if unsuccessful."
+      "A minimally invasive fertility treatment that increases the number of healthy sperm reaching the egg.",
+      "At Maa Nursing Home and NetraJyoti Eyecare Centre, IUI (Intrauterine Insemination) is one of the primary infertility treatments offered to couples. In IUI, highly motile and processed sperms are placed directly into the woman’s uterus, increasing the chances of sperm meeting the egg naturally.",
+      "The sperm used may be from the woman’s partner or a screened donor, depending on the medical condition.",
+      "Recommended for male subfertility, cervical factor infertility, endometriosis, ejaculatory problems, or when donor sperm is needed."
+    ],
+    symptoms: [
+      "Unexplained difficulty conceiving after timed intercourse",
+      "Mild male subfertility (low sperm count or motility)",
+      "Cervical factor infertility or hostile cervical mucus",
+      "Ejaculatory dysfunction or requirement of donor sperm"
+    ],
+    causes: [
+      "Mild male factor subfertility",
+      "Anovulation or cervical mucus hostilities",
+      "Azoospermia in male partner (requiring donor IUI)"
     ],
     diagnosis: [
-      "Consultations and tests to identify the cause of infertility and confirm suitability for IUI",
-      "Ultrasound monitoring of follicle growth during ovarian stimulation"
+      "Comprehensive semen analysis and swim-up/density gradient sperm processing test",
+      "Follicular ultrasound tracking to monitor egg maturation"
     ],
     treatmentSteps: [
-      { title: "Ovarian Stimulation & Monitoring", description: "Oral medications or injections stimulate egg development, tracked via ultrasound until the egg matures." },
-      { title: "Semen Collection & Processing", description: "Semen is collected from the partner (or thawed donor sperm used) and processed via Swim-Up or Density Gradient methods to isolate the most motile sperm." },
-      { title: "Insemination", description: "After an HCG trigger injection induces ovulation, a fine catheter places concentrated sperm directly into the uterus within 12-36 hours." },
-      { title: "Pregnancy Test", description: "A 14-day wait period is followed by a pregnancy test; usually up to 3 cycles are attempted before considering IVF/ICSI." }
+      { title: "Counselling & Ovarian Stimulation", description: "Medications stimulate egg growth monitored by ultrasound follicular scans." },
+      { title: "Semen Collection & Processing", description: "Sperm washed via Swim-Up or Density Gradient to isolate top motile sperm." },
+      { title: "Insemination & 14-Day Wait", description: "Fine catheter places processed sperm in uterus 12–36 hours post-HCG; pregnancy test in 14 days." }
     ],
     benefits: [
-      "Simple, quick (10-15 minutes), non-surgical day-care procedure requiring no anaesthesia",
-      "More affordable than IVF, using enhanced sperm selection techniques",
-      "Best suited for mild-to-moderate infertility",
-      "Precise ovulation timing to maximise natural conception chances"
+      "Simple, quick, and painless procedure taking only 10–15 minutes without anesthesia",
+      "Significantly more affordable first-line treatment than IVF",
+      "Enhanced sperm washing isolates the healthiest motile sperms for direct placement"
     ]
   },
   icsi: {
     slug: "icsi",
-    title: "Intracytoplasmic Sperm Injection (ICSI)",
+    title: "ICSI (Intra-Cytoplasmic Sperm Injection)",
     department: "IVF & Fertility Wing",
     category: "IVF & Infertility",
-    summary: "Micro-manipulation technique injecting a single high-quality sperm cell into the egg to overcome male factor infertility.",
+    summary:
+      "A highly advanced fertilization technique used to overcome severe male infertility and improve IVF success.",
     image: "/assets/img/images/ICSI.png",
     content: [
-      "ICSI (Intra-Cytoplasmic Sperm Injection) is an advanced ART procedure primarily used for severe male infertility. Unlike standard IVF, where eggs and sperm are mixed together, ICSI requires only one good sperm, which is manually injected into the egg by an embryologist, bypassing sperm motility and morphology problems and increasing the chances of successful fertilization. We are equipped with specialized micromanipulation technology and expert embryologists to perform ICSI with high accuracy.",
-      "ICSI benefits couples facing very low or zero sperm count, poor motility, abnormal sperm morphology, obstruction in sperm transport, ejaculation problems, egg penetration issues, failed fertilization in previous IVF cycles, high anti-sperm antibodies, or severe endometriosis in the female partner.",
-      "Children born through ICSI and IVF are generally healthy; ICSI may only slightly increase the chance of passing on certain genetic conditions, usually linked to the underlying infertility in the parents rather than the procedure itself."
+      "A single healthy sperm is directly injected into an egg to achieve fertilization.",
+      "ICSI (Intra-Cytoplasmic Sperm Injection) is an advanced ART (Assisted Reproductive Technology) procedure, primarily used for severe male infertility. Unlike standard IVF—where eggs and sperms are mixed together—ICSI requires only one good sperm, which is manually injected into the egg by an embryologist.",
+      "This bypasses sperm motility and morphology problems and increases the chances of successful fertilization.",
+      "Maa Nursing Home and NetraJyoti Eyecare Centre is equipped with specialized micromanipulation technology and expert embryologists to perform ICSI with high accuracy."
+    ],
+    symptoms: [
+      "Very low or zero sperm count (azoospermia)",
+      "Poor sperm motility or abnormal sperm morphology",
+      "Failed fertilization in previous standard IVF cycles",
+      "High anti-sperm antibodies or severe female endometriosis"
+    ],
+    causes: [
+      "Severe male factor infertility (Oligo-astheno-teratozoospermia)",
+      "Ejaculatory dysfunction or obstructive/non-obstructive azoospermia"
     ],
     diagnosis: [
-      "Detailed evaluation of both partners to determine sperm quality, ovarian reserve and overall fertility health"
+      "Detailed male and female fertility evaluation, semen CASA testing, and ovarian reserve assessment"
     ],
     treatmentSteps: [
-      { title: "Ovarian Stimulation", description: "Fertility injections stimulate the ovaries to produce multiple mature eggs, tracked via ultrasound and blood tests." },
-      { title: "Egg Retrieval", description: "Once follicles mature, eggs are collected via a guided needle under anaesthesia in a short ~15-minute procedure." },
-      { title: "Sperm Selection & Injection", description: "The best-quality sperm is identified and a single sperm is injected directly into each mature egg using specialized micromanipulation equipment; fertilization is assessed the next day." },
-      { title: "Embryo Transfer", description: "Two to five days after fertilization, healthy embryos are transferred into the uterus using a thin catheter; a pregnancy test follows two weeks later." }
+      { title: "Ovarian Stimulation & Egg Retrieval", description: "Injections stimulate ovaries to produce eggs, retrieved under ultrasound guidance." },
+      { title: "Sperm Selection & Micro-Injection (ICSI)", description: "High-magnification micromanipulation selects single motile sperm injected directly into mature egg." },
+      { title: "Embryo Culture & Transfer", description: "Embryos cultured 2–5 days and high-quality embryos transferred into uterus." }
     ],
     benefits: [
-      "Ideal for severe male infertility, requiring only one healthy sperm",
-      "Higher fertilization rates and helps couples with previously failed IVF attempts",
-      "Utilized alongside TESA/PESA surgical sperm retrieval when needed",
-      "Advanced micromanipulation technology with expert embryologists"
+      "Ideal solution for severe male infertility requiring only one healthy sperm cell per egg",
+      "Significantly higher fertilization rates and overcomes past standard IVF failures",
+      "Performed in high-tech micromanipulation labs led by expert embryologists"
     ]
   },
   tesapesa: {
@@ -663,49 +757,60 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     title: "Surgical Sperm Retrieval (TESA / PESA)",
     department: "IVF & Fertility Wing",
     category: "IVF & Infertility",
-    summary: "Minimal aspiration techniques to extract viable sperm directly from the testicles or epididymis for obstructive azoospermia.",
+    summary:
+      "Advanced minimally invasive techniques to retrieve sperm in cases of azoospermia for successful assisted reproduction.",
     image: "/assets/img/images/TESA PESA.png",
     content: [
-      "Some men have very low sperm count or no sperm in their ejaculate (azoospermia). In such cases, sperm can still be retrieved surgically using PESA (Percutaneous Epididymal Sperm Aspiration), which retrieves sperm from the epididymis, or TESA (Testicular Sperm Aspiration), which retrieves sperm directly from the testicular tubules. These retrieved sperm are then used for ICSI to achieve pregnancy.",
-      "Azoospermia may occur due to poor sperm production from genetic or testicular problems, past infections such as mumps, undescended testes, obstruction in the reproductive tract, cystic fibrosis-related absence of vas deferens, previous vasectomy, or trauma/scarring from past surgery. It is classified as obstructive azoospermia (sperm is produced but blocked from release) or non-obstructive azoospermia (impaired sperm production).",
-      "PESA uses a fine needle inserted into the epididymis and works well for obstructive azoospermia, while TESA involves a fine needle inserted directly into the testes to extract tissue containing sperm, which is then dissected in the lab. Both are day-care procedures performed under local anaesthesia. Because surgically retrieved samples contain very few sperm, they are combined with ICSI: the female partner undergoes IVF stimulation, eggs are retrieved the same day, a single sperm is injected into each egg, and healthy embryos are transferred after 2-5 days of culture."
+      "Effective sperm retrieval solutions for men with obstructive or non-obstructive azoospermia.",
+      "Some men have very low sperm count or no sperm in their ejaculate (azoospermia). In such cases, sperm can still be retrieved surgically using PESA or TESA.",
+      "PESA retrieves sperm from the epididymis, while TESA retrieves sperm directly from the testicular tubules. These retrieved sperms are then used for ICSI to achieve pregnancy.",
+      "Both procedures are done under local anaesthesia, are minimally invasive and are day-care procedures."
+    ],
+    symptoms: [
+      "Azoospermia (zero sperm in ejaculated semen)",
+      "Severe male subfertility or ejaculatory obstruction",
+      "History of vasectomy, undescended testes, or testicular trauma"
     ],
     causes: [
-      "Poor sperm production due to genetic or testicular problems",
-      "Past infections (e.g., mumps), undescended testes",
-      "Obstruction in the reproductive tract or absent vas deferens (cystic fibrosis carriers)",
-      "Previous vasectomy or failed reversal; trauma or scarring from past surgery"
+      "Obstructive Azoospermia: Blockage in vas deferens or epididymis (post-infection, post-surgery, or congenital absence)",
+      "Non-Obstructive Azoospermia: Impaired sperm production due to genetic, hormonal, or testicular causes"
+    ],
+    diagnosis: [
+      "Hormone blood assays (FSH, LH, Testosterone) and testicular ultrasound",
+      "Sperm retrieval trial and lab dissection under high-magnification microscope"
     ],
     treatmentSteps: [
-      { title: "PESA", description: "A fine needle is inserted into the epididymis to retrieve sperm — effective for obstructive azoospermia." },
-      { title: "TESA", description: "A fine needle is inserted directly into the testes to extract tissue containing sperm, which is dissected in the lab to find sperm cells." },
-      { title: "Combination with ICSI", description: "The female partner undergoes IVF stimulation and egg retrieval on the same day; a single retrieved sperm is injected into each egg via ICSI." },
-      { title: "Embryo Transfer & Freezing", description: "Embryos are cultured for 2-5 days and transferred into the uterus; extra sperm samples can be frozen for future IVF/ICSI cycles." }
+      { title: "PESA (Percutaneous Epididymal Sperm Aspiration)", description: "Fine needle inserted into the epididymis to retrieve sperm in obstructive azoospermia under local anesthesia." },
+      { title: "TESA (Testicular Sperm Aspiration)", description: "Fine needle inserted directly into the testes to extract testicular tissue for micro-dissection." },
+      { title: "ICSI Fertilization & Cryopreservation", description: "Retrieved sperm injected into retrieved eggs via ICSI; extra sperm frozen for future cycles." }
     ],
     benefits: [
-      "Enables biological fatherhood even with zero sperm in the ejaculate",
-      "Minimally invasive, local-anaesthesia, day-care procedure with quick recovery",
-      "Works for both obstructive and non-obstructive azoospermia",
-      "High success rates when combined with ICSI"
+      "Enables biological fatherhood even with zero sperm in ejaculated semen",
+      "Minimally invasive, day-care procedure under local anesthesia with rapid recovery",
+      "High success rates when combined with ICSI fertilization"
     ]
   },
   pcod: {
     slug: "pcod",
-    title: "PCOD / PCOS Management",
-    department: "Gynecology & Women's Health",
-    category: "Gynecology & Obstetrics",
-    summary: "Holistic medical, lifestyle, and hormonal management for Polycystic Ovarian Syndrome and fertility restoration.",
+    title: "Polycystic Ovarian Disease (PCOD / PCOS)",
+    department: "Gynaecology & Obstetrics",
+    category: "Gynaec Care",
+    summary:
+      "A common hormonal disorder in young women that affects ovulation, menstrual cycles, fertility and long-term health — manageable with timely diagnosis, lifestyle changes and medical care.",
     image: "/assets/img/images/pcod.jpeg",
     content: [
-      "In PCOD/PCOS, hormonal balance is disturbed and male-type hormones (androgens) increase, leading to irregular periods and the formation of multiple small fluid-filled cysts in the ovaries. These cysts contain immature eggs that do not get released on time, and when eggs are not released regularly (anovulation), it becomes difficult to conceive naturally — PCOS is one of the most common causes of female infertility. Women with PCOS also have an increased risk of pregnancy complications such as high blood pressure, gestational diabetes and miscarriage.",
-      "PCOS commonly affects women between 15 and 44 years of age, and many are unaware of the condition until they see a fertility specialist. The exact cause is not fully known, but genetics, insulin resistance and chronic low-grade inflammation are thought to play a role.",
-      "Treatment combines lifestyle changes (diet, exercise, weight loss) with hormone therapy and fertility-focused treatments when needed. Even a 5-10% reduction in body weight can significantly improve ovulation, hormone balance and chances of pregnancy."
+      "A hormonal imbalance where ovaries become enlarged and develop multiple small cysts, often causing irregular periods and difficulty conceiving.",
+      "Girls usually begin to menstruate around the age of 12. During this time, the body releases hormones such as oestrogen and progesterone in a balanced manner. In some girls and women, this balance is disturbed and male-type hormones (androgens) increase, leading to irregular periods and the formation of multiple cysts in the ovaries.",
+      "In PCOD, the ovaries are enlarged and contain many small fluid-filled sacs (cysts). These cysts contain immature eggs that do not get released on time. When eggs are not released regularly (anovulation), it becomes difficult to conceive naturally. PCOS is one of the most common causes of female infertility.",
+      "Women with PCOS also have an increased risk of complications in pregnancy such as high blood pressure, gestational diabetes and miscarriage. PCOS commonly affects women between 15 and 44 years of age."
     ],
     symptoms: [
-      "Irregular or missed periods",
-      "Hirsutism (excess facial and body hair), acne or hair loss from high androgen levels",
-      "Difficulty conceiving due to anovulation",
-      "Enlarged ovaries with multiple small cysts on ultrasound"
+      "Irregular, infrequent, or prolonged menstrual cycles",
+      "Hirsutism: Excess facial and body hair growth",
+      "Severe acne and oily skin",
+      "Male-pattern baldness or thinning hair",
+      "Unexplained weight gain and difficulty losing weight",
+      "Darkening of skin in skin creases (acanthosis nigricans)"
     ],
     causes: [
       "Hereditary tendency and family history of PCOS or irregular periods",
@@ -735,21 +840,24 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   },
   amenorrhea: {
     slug: "amenorrhea",
-    title: "Amenorrhea (Absence of Menses) Care",
-    department: "Gynecology & Women's Health",
-    category: "Gynecology & Obstetrics",
-    summary: "Endocrine investigation and treatment for primary and secondary absence of menstrual cycles.",
+    title: "Amenorrhea",
+    department: "Gynaecology & Obstetrics",
+    category: "Gynaec Care",
+    summary:
+      "Absence of menstrual periods outside of pregnancy, breastfeeding or menopause — a condition that needs evaluation to protect long-term reproductive and hormonal health.",
     image: "/assets/img/images/Amenorrhea.jpg",
     content: [
-      "Amenorrhea is the absence of menstrual periods in a woman during her reproductive years, apart from natural causes such as pregnancy, breastfeeding and menopause. It is classified as Primary Amenorrhea — when a girl has not had her first period by age 16 with poorly developed secondary sexual characteristics — or Secondary Amenorrhea, when a woman with previously regular cycles stops menstruating for about 6 months without being pregnant, breastfeeding or post-menopausal.",
-      "Causes of primary amenorrhea include hereditary factors, genetic disorders such as Turner's syndrome, and congenital abnormalities like Müllerian defects. Causes of secondary amenorrhea include stopping oral contraceptives, stress and depression, low body mass index or eating disorders, heavy exercise, certain psychiatric medications, chronic illness, hypothyroidism, Asherman's syndrome (uterine scar tissue), and prolactin-secreting pituitary tumours.",
-      "Treatment depends on the underlying cause. If no structural abnormality is found, hormone replacement therapy, medications for thyroid or prolactin disorders, lifestyle changes and diet correction are used; when structural abnormalities such as Müllerian defects or Asherman's syndrome are present, surgical correction may be advised. Early diagnosis protects bone health, hormonal balance, fertility and overall wellbeing."
+      "Amenorrhea is the absence of menstrual periods in a woman during her reproductive years, apart from natural causes such as pregnancy, breastfeeding and menopause.",
+      "Menstruation is a natural monthly cycle that usually starts around the age of 12 and continues until about 50–51 years. During each cycle, the uterine lining builds up and is shed as menstrual bleeding if pregnancy does not occur.",
+      "Women normally do not get their periods during pregnancy, breastfeeding (lactational amenorrhoea) and after menopause. When periods are absent outside of these natural causes, the condition is known as amenorrhea.",
+      "Primary Amenorrhea occurs when a girl does not get her first period by age 16 with poorly developed secondary sexual characteristics. Secondary Amenorrhea occurs when a woman with previously regular cycles stops menstruating for 6 months."
     ],
     symptoms: [
-      "Absence of menstrual periods",
-      "Lack of breast development in young girls with primary amenorrhea",
-      "Excess facial or body hair; vaginal dryness",
-      "Milky nipple discharge (galactorrhoea)"
+      "Absence of menstrual periods outside of pregnancy/menopause",
+      "Lack of breast development in young girls (Primary Amenorrhea)",
+      "Excess facial or body hair (hirsutism)",
+      "Vaginal dryness",
+      "Galactorrhoea: Milky discharge from nipples"
     ],
     causes: [
       "Hereditary factors and genetic disorders (e.g. Turner's syndrome) for primary amenorrhea",
@@ -779,21 +887,24 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   },
   endometriosis: {
     slug: "endometriosis",
-    title: "Endometriosis Medical & Laparoscopic Care",
-    department: "Gynecology & Women's Health",
-    category: "Gynecology & Obstetrics",
-    summary: "Diagnosis and pain relief for endometrial tissue growth outside the uterine cavity.",
+    title: "Endometriosis",
+    department: "Gynaecology & Obstetrics",
+    category: "Gynaec Care",
+    summary:
+      "A chronic gynaecological condition where endometrial tissue grows outside the uterus, causing pain, heavy periods and sometimes infertility.",
     image: "/assets/img/images/Endometriosis.jpeg",
     content: [
-      "Endometriosis is a disorder in which endometrial tissue — the lining of the uterus — grows outside the uterus, commonly on the ovaries, fallopian tubes, intestines and pelvic lining. This misplaced tissue still thickens, breaks down and bleeds with each menstrual cycle, but since the blood has no natural passage to exit the body, it causes inflammation, pain, cysts and adhesions (organs sticking together). It affects 5-10% of women and symptoms can range from mild to very severe, including infertility.",
-      "The exact cause is unknown, but theories include retrograde menstruation (menstrual blood flowing backwards through the fallopian tubes into the pelvis), coelomic metaplasia (pelvic lining cells transforming into endometrial-like tissue), direct transplantation during surgery, spread via blood or lymph, and immune system changes that fail to clear misplaced endometrial tissue.",
-      "Treatment depends on symptom severity, age and fertility wishes. Medical management uses pain-relief medicines and hormone-suppressing drugs to reduce cyclical activity and slow disease progression. In severe cases, especially with uncontrolled pain or infertility, laparoscopic surgery removes endometriotic implants, resects adhesions, and restores normal pelvic anatomy — offering better visualisation, smaller incisions, faster recovery and improved chances of pregnancy."
+      "A common condition affecting 5–10% of women, often presenting with severe pain, heavy bleeding and fertility issues.",
+      "Endometriosis is a disorder in which endometrial tissue (the lining of the uterus) grows outside the uterus — commonly on the ovaries, fallopian tubes, intestines and pelvic lining.",
+      "These tissues still behave like normal endometrium: they thicken, break down and bleed with each menstrual cycle. But since this blood has no natural passage to exit the body, it causes inflammation, pain, cysts and adhesions (organs sticking together).",
+      "Symptoms can range from mild to very severe and may include infertility. At Maa Nursing Home and NetraJyoti Eyecare Centre, endometriosis is treated with medicines and, in severe cases, laparoscopic surgery."
     ],
     symptoms: [
-      "Pelvic pain, often worsening during periods; pain radiating to thighs and legs",
-      "Heavy or prolonged menstrual bleeding with clots; premenstrual spotting",
+      "Pelvic pain (often worsening during periods)",
+      "Heavy or prolonged menstrual bleeding with blood clots",
+      "Premenstrual spotting and pain radiating to thighs and legs",
       "Infertility and chronic fatigue",
-      "Constipation, diarrhoea, bloating and pain while passing motions",
+      "Constipation, diarrhoea, bloating, or pain while passing motions",
       "Depression and anxiety due to chronic pain"
     ],
     causes: [
@@ -819,19 +930,21 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   dub: {
     slug: "dub",
     title: "Dysfunctional Uterine Bleeding (DUB)",
-    department: "Gynecology & Women's Health",
-    category: "Gynecology & Obstetrics",
-    summary: "Investigation and medical/surgical management for abnormal, heavy, or irregular menstrual bleeding.",
+    department: "Gynaecology & Obstetrics",
+    category: "Gynaec Care",
+    summary:
+      "Abnormal or irregular uterine bleeding not related to pregnancy, structural disease, or infection — most commonly caused by hormonal imbalance and requiring timely gynecological evaluation.",
     image: "/assets/img/images/Dysfunctional Uterine Bleeding (DUB).jpg",
     content: [
-      "Dysfunctional Uterine Bleeding (DUB) refers to abnormal, irregular or excessive uterine bleeding that occurs in the absence of pregnancy, infection, tumors or other pelvic disease — most commonly related to hormonal disturbances affecting the normal menstrual cycle. It is frequently seen in adolescents and women approaching menopause, when hormonal fluctuations are common.",
-      "DUB is classified as Anovulatory Bleeding, which occurs when ovulation does not take place, leading to irregular, prolonged or heavy bleeding, or Ovulatory Bleeding, with regular cycles but excessive or prolonged flow due to hormonal imbalance. If left untreated, DUB can result in anemia, fatigue, weakness and a significant impact on quality of life, and can also lead to endometrial hyperplasia (thickening of the uterine lining).",
-      "We provide accurate diagnosis and personalized treatment plans to restore hormonal balance and prevent complications, with most patients responding well and regular follow-up monitoring cycle regularity and overall health."
+      "Abnormal uterine bleeding without any structural disease — commonly caused by hormonal imbalance.",
+      "Dysfunctional Uterine Bleeding (DUB) refers to abnormal, irregular or excessive uterine bleeding that occurs in the absence of pregnancy, infection, tumors or other pelvic disease.",
+      "DUB is frequently seen in adolescents and women approaching menopause, when hormonal fluctuations are common. At Maa Nursing Home, we provide accurate diagnosis and personalized treatment plans.",
+      "Types include Anovulatory Bleeding (when ovulation does not take place, leading to irregular/prolonged bleeding) and Ovulatory Bleeding (regular cycles with excessive flow)."
     ],
     symptoms: [
-      "Heavy menstrual bleeding; bleeding between periods",
-      "Prolonged menstrual cycles; irregular or missed periods",
-      "Fatigue and weakness due to anemia"
+      "Heavy menstrual bleeding and bleeding between periods",
+      "Prolonged menstrual cycles or irregular/missed periods",
+      "Fatigue, weakness, and anemia due to excessive blood loss"
     ],
     causes: [
       "Anovulation — absence of ovulation leading to irregular, prolonged or heavy bleeding",
@@ -858,121 +971,164 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
   },
   menopause: {
     slug: "menopause",
-    title: "Menopause & Post-Menopausal Clinic",
-    department: "Gynecology & Women's Health",
-    category: "Gynecology & Obstetrics",
-    summary: "Guidance, bone density screening, and symptom management for women transitioning through menopause.",
+    title: "Menopause",
+    department: "Gynaecology & Obstetrics",
+    category: "Gynaec Care",
+    summary:
+      "Guidance and care for women transitioning through menopause — managing hormonal changes, symptoms and long-term health with comfort and support.",
     image: "/assets/img/images/Menopause.jpg",
     content: [
-      "Menopause is the stage when a woman permanently stops getting her periods, caused by a natural decline in reproductive hormones — mainly oestrogen and progesterone. If a woman has not had her period for 12 months, she is considered to be in menopause; most women experience symptoms after age 40, and the transition progresses gradually through perimenopause, menopause, and post-menopause over several years.",
-      "Declining oestrogen levels may contribute to bone loss and osteoporosis, higher risk of heart disease, urinary problems, increased risk of Alzheimer's disease, loss of muscle mass, skin thinning, and poorer vision. Premature menopause can result from premature ovarian failure, surgical removal of the ovaries, or chemotherapy/radiation damaging ovarian function.",
-      "Our dedicated Menopause Clinic manages symptoms through Hormone Replacement Therapy (HRT), topical hormone therapy for vaginal dryness, non-hormonal medicines for hot flashes, and medicines for osteoporosis, alongside lifestyle guidance covering exercise, yoga, pelvic floor strengthening, and diet."
+      "A natural transition marking the end of menstrual cycles, often accompanied by physical and emotional changes.",
+      "Maa Nursing Home and NetraJyoti Eyecare Centre has a dedicated Menopause Clinic that understands the unique needs of women going through this transition and supports them with personalised guidance and care.",
+      "Menopause is the stage when a woman permanently stops getting her periods. It is caused by a natural decline in reproductive hormones — mainly oestrogen and progesterone. If a woman has not had her period for 12 months, she is considered to be in menopause.",
+      "Most women experience symptoms after the age of 40. Menopause is not sudden — it progresses gradually over several years through perimenopause, menopause, and post-menopause."
     ],
     symptoms: [
-      "Irregular periods, hot flashes and night sweats",
+      "Irregular periods and hot flashes/night sweats",
       "Vaginal dryness and pain during intercourse",
-      "Fatigue, disturbed sleep, mood swings and irritability",
-      "Hair thinning, dry skin, urinary incontinence, heart palpitations",
-      "Bone loss (osteoporosis) and low sex drive"
+      "Fatigue, disturbed sleep, and mood swings/irritability",
+      "Dry skin, dry eyes, dry mouth, and hair thinning",
+      "Urinary incontinence or urgency",
+      "Bone loss (osteoporosis risk) and weight gain"
+    ],
+    causes: [
+      "Natural age-related decline in ovarian estrogen and progesterone production",
+      "Premature ovarian failure (ovaries stopping before age 40)",
+      "Surgical removal of ovaries (hysterectomy with oophorectomy)",
+      "Chemotherapy or radiation therapy damaging ovarian tissue"
     ],
     diagnosis: [
-      "Detailed symptom evaluation and tracking of menstrual patterns",
+      "Detailed symptom tracking and menstrual pattern evaluation",
       "Blood tests to check hormone levels (FSH, LH, oestrogen)",
-      "Thyroid tests if needed"
+      "Bone Mineral Density (DEXA scan) screening for post-menopausal bone health"
     ],
     treatmentSteps: [
-      { title: "Symptom Evaluation", description: "Detailed history, menstrual pattern tracking, and hormone level testing (FSH, LH, oestrogen) confirm the stage of menopause." },
-      { title: "Hormone Replacement Therapy", description: "HRT or topical hormone therapy addresses vaginal dryness and severe hormonal symptoms." },
-      { title: "Symptomatic Management", description: "Non-hormonal medicines for hot flashes and medicines for osteoporosis are prescribed as needed." },
-      { title: "Lifestyle Guidance", description: "Regular exercise, yoga, Kegel exercises, healthy diet and regular health check-ups support long-term wellbeing." }
+      { title: "Hormone Replacement Therapy (HRT)", description: "Customized estrogen-progesterone therapy to manage severe hot flashes and systemic symptoms." },
+      { title: "Topical Vaginal Estrogen", description: "Local estrogen creams/tablets for vaginal atrophy, dryness, and urinary comfort." },
+      { title: "Osteoporosis Prevention & Lifestyle Care", description: "Calcium, Vitamin D3, bone-sparing medications, and weight-bearing exercise routines." }
     ],
     benefits: [
-      "Osteoporosis & bone health screening",
-      "Personalised symptomatic hot flash and mood-change relief guidance",
-      "Cardiovascular, urinary and pelvic health checks",
-      "Holistic lifestyle guidance from a dedicated menopause care team"
+      "Dedicated Menopause Clinic care by senior gynaecologist Dr. Jyoti Shah",
+      "Hormone Replacement Therapy (HRT) and non-hormonal management options",
+      "Comprehensive screening for post-menopausal bone loss and heart health"
     ]
   },
   obstetrics: {
     slug: "obstetrics",
-    title: "Obstetrics & Maternity Care",
-    department: "Gynecology & Women's Health",
-    category: "Gynecology & Obstetrics",
-    summary: "Comprehensive pregnancy monitoring, high-risk obstetrics, normal delivery, and post-natal care by Dr. Jyoti Shah.",
+    title: "Obstetrics (Maternity Care)",
+    department: "Gynaecology & Obstetrics",
+    category: "Gynaec Care",
+    summary:
+      "Comprehensive pregnancy and childbirth care in a warm, safe and homely environment — from pre-conception to delivery and postnatal support.",
     image: "/assets/img/images/Obstetrics (Maternity Care).jpg",
     content: [
-      "Our Obstetrics department, led by Dr Jyoti Shah, offers a warm, cosy and reassuring environment for the entire maternity journey — from registration of pregnancy to safe delivery. We provide comprehensive pre-natal and antenatal care, and offer different delivery options depending on the mother's health and preferences, always prioritising safety for both mother and baby.",
-      "Services include prenatal & postnatal counselling, antenatal and postnatal classes & yoga, a well-equipped labour room and operation theatre, fetal medicine & genetics support, and NST/intrapartum fetal heart rate monitoring. Delivery options include normal vaginal delivery, C-section, high-risk delivery management, and pain-free delivery where medically appropriate, with instrumental delivery (forceps, vacuum extraction, Kiwicep) available when needed.",
-      "Special care and monitoring are provided for high-risk pregnancies including anaemia, high blood pressure, diabetes, eclampsia/pre-eclampsia, preterm labour, multiple pregnancies, and antepartum/postpartum haemorrhage. We also offer family planning services (sterilisation, Copper-T/IUD insertion) and, as a Government-registered Abortion Centre, safe and legal Medical Termination of Pregnancy (MTP) with confidential counselling."
+      "A 'home away from home' for mothers-to-be, with personalised care throughout pregnancy, childbirth and the postnatal period.",
+      "Motherhood is one of the most beautiful experiences in a woman’s life. Maa Nursing Home and NetraJyoti Eyecare Centre offers a warm, cosy and reassuring environment for your entire maternity journey — from registration of pregnancy to the safe delivery of your baby.",
+      "Our Obstetrics department is led by Dr Jyoti Shah, a senior and well-known gynaecologist and obstetrician, who personally attends to every expectant mother with care and compassion.",
+      "We provide comprehensive pre-natal and antenatal care, and offer different delivery options depending on the mother’s health condition and preferences — always prioritising safety for both mother and baby."
+    ],
+    symptoms: [
+      "Prenatal screening and routine pregnancy check-ups",
+      "High-risk pregnancy complications (hypertension, diabetes, eclampsia)",
+      "Preterm labor or risk of premature delivery",
+      "Multiple pregnancies (twins, triplets)",
+      "Antepartum or postpartum hemorrhage management"
+    ],
+    causes: [
+      "Normal physiological pregnancy changes",
+      "High-risk maternal conditions requiring specialist monitoring"
+    ],
+    diagnosis: [
+      "Ultrasonography, NST (Non-Stress Test), and fetal heart rate monitoring",
+      "Fetal medicine, genetics support, and routine blood/urine antenatal profiles"
     ],
     treatmentSteps: [
-      { title: "Preconception & Antenatal Care", description: "Pre-marital counselling, routine pregnancy check-ups, and antenatal classes and yoga throughout the pregnancy." },
-      { title: "Monitoring & High-Risk Management", description: "NST and intrapartum fetal heart rate monitoring, with special care for high-risk pregnancies such as pre-eclampsia, preterm labour, or multiple pregnancies." },
-      { title: "Delivery", description: "Normal vaginal delivery, C-section, pain-free delivery (where appropriate), or assisted instrumental delivery with forceps, vacuum extraction or Kiwicep." },
-      { title: "Postnatal Support", description: "Breastfeeding education, postnatal recovery guidance, and family planning or contraception counselling." }
+      { title: "Normal & Pain-Free Delivery", description: "Safe vaginal delivery in a well-equipped labor room with pain-free delivery options." },
+      { title: "C-Section & High-Risk Management", description: "Cesarean delivery and expert management for high-risk maternal/fetal conditions." },
+      { title: "Instrumental Delivery & Postnatal Care", description: "Forceps/vacuum assisted delivery, breastfeeding counseling, and legal MTP/family planning services." }
     ],
     benefits: [
-      "High-risk pregnancy monitoring under the personal care of Dr Jyoti Shah",
-      "Normal and pain-free delivery facilities alongside C-section capability",
-      "Well-equipped labour room, operation theatre, and fetal medicine support",
-      "Government-registered abortion centre with confidential MTP services"
+      "Personalized maternity care led by senior obstetrician Dr. Jyoti Shah",
+      "Safe normal delivery, pain-free labor, and C-section facilities",
+      "Government-registered facility for safe MTP, high-risk care, and family planning"
     ]
   },
   laparoscopy: {
     slug: "laparoscopy",
-    title: "Advanced Laparoscopic Surgery",
+    title: "Laparoscopy",
     department: "Laparoscopic Surgical Wing",
     category: "Laparoscopy & Surgery",
-    summary: "Minimally invasive keyhole procedures for ovarian cysts, fibroids, endometriosis, and hysterectomy.",
+    summary:
+      "A minimally invasive diagnostic and therapeutic procedure used to evaluate and treat infertility and various gynaecological conditions.",
     image: "/assets/img/images/Laparoscopy.jpeg",
     content: [
-      "Laparoscopy is a minimally invasive procedure that allows the doctor to look directly at the uterus, fallopian tubes, ovaries and pelvic structures. It is extremely useful in evaluating unexplained infertility and treating abnormalities that prevent conception. The surgeon makes 2-3 small incisions in the abdomen and inserts thin fibre-optic instruments equipped with a light and camera; if abnormalities are found, they can often be corrected during the same procedure, avoiding major surgery.",
-      "Laparoscopy is beneficial for endometriosis, blocked or damaged fallopian tubes, ovarian cysts, fibroids, pelvic adhesions, pelvic inflammatory disease, chronic pelvic pain, ectopic pregnancy, genital tuberculosis, polycystic ovaries (ovarian drilling), tubal pathology such as hydrosalpinx removal before IVF, uterine prolapse correction, the Burch procedure for urinary incontinence, and tubal ligation.",
-      "Laparoscopy is generally a day-care procedure performed under general anaesthesia, typically taking 20 minutes to 2 hours depending on complexity. Most patients go home the same day and need 1-2 days of rest, with mild-to-moderate discomfort lasting up to a week. When performed by expert surgeons it is very safe, though rare risks include injury to the bladder, ureter or bowel, damage to blood vessels, and infection or bleeding."
+      "A key-hole surgical method used to diagnose and treat conditions affecting a woman’s reproductive health.",
+      "Laparoscopy is a minimally invasive procedure that allows the doctor to look directly at the uterus, fallopian tubes, ovaries and pelvic structures. It is extremely useful in evaluating unexplained infertility and treating abnormalities that prevent conception.",
+      "The surgeon makes 2–3 small incisions in the abdomen and inserts thin fibre-optic instruments equipped with a light and camera. If abnormalities are found, they can often be corrected during the same procedure, avoiding major surgery."
+    ],
+    symptoms: [
+      "Unexplained infertility or repeated pregnancy loss",
+      "Endometriosis and chronic pelvic pain",
+      "Ovarian cysts, fibroids, or pelvic adhesions",
+      "Blocked or damaged fallopian tubes (hydrosalpinx)"
+    ],
+    causes: [
+      "Pelvic inflammatory disease (PID) or genital tuberculosis (TB)",
+      "Endometriosis implants causing pelvic adhesions",
+      "PCOS requiring laparoscopic ovarian drilling"
     ],
     diagnosis: [
-      "Direct visualization of the uterus, fallopian tubes, ovaries and pelvic structures via fibre-optic camera",
-      "Evaluation for unexplained infertility, endometriosis, adhesions or tubal pathology"
+      "Direct laparoscopy visualization via 2-3 keyhole abdominal incisions",
+      "Diagnostic chromopertubation (tubal dye test) during laparoscopy"
     ],
     treatmentSteps: [
-      { title: "Small Incisions", description: "2-3 small abdominal incisions allow insertion of thin fibre-optic instruments with a light and camera." },
-      { title: "Diagnostic Visualization", description: "Direct inspection of the uterus, tubes, ovaries and pelvic structures identifies the underlying abnormality." },
-      { title: "Same-Sitting Correction", description: "Abnormalities such as cysts, adhesions, endometriosis or blocked tubes are corrected in the same procedure where possible." },
-      { title: "Recovery", description: "Most patients go home the same day, with 1-2 days of rest and mild discomfort lasting up to a week." }
+      { title: "Keyhole Incision & Scope Insertion", description: "2-3 small 5mm incisions made in the abdomen for camera and micro-instrument access." },
+      { title: "Diagnostic Survey & Chromopertubation", description: "Inspection of pelvic organs and methylene blue dye injection to confirm tubal patency." },
+      { title: "Surgical Correction & Day-Care Recovery", description: "Adhesiolysis, cystectomy, fibroid removal, or tubal clipping performed with same-day discharge." }
     ],
     benefits: [
-      "Minimally invasive with very small cuts, lower infection risk, and better cosmetic results",
-      "Faster recovery and shorter hospital stay than open surgery",
-      "Diagnoses and treats the root cause of infertility in the same procedure",
-      "Improves chances of conception naturally or through IVF"
+      "Minimally invasive keyhole surgery with tiny incisions and minimal scarring",
+      "Diagnoses and treats root causes of infertility in a single day-care sitting",
+      "Rapid recovery with 1–2 days of rest compared to open abdominal surgery"
     ]
   },
   hysteroscopy: {
     slug: "hysteroscopy",
-    title: "Diagnostic & Operative Hysteroscopy",
-    department: "Laparoscopic Surgical Wing",
-    category: "Laparoscopy & Surgery",
-    summary: "Incisionless endoscopic examination and treatment of the uterine cavity for polyps, fibroids, and septum.",
+    title: "Hysteroscopy",
+    department: "IVF & Fertility Wing",
+    category: "IVF & Infertility",
+    summary:
+      "A minimally invasive procedure that allows direct visualization and treatment of abnormalities inside the uterus.",
     image: "/assets/img/images/Hysteroscopy.png",
     content: [
-      "Hysteroscopy is a short, minimally invasive procedure used when a woman experiences heavy bleeding, painful periods, infertility, or recurrent miscarriages. A hysteroscope — a thin fibre-optic telescope — is inserted through the vagina and cervix to directly visualize the uterine cavity, used for both diagnosis and treatment of fibroids, endometrial polyps, intrauterine scar tissue (adhesions), uterine septum or congenital malformations, tubal block at the utero-tubal junction, and uterine lesions interfering with IVF implantation.",
-      "Diagnostic hysteroscopy usually takes about 30 minutes and can be done under local anaesthesia; operative hysteroscopy may require general anaesthesia. If abnormalities such as polyps, fibroids or scar tissue are found during diagnostic hysteroscopy, the surgeon can remove them in the same sitting — known as operative hysteroscopy — preventing the need for multiple surgeries. Hysteroscopic Tubal Cannulation is an advanced technique for treating proximal tubal blockage, where a fine guidewire clears mucus plugs or debris from a blocked tube, restoring tubal patency without major surgery.",
-      "Hysteroscopy offers direct visualization of the uterus, allowing doctors to identify issues that hinder embryo implantation or lead to recurrent miscarriage. It is often recommended before IVF or when repeated IVF cycles fail due to suspected uterine pathology, and correcting abnormalities improves conception and pregnancy success rates. When performed by trained specialists it is very safe, though rare risks include infection, uterine perforation, vaginal bleeding and fluid overload."
+      "A thin telescope-like instrument is used to examine the cervix and uterus to diagnose and treat reproductive abnormalities.",
+      "Hysteroscopy is a short, minimally invasive procedure used when a woman experiences heavy bleeding, painful periods, infertility, or recurrent miscarriages. A hysteroscope (a thin fibre-optic telescope) is inserted through the vagina to directly visualize the uterine cavity.",
+      "It is used for both diagnosis and treatment, often helping identify and correct fibroids, endometrial polyps, intrauterine scar tissue (adhesions), uterine septum, tubal block at the utero-tubal junction, and lesions interfering with IVF implantation.",
+      "Diagnostic hysteroscopy usually takes about 30 minutes under local anaesthesia. If abnormalities are found, they can be removed in the same sitting (operative hysteroscopy)."
+    ],
+    symptoms: [
+      "Heavy bleeding or painful menstrual periods",
+      "Unexplained infertility or repeated IVF implantation failures",
+      "Recurrent miscarriages",
+      "Abnormal uterine bleeding outside menstruation"
+    ],
+    causes: [
+      "Endometrial polyps, submucosal fibroids, or uterine septum",
+      "Intrauterine adhesions (Asherman’s syndrome) or cornual tubal blockage",
+      "Endometritis or adenomyosis affecting the uterine cavity"
     ],
     diagnosis: [
-      "Direct visualization of the uterine cavity via a thin fibre-optic hysteroscope",
-      "Identification of fibroids, polyps, adhesions, septum or tubal block"
+      "Diagnostic hysteroscopy directly visualizing the cervical canal and uterine cavity",
+      "Pre-IVF cavity evaluation and histopathological assessment of uterine lining"
     ],
     treatmentSteps: [
-      { title: "Diagnostic Hysteroscopy", description: "A thin hysteroscope is passed through the vagina and cervix to directly visualize the uterine cavity, typically taking about 30 minutes under local anaesthesia." },
-      { title: "Operative Hysteroscopy", description: "Polyps, fibroids or scar tissue found during diagnosis are removed in the same sitting, avoiding a separate surgery." },
-      { title: "Hysteroscopic Tubal Cannulation", description: "For proximal tubal blockage, a fine guidewire clears mucus plugs or debris through the hysteroscope to restore tubal patency." }
+      { title: "Diagnostic Hysteroscopy", description: "30-minute evaluation using a thin fibre-optic telescope under local anaesthesia." },
+      { title: "Operative Hysteroscopy", description: "Same-sitting surgical removal of polyps, fibroids, or scar tissue under direct vision." },
+      { title: "Hysteroscopic Tubal Cannulation", description: "Guidewire insertion to clear mucus plugs and restore tubal patency in cornual blocks." }
     ],
     benefits: [
-      "Zero abdominal incisions with direct visualization of the uterine cavity",
-      "Diagnoses hidden causes of infertility and recurrent miscarriage",
-      "Treats polyps, fibroids, septum and adhesions in the same sitting",
-      "Improves IVF success rates with minimally invasive, quick recovery and same-day discharge"
+      "Direct visualization of the uterine cavity without external abdominal incisions",
+      "Significantly improves IVF implantation rates and resolves recurrent miscarriages"
     ]
   }
 };

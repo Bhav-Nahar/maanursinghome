@@ -6,9 +6,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Frequently Asked Questions (FAQ) | Maa Nursing Home",
+  title:
+    "FAQs | Best Eye Hospital & IVF Specialist in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz",
   description:
-    "Find answers to common questions regarding appointments, LASIK, Cataract surgery, IVF treatment, and hospital policies.",
+    "Find answers to common questions about cataract surgery, LASIK, infertility treatments, and gynaecological care at Maa Nursing Home in Malad, Mumbai. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function FAQPage() {

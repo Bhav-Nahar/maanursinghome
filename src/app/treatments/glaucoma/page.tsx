@@ -8,9 +8,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { Eye, ChevronRight, Info, CheckCircle2, ShieldCheck, Clock, FileSearch, Zap, Activity } from "lucide-react";
 
 export const metadata = {
-  title: "Glaucoma Diagnosis & Treatment in Malad, Mumbai",
+  title:
+    "Glaucoma Diagnosis & Treatment in Malad, Mumbai in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Eye Specialist",
   description:
-    "Expert glaucoma management in Malad West, Mumbai. Early diagnosis, laser treatment, and advanced surgery to prevent vision loss and protect optic nerve health.",
+    "Expert glaucoma management in Malad West, Mumbai. Early diagnosis, laser treatment, and advanced surgery to prevent vision loss and protect optic nerve health. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function GlaucomaPage() {

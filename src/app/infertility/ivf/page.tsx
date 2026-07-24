@@ -8,9 +8,9 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { ChevronRight, CheckCircle2, HeartPulse, ShieldCheck, Clock, Activity, Baby, Microscope, Sparkles, CircleDot } from "lucide-react";
 
 export const metadata = {
-  title: "Best IVF Centre in Malad, Mumbai",
+  title: "Best IVF Centre in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Maa Nursing Home is recognized as the best IVF centre in Malad West, Mumbai. Under Dr. Jyoti Shah, we offer high-success, ethical, and affordable IVF treatments.",
+    "Maa Nursing Home is recognized as the best IVF centre in Malad West, Mumbai. Under Dr. Jyoti Shah, we offer high-success, ethical, and affordable IVF treatments. Along with top gynaecology care, our center offers the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon services in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function IVFPage() {

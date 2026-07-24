@@ -7,9 +7,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { HeartPulse, ShieldCheck, Users, Phone, CheckCircle2, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "Dr. Jyoti Shah | Senior Gynaecologist & IVF Specialist in Malad, Mumbai",
+  title:
+    "Dr. Jyoti Shah | Senior Gynaecologist & IVF Specialist in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz",
   description:
-    "Meet Dr. Jyoti Shah, senior gynaecologist and infertility specialist in Malad West, Mumbai. Over 30 years of experience in IVF, high-risk obstetrics, and compassionate women's health care.",
+    "Meet Dr. Jyoti Shah, an expert gynaecologist and infertility specialist in Malad, Mumbai. Over 30 years of experience in IVF, high-risk obstetrics, and compassionate women's health care. Along with top gynaecology care, our center offers the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon services in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function DrJyotiPage() {
@@ -122,21 +123,21 @@ export default function DrJyotiPage() {
                   </div>
 
                   <p className="text-slate-700 text-xs leading-relaxed">
-                    Inspired by India’s first IVF success in 1986 under Dr Indira Hinduja, Dr Jyoti Shah pursued gynaecology at K.E.M. Medical College and trained directly under Dr Hinduja. With over 30 years of clinical experience, she specializes in Assisted Reproductive Technologies (IVF, ICSI, IUI), management of PCOD, high-risk obstetrics, and laparoscopic surgeries.
+                    Inspired by India’s first IVF success in 1986 under Dr Indira Hinduja, Dr Jyoti Shah pursued gynaecology at K.E.M. Medical College and trained directly under IVF pioneers Dr Indira Hinduja and Dr Sadhana Desai. Over the last 30+ years, she has helped hundreds of couples achieve parenthood and successfully handled complex cases including triplet births and deliveries in advanced maternal age.
                   </p>
 
                   <ul className="space-y-2 text-xs font-medium text-slate-700 border-t border-slate-200 pt-3">
                     <li className="flex items-center">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      <span>Specialist in IVF & ICSI fertility protocols</span>
+                      <span>30+ years of infertility & obstetric care</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      <span>Extensive experience in High-Risk Pregnancy & Normal Delivery</span>
+                      <span>IVF, IUI & advanced fertility protocols</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      <span>Minimally invasive laparoscopic hysterectomy & cystectomy</span>
+                      <span>Strong focus on ethical & affordable treatment</span>
                     </li>
                   </ul>
                 </div>

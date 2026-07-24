@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Terms & Privacy Policy | Maa Nursing Home",
+  title:
+    "Terms & Conditions in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Privacy policy, terms of service, clinical disclaimers, and appointment terms for Maa Nursing Home & NetraJyoti Eyecare Centre website.",
+    "Read the terms and conditions for using the services and website of Maa Nursing Home & NetraJyoti Eyecare Centre, Malad, Mumbai. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function TermsPage() {

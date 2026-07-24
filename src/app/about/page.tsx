@@ -6,9 +6,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { Heart, Eye, Star, Award, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Best Eye Hospital & IVF Centre in Malad West, Mumbai",
+  title:
+    "Best Eye Hospital & IVF Centre in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Maa Nursing Home & NetraJyoti Eyecare Centre is known as the best eye hospital & best IVF centre in Malad, Mumbai, providing advanced, ethical, and affordable treatment since 2002.",
+    "Maa Nursing Home & NetraJyoti Eyecare Centre is known as the best eye hospital & best IVF centre in Malad, Mumbai, providing advanced, ethical, and affordable treatment since 2002. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function AboutPage() {

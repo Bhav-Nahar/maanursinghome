@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { ChevronRight, Heart, Users, Eye, Award } from "lucide-react";
 
 export const metadata = {
-  title: "Charity & Free Eye Camps | Maa Nursing Home",
+  title:
+    "Charitable Eye Camps & Initiatives in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Charitable initiatives, free eye screening camps, and subsidized cataract operations conducted by Dr. Jugal Shah and Maa Nursing Home.",
+    "Explore the charitable work of Maa Nursing Home and NetraJyoti Eyecare Centre. Free eye camps, cataract surgeries, and community outreach programs in Mumbai and rural areas. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 type CampEntry = {

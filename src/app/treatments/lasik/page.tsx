@@ -19,9 +19,10 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "LASIK Eye Surgery Eligibility Assessment in Mumbai | Dr. Jugal Shah",
+  title:
+    "Best LASIK Surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Specs Removal",
   description:
-    "Get a personalized LASIK eligibility evaluation with Dr. Jugal Shah in Malad West, Mumbai. Contoura and Bladeless Femto LASIK options.",
+    "Maa Nursing Home is the premier destination for LASIK surgery in Mumbai. Get advanced Contoura & Femto Bladeless specs removal surgery from senior eye specialists in Malad West. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function LasikLandingPage() {

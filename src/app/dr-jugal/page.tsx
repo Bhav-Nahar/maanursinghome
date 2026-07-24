@@ -8,9 +8,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { Eye, Zap, FileText, CheckCircle2, Phone, Calendar, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "Dr. Jugal Shah | Best Eye Surgeon & Cataract Surgeon in Malad, Mumbai",
+  title:
+    "Dr. Jugal Shah | Best Eye Surgeon & Cataract Surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz",
   description:
-    "Meet Dr. Jugal Shah, senior ophthalmologist and cataract surgeon in Malad West, Mumbai. Over 98,000 successful cataract operations, specializing in stitchless Micro-Phaco & LASIK.",
+    "Meet Dr. Jugal Shah, the leading cataract surgeon in Malad West, Mumbai. Over 98,000 successful cataract operations, specializing in stitchless Micro-Phaco & LASIK. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function DrJugalPage() {

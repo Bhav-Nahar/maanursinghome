@@ -8,9 +8,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { ChevronRight, Calendar, Clock, PhoneCall } from "lucide-react";
 
 export const metadata = {
-  title: "Book OPD Appointment | Maa Nursing Home & NetraJyoti Eyecare",
+  title:
+    "Book Appointment | Best Eye Surgeon & Gynaecologist in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz",
   description:
-    "Schedule your OPD consultation for Eye Care, LASIK, Cataract, IVF, or Gynecology with Dr. Jugal Shah and Dr. Jyoti Shah.",
+    "Schedule your visit to Maa Nursing Home & NetraJyoti Eyecare Centre. Easy online booking for eye check-ups, LASIK consultation, and gynaecology appointments in Malad West. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function AppointmentPage() {

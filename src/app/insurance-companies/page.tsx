@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { ChevronRight, ShieldCheck, CheckCircle2, Building2 } from "lucide-react";
 
 export const metadata = {
-  title: "Insurance & Cashless Facility | Maa Nursing Home",
+  title:
+    "Insurance & Cashless Facility in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Maa Nursing Home is empanelled with leading insurance companies and TPAs for cashless hospitalization in Malad West, Mumbai. Smooth Mediclaim processing for all patients.",
+    "Maa Nursing Home is empanelled with leading insurance companies and TPAs for cashless hospitalization in Malad West, Mumbai. Smooth Mediclaim processing for all patients. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 const insuranceList = [

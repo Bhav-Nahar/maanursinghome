@@ -8,9 +8,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { Eye, ChevronRight, Info, CheckCircle2, AlertCircle, Sparkles, Activity, ShieldCheck, Clock, Settings, HeartPulse } from "lucide-react";
 
 export const metadata = {
-  title: "Cataract Surgery | Best Eye Surgeon in Malad, Mumbai",
+  title:
+    "Best Cataract Surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Looking for the best cataract surgeon in Malad West? Dr. Jugal Shah offers stitchless phacoemulsification and premium intraocular lenses at Maa Nursing Home.",
+    "Looking for the best cataract surgeon in Malad West? Dr. Jugal Shah at Maa Nursing Home offers stitchless phacoemulsification and premium intraocular lenses. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function CataractPage() {

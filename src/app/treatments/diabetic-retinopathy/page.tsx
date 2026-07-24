@@ -8,9 +8,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { ChevronRight, Eye, CheckCircle2, ShieldCheck, Clock, Zap, Stethoscope, AlertTriangle, Activity, Info, FileSearch, HeartPulse, AlertCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Diabetic Retinopathy Treatment in Malad, Mumbai",
+  title:
+    "Diabetic Retinopathy Treatment in Malad, Mumbai in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Eye Specialist",
   description:
-    "Expert diabetic retinopathy screening and treatment in Malad West, Mumbai. Laser therapy and vitrectomy surgery for retinal health by experienced surgeons.",
+    "Expert diabetic retinopathy screening and treatment in Malad West, Mumbai. Laser therapy and vitrectomy surgery for retinal health by experienced surgeons. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function DiabeticRetinopathyPage() {

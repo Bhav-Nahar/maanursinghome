@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { Stethoscope, CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Panel of Doctors & Consultants | Maa Nursing Home Malad West",
+  title:
+    "Our Specialists & Eye Surgeons in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz",
   description:
-    "Meet our panel of expert doctors and visiting consultants at Maa Nursing Home in ophthalmology, gynaecology, infertility, surgery, and paediatrics.",
+    "Meet our panel of expert doctors and visiting consultants at Maa Nursing Home. Specialists in ophthalmology, gynaecology, infertility, surgery, and paediatrics in Malad West. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function DoctorsPage() {

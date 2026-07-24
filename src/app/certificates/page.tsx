@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Certificates & Accreditations | Maa Nursing Home",
+  title:
+    "Certificates & Accreditations in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "View our medical accreditations and professional certifications. Maa Nursing Home and NetraJyoti Eyecare Centre are NABH and ISO certified facilities in Mumbai.",
+    "View our medical accreditations and professional certifications. Maa Nursing Home and NetraJyoti Eyecare Centre are NABH and ISO 9001:2015 certified facilities in Mumbai. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function CertificatesPage() {

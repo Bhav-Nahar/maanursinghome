@@ -7,9 +7,10 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Awards & Recognition | Maa Nursing Home",
+  title:
+    "Awards & Recognition in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Explore the awards and recognitions received by Dr. Jugal Shah, Dr. Jyoti Shah, and Maa Nursing Home for excellence in ophthalmology, gynaecology, and community service.",
+    "Explore the awards and recognitions received by Dr. Jugal Shah, Dr. Jyoti Shah, and Maa Nursing Home for excellence in ophthalmology, gynaecology, and community service. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function TrophiesPage() {

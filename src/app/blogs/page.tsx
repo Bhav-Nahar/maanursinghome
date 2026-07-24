@@ -8,9 +8,10 @@ import { BLOGS_DATA } from "@/data/blogs";
 import { Calendar, User, ArrowRight, ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Health Blogs & Medical Guidance | Maa Nursing Home",
+  title:
+    "Health Blogs & Medical Tips in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Read health articles, eye care tips, and gynecology advice by Dr. Jugal Shah and Dr. Jyoti Shah.",
+    "Explore our health blogs for expert advice on eye care, gynaecology, and infertility. Stay informed with tips from Maa Nursing Home and NetraJyoti Eyecare Centre, Malad. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export const revalidate = 31536000; // 1 year ISR

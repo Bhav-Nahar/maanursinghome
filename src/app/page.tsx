@@ -189,7 +189,7 @@ export default function HomePage() {
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h2 className="font-heading text-3xl font-extrabold text-slate-900">What We Do</h2>
               <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-                Maa Nursing Home and NetraJyoti Eyecare Centre is one of the best super-speciality hospitals offering comprehensive eye care and gynaecology care to patients in the western suburbs of Mumbai. Opened in 2002, it provides advanced treatment for eye problems like cataracts, glaucoma, squint, paediatric ophthalmology, Oculoplasty, and retinal problems, alongside a full Gynaecology, Obstetrics, LASIK, and Infertility facility.
+                Maa Nursing Home and NetraJyoti Eyecare Centre is one of the best super-speciality hospitals offering comprehensive eye care and gynaecology care to patients in the western suburbs of Mumbai. It opened its doors in 2002 to provide treatment for eye-related problems like cataracts, glaucoma, squint, paediatric ophthalmology, Oculoplasty, retinal problems, etc. and Gynaecology and Obstetrics facility. Today, it boasts of state-of-the-art advanced clinics-LASIK treatment for vision correction and a dedicated Infertility Clinic to help childless couples with fertility treatment. ‘Maa’ has an unwavering mission to make a world-class treatment accessible and affordable to all. The couple has pioneered new treatments and many rare and complicated cases; that have won them accolades nationally and internationally.
               </p>
             </div>
 
@@ -305,7 +305,7 @@ export default function HomePage() {
                   <div className="space-y-2">
                     <h3 className="font-heading font-bold text-xl text-slate-900">Eye Care</h3>
                     <p className="text-slate-600 text-xs leading-relaxed">
-                      A modern Eyecare Clinic offering complete check-ups and treatment for cataracts, glaucoma, dry eyes, diabetic retinopathy, computer vision syndrome, paediatric eye problems, and squint.
+                      A modern Eyecare Clinic that offers complete eye check-ups and treatment for cataracts, glaucoma, dry eyes, diabetic retinopathy, computer vision syndrome, eye problems of senior citizens, paediatric eye problems, squint, etc.
                     </p>
                   </div>
                   <Link href="/treatments/cataract" className="inline-flex items-center text-xs font-bold text-primary-700 hover:underline pt-2">
@@ -325,9 +325,9 @@ export default function HomePage() {
                 </div>
                 <div className="p-6 sm:w-3/5 flex flex-col justify-between space-y-3">
                   <div className="space-y-2">
-                    <h3 className="font-heading font-bold text-xl text-slate-900">LASIK Clinic</h3>
+                    <h3 className="font-heading font-bold text-xl text-slate-900">LASIK</h3>
                     <p className="text-slate-600 text-xs leading-relaxed">
-                      Dump your glasses and contact lenses forever. LASIK, a safe and painless vision correction procedure, will restore your eyesight instantly.
+                      Dump your glasses and contact lenses forever. LASIK, a safe and painless vision correction procedure, will restore your eyesight instantly. Walk out of our Clinic with a clear vision and no specs forever.
                     </p>
                   </div>
                   <Link href="/treatments/lasik" className="inline-flex items-center text-xs font-bold text-primary-700 hover:underline pt-2">
@@ -349,7 +349,7 @@ export default function HomePage() {
                   <div className="space-y-2">
                     <h3 className="font-heading font-bold text-xl text-slate-900">Gynaec Care</h3>
                     <p className="text-slate-600 text-xs leading-relaxed">
-                      Spearheaded by Dr Jyoti Shah, offering quality treatment for PCOD, menstrual disorders, maternity, and women’s health across all age groups.
+                      We are committed to women’s health. Spearheaded by Dr Jyoti Shah, this clinic offers affordable quality treatment and advice for gynaec-related problems to women of all ages, from pre-teen to elderly women
                     </p>
                   </div>
                   <Link href="/treatments/pcod" className="inline-flex items-center text-xs font-bold text-primary-700 hover:underline pt-2">

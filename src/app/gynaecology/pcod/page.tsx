@@ -8,9 +8,10 @@ import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { ChevronRight, Info, CheckCircle2, HeartPulse, Activity, ShieldCheck, Clock, ListChecks, Stethoscope, Baby } from "lucide-react";
 
 export const metadata = {
-  title: "PCOD & PCOS Treatment in Malad, Mumbai",
+  title:
+    "PCOD & PCOS Treatment in Malad, Mumbai in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, Santacruz | Maa Nursing Home",
   description:
-    "Manage PCOD and PCOS with expert gynaecological care in Malad West, Mumbai. Personalized treatment plans including lifestyle changes and fertility support.",
+    "Manage PCOD and PCOS with expert gynaecological care in Malad West, Mumbai. Personalized treatment plans including lifestyle changes and fertility support. Along with top gynaecology care, our center offers the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon services in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
 export default function PCODPage() {
