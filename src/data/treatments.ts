@@ -846,9 +846,11 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       { title: "Surrogacy & Surgical Correction", description: "Minimal access fertility surgery and legal surrogacy pathways." }
     ],
     benefits: [
-      "Led by senior fertility specialist Dr. Jyoti Shah with state-of-the-art IVF labs",
-      "Full spectrum of fertility options: IUI, IVF, ICSI, Donor Programs, and Laparoscopy",
-      "High success rates with personalized compassionate care for both partners"
+      "Advanced fertility technologies",
+      "Highly qualified IVF specialists",
+      "Personalized treatment approach",
+      "Transparent and ethical care",
+      "High success rates"
     ]
   },
   iui: {
