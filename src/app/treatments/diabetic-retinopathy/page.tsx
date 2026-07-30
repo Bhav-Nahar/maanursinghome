@@ -36,7 +36,7 @@ export default function DiabeticRetinopathyPage() {
               Diabetic Retinopathy
             </h1>
             <p className="text-slate-300 text-base max-w-3xl leading-relaxed">
-              Comprehensive retinal screening, laser therapy and injection-based treatments for diabetic retinopathy — preserving vision through timely, evidence-based care.
+              Comprehensive retinal screening, laser therapy and injection-based treatments for diabetic retinopathy - preserving vision through timely, evidence-based care.
             </p>
           </div>
         </section>
@@ -62,10 +62,10 @@ export default function DiabeticRetinopathyPage() {
                   <div className="space-y-4">
                     <h2 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">What is Diabetic Retinopathy?</h2>
                     <p className="text-primary-700 font-semibold text-sm sm:text-base border-l-4 border-primary-600 pl-4 py-1">
-                      A diabetes-related retinal disease caused by damage to retinal blood vessels — a leading cause of preventable blindness.
+                      A diabetes-related retinal disease caused by damage to retinal blood vessels - a leading cause of preventable blindness.
                     </p>
                     <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                      Diabetic Retinopathy is an eye condition that develops due to prolonged high blood sugar levels in diabetic patients. Elevated glucose damages the tiny blood vessels of the retina — the light-sensitive layer at the back of the eye that sends visual signals to the brain through the optic nerve. Since the retina is affected, the condition is called <strong>Diabetic Retinopathy</strong>.
+                      Diabetic Retinopathy is an eye condition that develops due to prolonged high blood sugar levels in diabetic patients. Elevated glucose damages the tiny blood vessels of the retina - the light-sensitive layer at the back of the eye that sends visual signals to the brain through the optic nerve. Since the retina is affected, the condition is called <strong>Diabetic Retinopathy</strong>.
                     </p>
                     <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                       In early stages, vision may remain normal. However, if left untreated, progressive vessel damage can lead to severe visual loss or permanent blindness. Maa Nursing Home and NetraJyoti Eyecare Centre provide advanced diagnostic and treatment facilities for diabetic retinal diseases.
@@ -110,7 +110,7 @@ export default function DiabeticRetinopathyPage() {
                     <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
                       <h3 className="font-heading font-bold text-xl text-slate-900">Complications of PDR</h3>
                       <p className="text-xs text-slate-600 leading-relaxed">
-                        Complications of PDR include vitreous haemorrhage, tractional retinal detachment and neovascular glaucoma — all of which can cause severe or complete vision loss.
+                        Complications of PDR include vitreous haemorrhage, tractional retinal detachment and neovascular glaucoma - all of which can cause severe or complete vision loss.
                       </p>
                     </div>
                     

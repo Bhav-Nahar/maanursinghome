@@ -109,7 +109,7 @@ export default function FAQPage() {
                 How long is the recovery after laparoscopic surgery?
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Laparoscopic (minimally invasive) surgery usually allows for a much faster recovery compared to open surgery. Most patients can return to light activities within a few days and resume full normal activity within 1-2 weeks.
+                Laparoscopic (minimally invasive) surgery usually allows for a much faster recovery compared to open surgery. Most patients can return to light activities within a few days and resume full normal work within a week.
               </p>
             </div>
           </div>

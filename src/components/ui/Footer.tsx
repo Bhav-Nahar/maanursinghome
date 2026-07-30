@@ -89,7 +89,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4 text-center md:text-left">
-          <p>© {new Date().getFullYear()} <strong>Maa Nursing Home & NetraJyoti Eyecare Centre</strong> — All Rights Reserved</p>
+          <p>© {new Date().getFullYear()} <strong>Maa Nursing Home & NetraJyoti Eyecare Centre</strong> - All Rights Reserved</p>
           <div className="flex space-x-6">
             <Link href="/terms" className="hover:text-slate-400">
               Privacy Policy & Terms

@@ -17,6 +17,7 @@ import {
   Clock,
   MapPin,
   ExternalLink,
+  MessagesSquare,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -157,7 +158,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="p-4 bg-white rounded-xl border-l-4 border-rose-600 shadow-sm text-xs space-y-1 text-slate-700">
-                  <p><strong>📍 Venue:</strong> Maa Nursing Home, Himachal Bldg, S.V. Road, Opp. Sundar Nagar, Malad West, Mumbai 400064</p>
+                  <p><strong>📍 Venue:</strong> Maa Nursing Home, Himachal Bldg, S.V. Road, Opp. Sundar Nagar, Malad-Goregaon (West), Mumbai 400064</p>
                   <p><strong>📅 Date & Time:</strong> 11th July 2026, Saturday (9:00 AM - 1:00 PM)</p>
                   <p><strong>📞 Helpline Contacts:</strong> 8828068727 / 8850118725 / 8828328726 / 8823328766</p>
                 </div>
@@ -269,6 +270,12 @@ export default function HomePage() {
                     className="inline-flex items-center px-4 py-2.5 rounded-xl font-heading font-bold text-xs text-white bg-primary-700 hover:bg-primary-900 transition-all"
                   >
                     Explore Services <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center px-4 py-2.5 rounded-xl font-heading font-bold text-xs text-white bg-slate-900 hover:bg-slate-800 transition-all"
+                  >
+                    <Phone className="w-4 h-4 mr-1.5" /> Schedule Consultation
                   </Link>
                   <a
                     href={onlineConsultWhatsappUrl}
@@ -451,6 +458,23 @@ export default function HomePage() {
                   Verified Google Review
                 </div>
               </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3 pt-4">
+              <Link
+                href="/testimonials"
+                className="inline-flex items-center px-5 py-3 rounded-full text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 border border-slate-300 shadow-sm transition-all"
+              >
+                <MessagesSquare className="w-4 h-4 mr-1.5" /> View All Patient Stories
+              </Link>
+              <a
+                href="https://share.google/X9V7DCsfep9B7EqWL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-5 py-3 rounded-full text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 shadow-sm transition-all"
+              >
+                <Star className="w-4 h-4 mr-1.5" /> Write a Google Review
+              </a>
             </div>
           </div>
         </section>

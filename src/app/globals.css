@@ -28,6 +28,10 @@
 }
 
 @layer base {
+  html {
+    font-size: 112.5%; /* 18px base - larger text sitewide for patients with eye conditions */
+  }
+
   body {
     @apply bg-slate-50 text-slate-900 font-body antialiased selection:bg-primary-500 selection:text-white;
   }

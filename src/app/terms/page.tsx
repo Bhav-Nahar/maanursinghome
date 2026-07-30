@@ -4,7 +4,7 @@ import { TopBar } from "@/components/ui/TopBar";
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Mail } from "lucide-react";
 
 export const metadata = {
   title:
@@ -41,7 +41,13 @@ export default function TermsPage() {
         {/* CONTENT */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 md:p-12 rounded-2xl border border-slate-200 shadow-sm space-y-8 text-slate-700 text-sm leading-relaxed">
-            
+
+            <div className="text-center">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wide text-emerald-600">
+                Last Updated: May 2025
+              </span>
+            </div>
+
             {/* Section 1 */}
             <div className="space-y-3">
               <h2 className="font-heading font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
@@ -68,7 +74,7 @@ export default function TermsPage() {
                 3. Appointments & Cancellations
               </h2>
               <p>
-                Appointment requests submitted online or via WhatsApp are subject to confirmation by our OPD desk staff. While we strive to honor your preferred date and time, emergency procedures or surgical schedules may require slot rescheduling. Patients are requested to notify us at least 24 hours in advance if cancelling or rescheduling an appointment.
+                Appointment requests submitted online or via WhatsApp are subject to confirmation by our OPD desk staff. While we strive to honor your preferred date and time, emergency procedures or surgical schedules may require slot rescheduling. We request patients to arrive 15 minutes before their scheduled time. Patients are requested to notify us at least 24 hours in advance if cancelling or rescheduling an appointment.
               </p>
             </div>
 
@@ -78,8 +84,27 @@ export default function TermsPage() {
                 4. Privacy Policy & Patient Data Security
               </h2>
               <p>
-                Maa Nursing Home is committed to protecting patient privacy and personal health information. Details submitted through appointment forms, contact inquiries, or WhatsApp messages are kept strictly confidential. We do not sell, rent, or distribute patient contact details to third parties.
+                Maa Nursing Home is committed to protecting patient privacy and personal health information. Details submitted through appointment forms, contact inquiries, or WhatsApp messages are kept strictly confidential. We do not sell, rent, or distribute patient contact details to third parties, except as required by law.
               </p>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="pt-6 border-t border-slate-200 text-center space-y-3">
+              <div className="mx-auto w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center">
+                <Mail className="w-6 h-6 text-emerald-600" />
+              </div>
+              <h3 className="font-heading font-bold text-lg text-slate-900">
+                Questions About Our Terms?
+              </h3>
+              <p>
+                If you have any questions about these Terms, please contact our hospital administration.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors"
+              >
+                Contact Us
+              </Link>
             </div>
 
           </div>

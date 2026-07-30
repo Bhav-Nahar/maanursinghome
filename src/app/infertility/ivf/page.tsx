@@ -143,7 +143,7 @@ export default function IVFPage() {
                       </div>
                       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
                         <h4 className="font-heading font-bold text-slate-900 mb-1">Egg & Sperm Collection</h4>
-                        <p className="text-xs text-slate-600">Eggs are collected under short anaesthesia. Male partner provides a semen sample; best sperms are selected.</p>
+                        <p className="text-xs text-slate-600">Once eggs mature, they are collected under short anaesthesia using a guided needle; most patients return home within a few hours. Male partner provides a semen sample; best sperms are selected.</p>
                       </div>
                     </div>
 
@@ -165,7 +165,7 @@ export default function IVFPage() {
                       </div>
                       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm border-l-4 border-l-emerald-400">
                         <h4 className="font-heading font-bold text-slate-900 mb-1">Embryo Transfer</h4>
-                        <p className="text-xs text-slate-600">After 2–5 days of growth, healthy embryos are placed into the uterus. Extra embryos can be frozen. Pregnancy is confirmed after 14 days.</p>
+                        <p className="text-xs text-slate-600">After 2–5 days of growth, healthy embryos are placed into the uterus using a thin catheter. Extra embryos can be frozen. Pregnancy is confirmed with a blood test after 14 days.</p>
                       </div>
                     </div>
                   </div>

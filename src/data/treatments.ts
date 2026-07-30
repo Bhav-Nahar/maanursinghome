@@ -11,6 +11,7 @@ export interface Treatment {
   diagnosis?: string[];
   treatmentSteps?: { title: string; description: string }[];
   benefits: string[];
+  extraSections?: { title: string; items: string[] }[];
 }
 
 export const TREATMENTS_DATA: Record<string, Treatment> = {
@@ -20,13 +21,15 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Advanced corneal transplant surgery (DSAEK) for corneal disorders — restoring vision with precision, safety and faster recovery.",
+      "Advanced corneal transplant surgery (DSAEK) for corneal disorders - restoring vision with precision, safety and faster recovery.",
     image: "/assets/img/images/Cornea DSAEK.jpg",
     content: [
+      "The human eye consists of three layers - sclera, choroid and retina. The front portion of the sclera is called the cornea, a thin, transparent tissue that covers the front of the eye and is the surface on which contact lenses sit. The cornea plays a major role in bending (refracting) light and is responsible for nearly two-thirds of the eye's focusing power, so it must remain smooth, compact and transparent for clear vision.",
       "A modern, minimally invasive corneal transplant that replaces only the damaged inner layer of the cornea.",
       "Research studies in India show that corneal blindness is one of the leading causes of blindness, with more than 10 lakh people blind in both eyes. Corneal blindness can often be restored with a corneal transplant.",
       "Healthy donor corneas, donated soon after death, are transplanted to replace the damaged cornea. As noted by Dr. Jugal Shah, corneal transplants are highly successful, but eye donation awareness remains low in the country.",
-      "Traditionally, full-thickness corneal transplants were performed. Today, DSAEK (Descemet’s Stripping Automated Endothelial Keratoplasty) allows selective replacement of only the damaged endothelial layer, preserving healthy corneal tissue."
+      "Traditionally, full-thickness corneal transplants were performed. Today, DSAEK (Descemet’s Stripping Automated Endothelial Keratoplasty) allows selective replacement of only the damaged endothelial layer, preserving healthy corneal tissue.",
+      "DSAEK is an outpatient procedure; the entire surgery typically takes 45-60 minutes and no hospital stay is required."
     ],
     symptoms: [
       "Swollen, scarred or cloudy cornea resulting in reduced or lost vision",
@@ -48,12 +51,30 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     treatmentSteps: [
       { title: "Endothelial Layer Preparation", description: "A thin donor graft containing healthy endothelial cells is micro-cut and prepared." },
       { title: "Descemet's Stripping", description: "The diseased endothelial layer is removed through a micro-incision." },
-      { title: "Tissue Insertion & Air Bubble Positioning", description: "The donor graft is inserted and held in place against the patient's cornea using an air bubble." }
+      { title: "Tissue Insertion & Air Bubble Positioning", description: "The donor graft is inserted and held in place against the patient's cornea using an air bubble." },
+      { title: "Recovery & Post-Operative Care", description: "Full recovery usually takes about three months; vision is initially blurred and gradually improves within one to two weeks. Patients are advised to lie flat on their back for the first few days to help the graft attach properly (typically 45 minutes out of every hour), use prescribed antibiotic and steroid eye drops regularly, avoid rubbing or bumping the eye, wear protective eyewear when required, and avoid swimming, diving and heavy lifting for some time." }
     ],
     benefits: [
       "Minimally invasive selective layer transplantation preserving healthy corneal tissue",
       "Smaller incision with fewer stitches compared to full-thickness transplants",
       "Faster visual rehabilitation and higher long-term success rates"
+    ],
+    extraSections: [
+      {
+        title: "Who is Eligible for Cornea DSAEK?",
+        items: [
+          "DSAEK is suitable only when damage is limited to the inner endothelial layer",
+          "Patients with deeper or full-thickness corneal damage may require a full corneal transplant instead"
+        ]
+      },
+      {
+        title: "Risks of DSAEK / DMEK Surgery",
+        items: [
+          "In rare cases, the graft may not fully attach, requiring a small procedure to insert an additional air bubble",
+          "Serious complications such as infection, retinal detachment or haemorrhage are extremely rare",
+          "Minor pupil shape or size changes may occasionally occur"
+        ]
+      }
     ]
   },
   cataract: {
@@ -62,11 +83,11 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Cataract diagnosis, modern laser phacoemulsification surgery and intraocular lens (IOL) options — evidence-based care with fast recovery and compassionate support.",
+      "Cataract diagnosis, modern laser phacoemulsification surgery and intraocular lens (IOL) options - evidence-based care with fast recovery and compassionate support.",
     image: "/assets/img/images/carastact.png",
     content: [
-      "Clouding of the eye’s natural lens that progressively blurs vision — common with ageing but can affect younger people too.",
-      "The lens inside the eye focuses light on the retina to produce clear images. Over years (or sometimes rapidly), insoluble proteins can cloud the lens and cause hazy vision — this condition is called a cataract. No diet, medicine or exercise prevents cataracts; regular eye checks ensure early detection and timely treatment.",
+      "Clouding of the eye’s natural lens that progressively blurs vision - common with ageing but can affect younger people too.",
+      "The lens inside the eye focuses light on the retina to produce clear images. Over years (or sometimes rapidly), insoluble proteins can cloud the lens and cause hazy vision - this condition is called a cataract. No diet, medicine or exercise prevents cataracts; regular eye checks ensure early detection and timely treatment.",
       "At Maa Nursing Home and NetraJyoti Eyecare Centre we offer advanced micro-incision phacoemulsification. The cloudy lens is broken into tiny pieces using ultrasonic energy and aspirated through a 1.5–3 mm incision (often stitchless). The natural lens is replaced with a clear synthetic intraocular lens (IOL). The procedure is a day-care surgery (often 5 minutes) under topical anaesthesia (eye drops) with quick recovery."
     ],
     symptoms: [
@@ -101,7 +122,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Stitchless, micro-incision operation (minimal cut).",
       "Faster healing and early return to work.",
       "Less ocular trauma and reduced infection risk.",
-      "Topical anaesthesia (drops) — safe for most patients.",
+      "Topical anaesthesia (drops) - safe for most patients.",
       "Better night and low-light vision with good quality IOLs."
     ]
   },
@@ -111,10 +132,10 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "A progressive disease that damages the optic nerve—usually due to high eye pressure. Early detection prevents vision loss.",
+      "A progressive disease that damages the optic nerve - usually due to high eye pressure. Early detection prevents vision loss.",
     image: "/assets/img/images/Glaucoma.jpg",
     content: [
-      "A group of eye conditions that damage the optic nerve, often due to increased eye pressure — a major cause of irreversible blindness.",
+      "A group of eye conditions that damage the optic nerve, often due to increased eye pressure - a major cause of irreversible blindness.",
       "The optic nerve acts like a cable containing over a million nerve fibres, transmitting visual information from the eye to the brain. When eye pressure rises or the nerve becomes weak, these fibres get damaged. If untreated, glaucoma can cause permanent vision loss or total blindness.",
       "With timely diagnosis and proper treatment, further damage can be prevented. Regular eye check-ups after age 40 are crucial.",
       "A clear fluid called aqueous humour circulates inside the eye. When drainage channels get blocked, fluid builds up and increases pressure. This pressure damages the optic nerve gradually or suddenly depending on the type of glaucoma."
@@ -164,11 +185,11 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "A diabetes-related eye disease that damages the retina — if untreated, it can lead to severe vision loss or blindness.",
+      "A diabetes-related eye disease that damages the retina - if untreated, it can lead to severe vision loss or blindness.",
     image: "/assets/img/images/Retinal Detachment.jpg",
     content: [
       "Damage to the tiny blood vessels of the retina caused by long-standing or uncontrolled diabetes.",
-      "Diabetic Retinopathy is an eye condition where high blood sugar levels damage the blood vessels of the retina — the light-sensitive layer at the back of the eye that sends images to the brain via the optic nerve.",
+      "Diabetic Retinopathy is an eye condition where high blood sugar levels damage the blood vessels of the retina - the light-sensitive layer at the back of the eye that sends images to the brain via the optic nerve.",
       "In diabetic patients, prolonged uncontrolled sugar levels cause these vessels to leak fluid, proteins, and fats, or become blocked. If left untreated, Diabetic Retinopathy can lead to severe visual loss or complete blindness.",
       "Maa Nursing Home and NetraJyoti Eyecare Centre offers advanced treatment for this condition."
     ],
@@ -190,12 +211,50 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     treatmentSteps: [
       { title: "LASER Photocoagulation Treatment", description: "Safe, painless, day-care LASER procedure to seal leaking vessels and destroy abnormal new blood vessels." },
       { title: "Intravitreal Anti-VEGF Injections", description: "Targeted injections into the eye to reduce macular edema and clear vitreous fluid accumulation." },
-      { title: "Vitrectomy Surgery", description: "Surgical removal of blood-filled vitreous gel and scar tissue in advanced proliferative stages." }
+      { title: "Vitrectomy Surgery", description: "Surgical removal of blood-filled vitreous gel and scar tissue in advanced proliferative stages. Recovery usually takes about 2-4 weeks; patients may experience redness, swelling and mild-to-moderate pain in the operated eye along with blurred vision while healing. Post-surgery, the ophthalmologist advises wearing an eye patch for about a day, using prescribed eye drops to reduce swelling and prevent infection, and avoiding driving, heavy lifting and strenuous exercise for a few weeks." }
     ],
     benefits: [
       "Comprehensive retinal evaluation and regular 2–4 month screening",
       "Painless LASER photocoagulation to seal leaking retinal vessels",
       "Prevention of severe visual impairment, macular edema, and neovascular glaucoma"
+    ],
+    extraSections: [
+      {
+        title: "How Does Diabetic Retinopathy Progress?",
+        items: [
+          "Non-Proliferative Diabetic Retinopathy (NPDR): Early stage where blood vessels leak fluid or blood, get clogged or rupture; vision may still be normal or only mildly affected",
+          "Proliferative Diabetic Retinopathy (PDR): Advanced stage where the retina grows abnormal new blood vessels (neovascularization) that can bleed inside the eye, cause tractional retinal detachment or neovascular glaucoma",
+          "Diabetic Maculopathy: Fluid rich in fats and cholesterol leaks near the macula, affecting central vision"
+        ]
+      },
+      {
+        title: "Eye Complications Due to Diabetic Retinopathy",
+        items: [
+          "Diabetic Macular Oedema (DME): Fluid leaks from damaged vessels near the macula, causing blurred central vision",
+          "Neovascular Glaucoma: New abnormal blood vessels grow on the iris and drainage angle, blocking fluid outflow and increasing eye pressure",
+          "Retinal Detachment: Scar tissue pulls the retina away from the back of the eye, causing severe vision loss"
+        ]
+      },
+      {
+        title: "Recovery After Vitrectomy Surgery",
+        items: [
+          "Recovery usually takes about 2-4 weeks, with redness, swelling, mild to moderate pain and blurred vision while healing",
+          "An eye patch is usually worn for about a day after surgery",
+          "Prescribed eye drops reduce swelling and prevent infection",
+          "Avoid driving, heavy lifting and strenuous exercise for a few weeks",
+          "Rest and follow posture instructions if a gas or air bubble is used inside the eye",
+          "In some cases, silicone oil may be injected into the eye and removed later with a second surgery"
+        ]
+      },
+      {
+        title: "Can Diabetic Retinopathy Be Prevented?",
+        items: [
+          "Maintaining good blood sugar control as advised by your diabetologist",
+          "Controlling blood pressure and cholesterol",
+          "Undergoing regular eye check-ups, even if vision seems normal",
+          "Seeking prompt treatment if any visual changes occur"
+        ]
+      }
     ]
   },
   "diabetic-retinopathy": {
@@ -207,7 +266,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     image: "/assets/img/images/Diabetic Retinopathy.jpg",
     content: [
       "Diabetic Retinopathy develops when persistent high blood sugar levels damage the tiny blood vessels of the retina, the light-sensitive layer at the back of the eye that sends visual signals to the brain through the optic nerve. In early stages vision may remain normal, but if left untreated, progressive vessel damage can lead to severe visual loss or permanent blindness.",
-      "The disease progresses from Non-Proliferative Diabetic Retinopathy (NPDR) — an early stage where retinal vessels leak fluid, fats or proteins and may weaken, swell or get blocked — to Proliferative Diabetic Retinopathy (PDR), an advanced stage where fragile new blood vessels grow on the retinal surface and are prone to bleeding, vitreous haemorrhage, tractional retinal detachment and neovascular glaucoma. Some patients also develop Diabetic Maculopathy, where fat- and cholesterol-rich fluid leaks near the macula, distorting and reducing central vision.",
+      "The disease progresses from Non-Proliferative Diabetic Retinopathy (NPDR) - an early stage where retinal vessels leak fluid, fats or proteins and may weaken, swell or get blocked - to Proliferative Diabetic Retinopathy (PDR), an advanced stage where fragile new blood vessels grow on the retinal surface and are prone to bleeding, vitreous haemorrhage, tractional retinal detachment and neovascular glaucoma. Some patients also develop Diabetic Maculopathy, where fat- and cholesterol-rich fluid leaks near the macula, distorting and reducing central vision.",
       "Because early stages often have no symptoms, regular dilated eye examinations are critical for every diabetic patient. Strict control of blood sugar, blood pressure and cholesterol is essential to slow progression, though retinopathy may still advance despite good control, making timely treatment equally important."
     ],
     symptoms: [
@@ -247,7 +306,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Diagnosis and management of digital eye strain, dryness and vision fatigue — tailored solutions for prolonged screen use and modern lifestyles.",
+      "Diagnosis and management of digital eye strain, dryness and vision fatigue - tailored solutions for prolonged screen use and modern lifestyles.",
     image: "/assets/img/images/Computer Vision Syndrome.jpg",
     content: [
       "A group of eye and vision-related problems caused by prolonged use of digital screens.",
@@ -285,6 +344,17 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Relief from digital fatigue, eye strain, and screen-related headaches",
       "Tailored blue-light filtering and computer spectacle prescriptions",
       "Ergonomic guidance to protect vision and neck posture during long work hours"
+    ],
+    extraSections: [
+      {
+        title: "Who Is at Risk?",
+        items: [
+          "Office professionals",
+          "Students and gamers",
+          "Long screen-time users",
+          "Improper spectacle users"
+        ]
+      }
     ]
   },
   "dry-eyes": {
@@ -293,12 +363,12 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Advanced evaluation and treatment of dry eye disease — restoring comfort, clarity and long-term eye surface health.",
+      "Advanced evaluation and treatment of dry eye disease - restoring comfort, clarity and long-term eye surface health.",
     image: "/assets/img/images/dry eyes.jpg",
     content: [
       "A chronic condition caused by insufficient or poor-quality tears leading to eye irritation and discomfort.",
       "Tears are essential for lubricating, nourishing and protecting the front surface of the eyes. When the eyes do not produce enough tears, or when tear quality is poor, the eyes become dry and irritated. This condition is known as Dry Eye Disease.",
-      "Dry eyes are more common in older individuals and are usually chronic in nature. Tears are not just emotional responses — they are a complex mixture of water, oils and mucus that spreads evenly across the eye surface to keep it moist and prevent evaporation.",
+      "Dry eyes are more common in older individuals and are usually chronic in nature. Tears are not just emotional responses - they are a complex mixture of water, oils and mucus that spreads evenly across the eye surface to keep it moist and prevent evaporation.",
       "With every blink, tears coat the cornea, reduce the risk of infection, wash away foreign particles and maintain a smooth, clear eye surface."
     ],
     symptoms: [
@@ -329,6 +399,17 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Personalized treatment based on the severity of dry eye disease",
       "Artificial tear drops and tear conservation (punctal occlusion) options",
       "Significantly reduced discomfort, burning, and improved overall eye surface health"
+    ],
+    extraSections: [
+      {
+        title: "Who Is at Risk?",
+        items: [
+          "Elderly individuals",
+          "Long screen-time users",
+          "Post-menopausal women",
+          "AC and dry climate exposure"
+        ]
+      }
     ]
   },
   "retinal-detachment": {
@@ -337,7 +418,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Emergency diagnosis and surgical management of retinal detachment — prompt intervention to preserve vision and prevent permanent loss.",
+      "Emergency diagnosis and surgical management of retinal detachment - prompt intervention to preserve vision and prevent permanent loss.",
     image: "/assets/img/images/Retinal Detachment.jpg",
     content: [
       "A serious eye emergency where the retina separates from its underlying tissue, leading to vision loss.",
@@ -373,6 +454,16 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Emergency retinal evaluation and prompt surgical intervention",
       "Advanced procedures including Cryopexy, Scleral Buckling, Pneumatic Retinopexy, and Vitrectomy",
       "Preservation of visual fields and prevention of permanent blindness"
+    ],
+    extraSections: [
+      {
+        title: "Types of Retinal Detachment",
+        items: [
+          "Rhegmatogenous: Caused by a tear or break in the retina",
+          "Exudative (Secondary): Caused by fluid accumulation without a retinal tear",
+          "Tractional: Caused by scar tissue pulling the retina away"
+        ]
+      }
     ]
   },
   "squint": {
@@ -381,13 +472,16 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Misalignment of the eyes where both eyes do not look in the same direction — affecting vision, depth perception and confidence.",
+      "Misalignment of the eyes where both eyes do not look in the same direction - affecting vision, depth perception and confidence.",
     image: "/assets/img/images/Squint.jpg",
     content: [
       "A condition where the eyes are misaligned and do not point in the same direction, leading to cosmetic and visual problems.",
       "A squint, medically known as strabismus, occurs when both eyes do not look at the same object at the same time. While one eye is looking straight, the other may turn inwards, outwards, upwards or downwards.",
       "Squint can be present from birth or develop later in life due to eye injury, nerve problems or other illnesses. It may be constant (always visible) or intermittent (seen only at times, usually when tired).",
-      "Apart from cosmetic concerns and social embarrassment, untreated squint can lead to reduced vision in one eye (amblyopia) and loss of 3D (binocular) vision."
+      "Squint usually occurs due to an imbalance in the eye muscles or their nerve control. When some muscles are weaker or not working in sync, one eye looks straight while the other turns in a different direction, and the brain starts ignoring the image from the weaker eye.",
+      "Apart from cosmetic concerns and social embarrassment, untreated squint can lead to reduced vision in one eye (amblyopia) and loss of 3D (binocular) vision.",
+      "In the first few months of life, a baby learns to focus, move the eyes accurately and use them together. If proper visual impulses are not received during this critical period, amblyopia (lazy eye) and loss of binocular vision can occur.",
+      "Squints are classified based on the direction in which the eye turns: Esotropia (eye turns inwards towards the nose), Exotropia (eye turns outwards), Hypertropia (eye turns upwards), and Hypotropia (eye turns downwards)."
     ],
     symptoms: [
       "Eyes looking in different directions at the same time",
@@ -417,13 +511,23 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       { title: "Glasses", description: "Correct underlying refractive errors and may straighten the eyes in some children." },
       { title: "Eye Patching", description: "Covering the stronger eye to force the weaker eye to work, improving vision in amblyopia." },
       { title: "Eye Exercises & Prisms", description: "Pencil push-ups, barrel cards, or prism lenses to improve coordination or manage double vision." },
-      { title: "Botox / Squint Surgery", description: "Botulinum toxin to weaken overacting muscles, or surgery to tighten/loosen eye muscles and realign the eyes when non-surgical options are insufficient." }
+      { title: "Botox / Squint Surgery", description: "Botulinum toxin to weaken overacting muscles, or surgery to tighten/loosen eye muscles and realign the eyes when non-surgical options are insufficient. Surgical planning is based on nomograms - tables developed from the results of thousands of squint surgeries." }
     ],
     benefits: [
       "Prevents lazy eye (amblyopia) and restores binocular/3D vision",
       "Cosmetic & functional eye alignment tailored to children and adults",
       "Boosts confidence and social interaction",
       "Reduces the risk of long-term visual disability"
+    ],
+    extraSections: [
+      {
+        title: "Risk Factors for Developing Squint",
+        items: [
+          "Family history: Squint in parents or siblings",
+          "Refractive error: Significant hyperopia (far-sightedness) increases strain on the eyes, causing them to turn inwards to focus",
+          "Medical conditions: Stroke, Down Syndrome, Cerebral Palsy and other neurological disorders can increase squint risk"
+        ]
+      }
     ]
   },
   armd: {
@@ -432,16 +536,27 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Diagnosis and advanced management of ARMD — slowing disease progression and preserving central vision with modern therapies.",
+      "Diagnosis and advanced management of ARMD - slowing disease progression and preserving central vision with modern therapies.",
     image: "/assets/img/images/ARMD.jpg",
     content: [
       "A progressive retinal condition causing loss of central vision, commonly seen with ageing.",
       "Age-related macular degeneration (ARMD) is a deterioration of the macula, the central part of the retina responsible for sharp, straight-ahead vision. The primary cause of ARMD is ageing.",
       "When the macula degenerates, fine tasks such as reading, threading a needle, recognising faces or seeing details become difficult. Although the macula occupies a small portion of the retina, it is far more sensitive to detail than the peripheral retina, which provides side vision.",
-      "ARMD usually begins in one eye and may gradually affect the other. Many people remain unaware of the condition until noticeable vision changes occur or during a routine eye examination."
+      "ARMD usually begins in one eye and may gradually affect the other. Many people remain unaware of the condition until noticeable vision changes occur or during a routine eye examination.",
+      "ARMD alone rarely causes total blindness. Even in advanced stages, most patients retain peripheral vision, allowing them to move around independently."
+    ],
+    symptoms: [
+      "Straight lines appearing bent, distorted or wavy (an important warning sign requiring immediate evaluation)",
+      "Reduced or blurry central vision",
+      "Need for brighter light while reading",
+      "Difficulty adapting to low light",
+      "Increased blurriness of printed text",
+      "Reduced brightness or intensity of colours, or faded/dull colours",
+      "Difficulty recognising faces",
+      "Dark or blank blind spots in central vision"
     ],
     causes: [
-      "Ageing — the primary driver of macular degeneration",
+      "Ageing - the primary driver of macular degeneration",
       "Accumulation of drusen deposits under the macula",
       "Abnormal blood vessel growth beneath the retina (wet ARMD)",
       "Heredity and family history of ARMD",
@@ -450,7 +565,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     diagnosis: [
       "Retinal examination and Amsler grid testing",
       "OCT (Optical Coherence Tomography) for detailed imaging of the retina and macula",
-      "OCTA — dye-free imaging of the retinal blood vessels"
+      "OCTA - dye-free imaging of the retinal blood vessels"
     ],
     treatmentSteps: [
       { title: "Anti-VEGF Injections", description: "Intravitreal injections to reduce growth and leakage of abnormal blood vessels in wet ARMD." },
@@ -461,7 +576,44 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     benefits: [
       "OCT and OCTA macular mapping for precise diagnosis",
       "Intravitreal injection protocols to preserve central vision",
-      "Prevention guidance covering diet, smoking cessation and blood pressure control"
+      "Prevention guidance covering a healthy diet rich in leafy greens and fish, smoking cessation and blood pressure control"
+    ],
+    extraSections: [
+      {
+        title: "Types of Macular Degeneration",
+        items: [
+          "Dry (Atrophic) ARMD: The most common form, usually affecting people over 50; occurs due to thinning of the macula and accumulation of drusen deposits under the retina, causing slow and gradual vision loss",
+          "Wet (Exudative) ARMD: Occurs when abnormal blood vessels grow under the retina from the choroidal layer and leak fluid or blood; vision loss is usually faster and more severe than in dry ARMD",
+          "If wet ARMD develops in one eye, there is an increased risk of it occurring in the other eye"
+        ]
+      },
+      {
+        title: "Who Is at Risk?",
+        items: [
+          "Age above 60 years",
+          "Family history of ARMD",
+          "Smokers",
+          "Heart disease, high cholesterol or obesity"
+        ]
+      },
+      {
+        title: "When Should You See an Eye Doctor?",
+        items: [
+          "Any changes in central vision or difficulty seeing fine details or colours",
+          "Age over 60 years, even without noticeable symptoms",
+          "Family history of ARMD, smoking, heart disease, high cholesterol or obesity, which raise your risk"
+        ]
+      },
+      {
+        title: "Prevention & Risk Reduction",
+        items: [
+          "Regular eye examinations",
+          "Avoid smoking",
+          "Maintain healthy blood pressure and cholesterol",
+          "Exercise regularly",
+          "Eat a healthy diet rich in leafy greens and fish"
+        ]
+      }
     ]
   },
   "paediatric-eye": {
@@ -470,12 +622,13 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Dedicated eye care for children and adolescents — ensuring healthy vision development through early detection and specialized treatment.",
+      "Dedicated eye care for children and adolescents - ensuring healthy vision development through early detection and specialized treatment.",
     image: "/assets/img/images/Paediatric.jpg",
     content: [
       "Early childhood is the most critical period for vision development. Any eye problem during this time can have long-term consequences if not treated promptly.",
       "Children often do not complain about vision problems because they don't know what 'normal' vision is. At Maa Nursing Home and NetraJyoti Eyecare Centre, we specialize in child-friendly eye examinations and treatments tailored to young patients.",
-      "We offer comprehensive evaluation and management of all paediatric eye disorders in a comforting environment."
+      "We offer comprehensive evaluation and management of all paediatric eye disorders in a comforting environment.",
+      "A child's first eye exam is recommended by age 3, with screening especially crucial for school-age kids - treatment is most effective when started early."
     ],
     symptoms: [
       "Refractive Errors: Nearsightedness, farsightedness, or astigmatism in children",
@@ -509,6 +662,17 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Amblyopia patch therapy during the critical vision-forming years",
       "Congenital eye disorder and ROP screening for premature infants",
       "Vision screening for school children to support academic performance"
+    ],
+    extraSections: [
+      {
+        title: "When to See a Specialist?",
+        items: [
+          "Child squints or tilts head to see",
+          "Frequent eye rubbing or watering",
+          "Difficulty reading or seeing the board",
+          "Family history of eye problems"
+        ]
+      }
     ]
   },
   oculoplasty: {
@@ -517,7 +681,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Specialized surgical care for eyelids, tear ducts, orbits, and eye tumors — combining functional restoration with aesthetic excellence.",
+      "Specialized surgical care for eyelids, tear ducts, orbits, and eye tumors - combining functional restoration with aesthetic excellence.",
     image: "/assets/img/images/Oculoplasty.jpg",
     content: [
       "A specialized field of ophthalmology focusing on the structures around the eye, including eyelids, tear ducts, and the eye socket (orbit).",
@@ -529,7 +693,8 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Blocked Tear Ducts: Leading to constant watering (treated with DCR surgery)",
       "Eyelid Tumors: Cysts or tumors requiring removal and reconstruction",
       "Orbital Fractures: Bony socket damage after facial trauma",
-      "Thyroid Eye Disease: Bulging eyes or eyelid retraction"
+      "Thyroid Eye Disease: Bulging eyes or eyelid retraction",
+      "Enucleation/Evisceration: Removal of a non-functional eye with prosthetic fitting"
     ],
     causes: [
       "Age-related skin loosening or muscle weakness around the eye",
@@ -544,12 +709,24 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     treatmentSteps: [
       { title: "DCR (Dacryocystorhinostomy)", description: "Creates a new tear drainage path into the nose to stop chronic watering and infections." },
       { title: "Ptosis Correction", description: "Surgical lifting of drooping eyelids to improve vision field and aesthetics." },
+      { title: "Ocular Oncology", description: "Management of tumors in and around the eye; early diagnosis and precise surgical removal are critical for protecting both the eye and the patient's overall health." },
       { title: "Blepharoplasty & Prosthetics", description: "Eyelid aesthetic rejuvenation and custom artificial eye fitting for non-functional eyes." }
     ],
     benefits: [
       "Expert oculoplastic procedures combining functional restoration and cosmetic appearance",
       "Treatment for ptosis, blocked tear ducts (DCR), eyelid tumors, and orbital trauma",
       "Custom prosthetic eye fitting matching natural eye color and movement"
+    ],
+    extraSections: [
+      {
+        title: "Why Choose Our Centre?",
+        items: [
+          "Experienced oculoplastic surgeons",
+          "Advanced surgical facility",
+          "Personalized care & follow-up",
+          "Integration of function & aesthetics"
+        ]
+      }
     ]
   },
   "lasik": {
@@ -558,7 +735,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Eye Care (Ophthalmology)",
     category: "Eye Care",
     summary:
-      "Modern, precise LASER vision correction to reduce dependence on spectacles and contact lenses — with personalised evaluation and advanced technology.",
+      "Modern, precise LASER vision correction to reduce dependence on spectacles and contact lenses - with personalised evaluation and advanced technology.",
     image: "/assets/img/images/LASIK Clinic.jpg",
     content: [
       "A painless day-care LASER procedure to correct refractive errors and reduce or eliminate the need for glasses or contact lenses.",
@@ -572,9 +749,9 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Astigmatism from –1.0 D to –6.0 D"
     ],
     causes: [
-      "Myopia — light focuses in front of the retina",
-      "Hypermetropia — light focuses behind the retina",
-      "Astigmatism — light focuses at multiple points due to irregular corneal curvature"
+      "Myopia - light focuses in front of the retina",
+      "Hypermetropia - light focuses behind the retina",
+      "Astigmatism - light focuses at multiple points due to irregular corneal curvature"
     ],
     diagnosis: [
       "Routine eye examination to assess refractive error",
@@ -582,7 +759,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Pachymetry to measure corneal thickness before planning treatment"
     ],
     treatmentSteps: [
-      { title: "Topical Anaesthesia", description: "Numbing eye drops are applied — no injections are needed." },
+      { title: "Topical Anaesthesia", description: "Numbing eye drops are applied - no injections are needed." },
       { title: "Flap Creation", description: "A suction ring is applied and a thin corneal flap is created manually (Contoura) or with a Femto Second LASER (Bladeless)." },
       { title: "Excimer Laser Reshaping", description: "The flap is lifted and a computer-controlled excimer laser precisely reshapes the underlying corneal tissue." },
       { title: "Flap Repositioning", description: "The flap is repositioned and naturally adheres without stitches, completing the 15-20 minute procedure." }
@@ -643,7 +820,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     image: "/assets/img/images/Infertility.jpg",
     content: [
       "Infertility is defined by WHO as the inability to conceive after 12 months of regular, unprotected intercourse.",
-      "Infertility is rising globally among both men and women. At Maa Nursing Home and NetraJyoti Eyecare Centre, we offer a complete range of diagnostic and treatment options through our dedicated Infertility Clinic, led by Dr. Jyoti Shah — senior gynaecologist, obstetrician and infertility specialist.",
+      "Infertility is rising globally among both men and women. At Maa Nursing Home and NetraJyoti Eyecare Centre, we offer a complete range of diagnostic and treatment options through our dedicated Infertility Clinic, led by Dr. Jyoti Shah - senior gynaecologist, obstetrician and infertility specialist.",
       "Our highly trained IVF and fertility experts use advanced technology and strict safety protocols, ensuring some of the highest success rates in the country.",
       "Each couple receives a customized treatment plan tailored to their medical history, diagnosis and personal needs."
     ],
@@ -652,11 +829,11 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Female partner age over 35 years",
       "Irregular menstrual cycles or severe period-related issues",
       "Erection/ejaculation issues or pain/swelling in testicles",
-      "History of scrotal, testicular, or pelvic surgeries"
+      "History of groin, testicle, penile or scrotal surgery"
     ],
     causes: [
-      "Female: Ovulatory dysfunction, Endometriosis, advanced maternal age, fibroids, uterine abnormalities",
-      "Male: Low sperm count (<15M/mL), poor motility, abnormal morphology, blockages, anti-sperm antibodies",
+      "Female: Ovulatory dysfunction, Endometriosis, advanced maternal age, fibroids, uterine or cervical abnormalities, luteal phase defects",
+      "Male: Low sperm count (<15M/mL), poor motility, abnormal morphology, blockages, anti-sperm antibodies, hormonal or chromosomal abnormalities, chronic illnesses and infections",
       "Lifestyle: Smoking, alcohol, obesity, stress, and environmental exposures"
     ],
     diagnosis: [
@@ -692,6 +869,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Unexplained difficulty conceiving after timed intercourse",
       "Mild male subfertility (low sperm count or motility)",
       "Cervical factor infertility or hostile cervical mucus",
+      "Immunological infertility",
       "Ejaculatory dysfunction or requirement of donor sperm"
     ],
     causes: [
@@ -705,13 +883,24 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     ],
     treatmentSteps: [
       { title: "Counselling & Ovarian Stimulation", description: "Medications stimulate egg growth monitored by ultrasound follicular scans." },
-      { title: "Semen Collection & Processing", description: "Sperm washed via Swim-Up or Density Gradient to isolate top motile sperm." },
-      { title: "Insemination & 14-Day Wait", description: "Fine catheter places processed sperm in uterus 12–36 hours post-HCG; pregnancy test in 14 days." }
+      { title: "Semen Collection & Processing", description: "Sperm washed via Swim-Up or Density Gradient to isolate top motile sperm. Donor sperm is quarantined for 6 months to screen for infections such as HIV." },
+      { title: "Insemination & 14-Day Wait", description: "Fine catheter places processed sperm in uterus 12–36 hours post-HCG; pregnancy test in 14 days. Typically 3 IUI cycles are attempted before IVF or ICSI is recommended." }
     ],
     benefits: [
       "Simple, quick, and painless procedure taking only 10–15 minutes without anesthesia",
       "Significantly more affordable first-line treatment than IVF",
       "Enhanced sperm washing isolates the healthiest motile sperms for direct placement"
+    ],
+    extraSections: [
+      {
+        title: "When Is Donor Sperm Recommended?",
+        items: [
+          "Male partner has azoospermia (zero sperm count)",
+          "Poor sperm quality or compromised morphology",
+          "Genetic disorders that may pass to the child",
+          "Non-obstructive sperm production problems"
+        ]
+      }
     ]
   },
   icsi: {
@@ -724,13 +913,14 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     image: "/assets/img/images/ICSI.png",
     content: [
       "A single healthy sperm is directly injected into an egg to achieve fertilization.",
-      "ICSI (Intra-Cytoplasmic Sperm Injection) is an advanced ART (Assisted Reproductive Technology) procedure, primarily used for severe male infertility. Unlike standard IVF—where eggs and sperms are mixed together—ICSI requires only one good sperm, which is manually injected into the egg by an embryologist.",
+      "ICSI (Intra-Cytoplasmic Sperm Injection) is an advanced ART (Assisted Reproductive Technology) procedure, primarily used for severe male infertility. Unlike standard IVF - where eggs and sperms are mixed together - ICSI requires only one good sperm, which is manually injected into the egg by an embryologist.",
       "This bypasses sperm motility and morphology problems and increases the chances of successful fertilization.",
       "Maa Nursing Home and NetraJyoti Eyecare Centre is equipped with specialized micromanipulation technology and expert embryologists to perform ICSI with high accuracy."
     ],
     symptoms: [
       "Very low or zero sperm count (azoospermia)",
       "Poor sperm motility or abnormal sperm morphology",
+      "Egg penetration issues",
       "Failed fertilization in previous standard IVF cycles",
       "High anti-sperm antibodies or severe female endometriosis"
     ],
@@ -750,6 +940,15 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Ideal solution for severe male infertility requiring only one healthy sperm cell per egg",
       "Significantly higher fertilization rates and overcomes past standard IVF failures",
       "Performed in high-tech micromanipulation labs led by expert embryologists"
+    ],
+    extraSections: [
+      {
+        title: "Are There Any Risks?",
+        items: [
+          "Children born through ICSI and IVF are generally healthy.",
+          "ICSI may slightly increase the chance of passing on certain genetic conditions, usually linked to the underlying infertility in the parents rather than the procedure itself."
+        ]
+      }
     ]
   },
   tesapesa: {
@@ -796,7 +995,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Gynaecology & Obstetrics",
     category: "Gynaec Care",
     summary:
-      "A common hormonal disorder in young women that affects ovulation, menstrual cycles, fertility and long-term health — manageable with timely diagnosis, lifestyle changes and medical care.",
+      "A common hormonal disorder in young women that affects ovulation, menstrual cycles, fertility and long-term health - manageable with timely diagnosis, lifestyle changes and medical care.",
     image: "/assets/img/images/pcod.jpeg",
     content: [
       "A hormonal imbalance where ovaries become enlarged and develop multiple small cysts, often causing irregular periods and difficulty conceiving.",
@@ -814,7 +1013,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     ],
     causes: [
       "Hereditary tendency and family history of PCOS or irregular periods",
-      "Anovulation — failure of the ovaries to regularly release eggs",
+      "Anovulation - failure of the ovaries to regularly release eggs",
       "High androgen and oestrogen levels (hormonal imbalance)",
       "Obesity or excess weight; overactive adrenal glands",
       "Insulin resistance leading to high insulin levels and further hormonal imbalance"
@@ -844,7 +1043,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Gynaecology & Obstetrics",
     category: "Gynaec Care",
     summary:
-      "Absence of menstrual periods outside of pregnancy, breastfeeding or menopause — a condition that needs evaluation to protect long-term reproductive and hormonal health.",
+      "Absence of menstrual periods outside of pregnancy, breastfeeding or menopause - a condition that needs evaluation to protect long-term reproductive and hormonal health.",
     image: "/assets/img/images/Amenorrhea.jpg",
     content: [
       "Amenorrhea is the absence of menstrual periods in a woman during her reproductive years, apart from natural causes such as pregnancy, breastfeeding and menopause.",
@@ -864,11 +1063,12 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Congenital Müllerian defects affecting uterine development",
       "Stress, depression, low BMI, eating disorders or heavy exercise for secondary amenorrhea",
       "Hypothyroidism, Asherman's syndrome, or prolactin-secreting pituitary tumours",
-      "Stopping oral contraceptive pills or certain birth control methods"
+      "Stopping oral contraceptive pills or certain birth control methods",
+      "Certain psychiatric medications or chronic long-term illnesses"
     ],
     diagnosis: [
       "Physical examination to assess secondary sexual characteristics and abnormalities",
-      "Detailed medical history including menstrual pattern, weight changes and stress levels",
+      "Detailed medical history including menstrual pattern, weight changes, medications and stress levels",
       "Blood tests for thyroid, prolactin, FSH, LH and oestrogen levels",
       "Pelvic ultrasound to check for structural or anatomical issues; X-ray or imaging if needed"
     ],
@@ -882,7 +1082,8 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Hormonal & pelvic ultrasound screening for accurate diagnosis",
       "Thyroid & prolactin profile evaluation",
       "Individualised cycle restoration guidance and counselling",
-      "Focus on long-term reproductive and bone health"
+      "Focus on long-term reproductive and bone health",
+      "Experienced gynaecologists for adolescent & adult care"
     ]
   },
   endometriosis: {
@@ -895,7 +1096,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     image: "/assets/img/images/Endometriosis.jpeg",
     content: [
       "A common condition affecting 5–10% of women, often presenting with severe pain, heavy bleeding and fertility issues.",
-      "Endometriosis is a disorder in which endometrial tissue (the lining of the uterus) grows outside the uterus — commonly on the ovaries, fallopian tubes, intestines and pelvic lining.",
+      "Endometriosis is a disorder in which endometrial tissue (the lining of the uterus) grows outside the uterus - commonly on the ovaries, fallopian tubes, intestines and pelvic lining.",
       "These tissues still behave like normal endometrium: they thicken, break down and bleed with each menstrual cycle. But since this blood has no natural passage to exit the body, it causes inflammation, pain, cysts and adhesions (organs sticking together).",
       "Symptoms can range from mild to very severe and may include infertility. At Maa Nursing Home and NetraJyoti Eyecare Centre, endometriosis is treated with medicines and, in severe cases, laparoscopic surgery."
     ],
@@ -905,18 +1106,19 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Premenstrual spotting and pain radiating to thighs and legs",
       "Infertility and chronic fatigue",
       "Constipation, diarrhoea, bloating, or pain while passing motions",
-      "Depression and anxiety due to chronic pain"
+      "Depression and anxiety due to chronic pain",
+      "Occasional fever and headache"
     ],
     causes: [
-      "Retrograde menstruation — menstrual blood flowing backwards into the pelvis where cells implant and grow",
-      "Coelomic metaplasia — transformation of pelvic lining cells into endometrial-like tissue",
+      "Retrograde menstruation - menstrual blood flowing backwards into the pelvis where cells implant and grow",
+      "Coelomic metaplasia - transformation of pelvic lining cells into endometrial-like tissue",
       "Transplantation of endometrial tissue during surgery (e.g. Caesarean or episiotomy scars)",
       "Spread via blood or lymph to distant organs",
-      "Altered immune system function"
+      "Immune system changes - altered immunity may fail to recognise and remove misplaced endometrial tissue"
     ],
     treatmentSteps: [
       { title: "Pain-Relief Medication", description: "Medicines control pelvic pain and menstrual cramps." },
-      { title: "Hormone-Suppressing Therapy", description: "Oral or injectable drugs reduce or stop cyclical activity of endometrial implants, relieving pain and slowing progression." },
+      { title: "Hormone-Suppressing Therapy", description: "Oral or injectable drugs reduce or stop cyclical activity of endometrial implants, relieving pain and slowing progression. In selected patients, these medicines may also help reduce the risk of ectopic pregnancy." },
       { title: "Laparoscopic Surgery", description: "For severe or uncontrolled cases, implants are removed and adhesions resected to restore normal pelvic anatomy." },
       { title: "Fertility-Focused Follow-Up", description: "Laparoscopy improves the chances of pregnancy where endometriosis is a cause of infertility." }
     ],
@@ -933,10 +1135,10 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Gynaecology & Obstetrics",
     category: "Gynaec Care",
     summary:
-      "Abnormal or irregular uterine bleeding not related to pregnancy, structural disease, or infection — most commonly caused by hormonal imbalance and requiring timely gynecological evaluation.",
+      "Abnormal or irregular uterine bleeding not related to pregnancy, structural disease, or infection - most commonly caused by hormonal imbalance and requiring timely gynecological evaluation.",
     image: "/assets/img/images/Dysfunctional Uterine Bleeding (DUB).jpg",
     content: [
-      "Abnormal uterine bleeding without any structural disease — commonly caused by hormonal imbalance.",
+      "Abnormal uterine bleeding without any structural disease - commonly caused by hormonal imbalance.",
       "Dysfunctional Uterine Bleeding (DUB) refers to abnormal, irregular or excessive uterine bleeding that occurs in the absence of pregnancy, infection, tumors or other pelvic disease.",
       "DUB is frequently seen in adolescents and women approaching menopause, when hormonal fluctuations are common. At Maa Nursing Home, we provide accurate diagnosis and personalized treatment plans.",
       "Types include Anovulatory Bleeding (when ovulation does not take place, leading to irregular/prolonged bleeding) and Ovulatory Bleeding (regular cycles with excessive flow)."
@@ -947,7 +1149,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Fatigue, weakness, and anemia due to excessive blood loss"
     ],
     causes: [
-      "Anovulation — absence of ovulation leading to irregular, prolonged or heavy bleeding",
+      "Anovulation - absence of ovulation leading to irregular, prolonged or heavy bleeding",
       "Hormonal imbalance affecting regular ovulatory cycles",
       "Common in adolescents and women approaching menopause"
     ],
@@ -959,7 +1161,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     treatmentSteps: [
       { title: "Medical Management", description: "Hormonal therapy, oral contraceptives, progesterone or non-hormonal medications regulate cycles and reduce bleeding." },
       { title: "Iron Supplementation", description: "Corrects anemia caused by excessive blood loss." },
-      { title: "Surgical Treatment", description: "Considered when medical treatment fails — includes procedures like D&C or hysteroscopy." },
+      { title: "Surgical Treatment", description: "Considered when medical treatment fails - includes procedures like D&C or hysteroscopy." },
       { title: "Follow-Up", description: "Regular follow-up monitors cycle regularity, hormone balance and overall health." }
     ],
     benefits: [
@@ -967,6 +1169,16 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Hormonal therapy & medical control tailored to age and fertility plans",
       "Minimally invasive surgical solutions when needed",
       "Prevents severe anemia and restores hormonal balance and fertility outcomes"
+    ],
+    extraSections: [
+      {
+        title: "Possible Complications",
+        items: [
+          "Anemia due to chronic blood loss",
+          "Hormonal imbalance affecting fertility",
+          "Endometrial hyperplasia - thickening of the uterine lining"
+        ]
+      }
     ]
   },
   menopause: {
@@ -975,13 +1187,15 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Gynaecology & Obstetrics",
     category: "Gynaec Care",
     summary:
-      "Guidance and care for women transitioning through menopause — managing hormonal changes, symptoms and long-term health with comfort and support.",
+      "Guidance and care for women transitioning through menopause - managing hormonal changes, symptoms and long-term health with comfort and support.",
     image: "/assets/img/images/Menopause.jpg",
     content: [
       "A natural transition marking the end of menstrual cycles, often accompanied by physical and emotional changes.",
       "Maa Nursing Home and NetraJyoti Eyecare Centre has a dedicated Menopause Clinic that understands the unique needs of women going through this transition and supports them with personalised guidance and care.",
-      "Menopause is the stage when a woman permanently stops getting her periods. It is caused by a natural decline in reproductive hormones — mainly oestrogen and progesterone. If a woman has not had her period for 12 months, she is considered to be in menopause.",
-      "Most women experience symptoms after the age of 40. Menopause is not sudden — it progresses gradually over several years through perimenopause, menopause, and post-menopause."
+      "Menopause is the stage when a woman permanently stops getting her periods. It is caused by a natural decline in reproductive hormones - mainly oestrogen and progesterone. If a woman has not had her period for 12 months, she is considered to be in menopause.",
+      "Most women experience symptoms after the age of 40. Menopause is not sudden - it progresses gradually over several years through perimenopause, menopause, and post-menopause.",
+      "Declining oestrogen levels can also contribute to several long-term health complications if left unmanaged.",
+      "Symptom duration varies greatly - on average, perimenopause symptoms last about four years, and post-menopause symptoms fade gradually over time."
     ],
     symptoms: [
       "Irregular periods and hot flashes/night sweats",
@@ -989,7 +1203,11 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "Fatigue, disturbed sleep, and mood swings/irritability",
       "Dry skin, dry eyes, dry mouth, and hair thinning",
       "Urinary incontinence or urgency",
-      "Bone loss (osteoporosis risk) and weight gain"
+      "Bone loss (osteoporosis risk) and weight gain",
+      "Sore breasts and heart palpitations",
+      "Headaches, joint pain and muscle pain",
+      "Low sex drive",
+      "Depression, anxiety or crankiness"
     ],
     causes: [
       "Natural age-related decline in ovarian estrogen and progesterone production",
@@ -1000,17 +1218,56 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     diagnosis: [
       "Detailed symptom tracking and menstrual pattern evaluation",
       "Blood tests to check hormone levels (FSH, LH, oestrogen)",
-      "Bone Mineral Density (DEXA scan) screening for post-menopausal bone health"
+      "Bone Mineral Density (DEXA scan) screening for post-menopausal bone health",
+      "Thyroid tests if needed"
     ],
     treatmentSteps: [
       { title: "Hormone Replacement Therapy (HRT)", description: "Customized estrogen-progesterone therapy to manage severe hot flashes and systemic symptoms." },
       { title: "Topical Vaginal Estrogen", description: "Local estrogen creams/tablets for vaginal atrophy, dryness, and urinary comfort." },
+      { title: "Non-Hormonal Medicines", description: "Non-hormonal medicines to manage hot flashes for women who cannot or prefer not to use hormone therapy." },
       { title: "Osteoporosis Prevention & Lifestyle Care", description: "Calcium, Vitamin D3, bone-sparing medications, and weight-bearing exercise routines." }
     ],
     benefits: [
       "Dedicated Menopause Clinic care by senior gynaecologist Dr. Jyoti Shah",
       "Hormone Replacement Therapy (HRT) and non-hormonal management options",
       "Comprehensive screening for post-menopausal bone loss and heart health"
+    ],
+    extraSections: [
+      {
+        title: "Possible Complications of Menopause",
+        items: [
+          "Bone loss and osteoporosis",
+          "Higher risk of heart disease",
+          "Urinary problems and bladder control issues",
+          "Increased risk of Alzheimer's disease",
+          "Loss of muscle mass",
+          "Wrinkles and skin thinning",
+          "Poor vision, including increased risk of cataract and macular degeneration"
+        ]
+      },
+      {
+        title: "Stages of Menopause",
+        items: [
+          "Perimenopause: Hormone levels begin to decline, periods become irregular, and early symptoms start.",
+          "Menopause: The woman has had no periods for 12 months; ovaries stop releasing eggs.",
+          "Post-menopause: Symptoms gradually reduce, but long-term health risks such as bone loss increase."
+        ]
+      },
+      {
+        title: "Lifestyle Tips for Menopause",
+        items: [
+          "Regular exercise - walking, cycling, stretching, weight training",
+          "Yoga and meditation",
+          "Drink cold water and rest during hot flashes",
+          "Use vaginal moisturizers or lubricants",
+          "Strengthen pelvic floor muscles with Kegel exercises",
+          "Stay mentally and socially active",
+          "Avoid smoking and reduce alcohol intake",
+          "Maintain a healthy body weight",
+          "Manage diabetes",
+          "Regular health check-ups"
+        ]
+      }
     ]
   },
   obstetrics: {
@@ -1019,13 +1276,13 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     department: "Gynaecology & Obstetrics",
     category: "Gynaec Care",
     summary:
-      "Comprehensive pregnancy and childbirth care in a warm, safe and homely environment — from pre-conception to delivery and postnatal support.",
+      "Comprehensive pregnancy and childbirth care in a warm, safe and homely environment - from pre-conception to delivery and postnatal support.",
     image: "/assets/img/images/Obstetrics (Maternity Care).jpg",
     content: [
       "A 'home away from home' for mothers-to-be, with personalised care throughout pregnancy, childbirth and the postnatal period.",
-      "Motherhood is one of the most beautiful experiences in a woman’s life. Maa Nursing Home and NetraJyoti Eyecare Centre offers a warm, cosy and reassuring environment for your entire maternity journey — from registration of pregnancy to the safe delivery of your baby.",
+      "Motherhood is one of the most beautiful experiences in a woman’s life. Maa Nursing Home and NetraJyoti Eyecare Centre offers a warm, cosy and reassuring environment for your entire maternity journey - from registration of pregnancy to the safe delivery of your baby.",
       "Our Obstetrics department is led by Dr Jyoti Shah, a senior and well-known gynaecologist and obstetrician, who personally attends to every expectant mother with care and compassion.",
-      "We provide comprehensive pre-natal and antenatal care, and offer different delivery options depending on the mother’s health condition and preferences — always prioritising safety for both mother and baby."
+      "We provide comprehensive pre-natal and antenatal care, and offer different delivery options depending on the mother’s health condition and preferences - always prioritising safety for both mother and baby."
     ],
     symptoms: [
       "Prenatal screening and routine pregnancy check-ups",
@@ -1045,12 +1302,37 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     treatmentSteps: [
       { title: "Normal & Pain-Free Delivery", description: "Safe vaginal delivery in a well-equipped labor room with pain-free delivery options." },
       { title: "C-Section & High-Risk Management", description: "Cesarean delivery and expert management for high-risk maternal/fetal conditions." },
-      { title: "Instrumental Delivery & Postnatal Care", description: "Forceps/vacuum assisted delivery, breastfeeding counseling, and legal MTP/family planning services." }
+      { title: "Instrumental Delivery & Postnatal Care", description: "Assisted vaginal delivery when needed with forceps, vacuum extraction or Kiwicep (vacuum-assisted device), plus breastfeeding counseling and legal MTP/family planning services including Sterilisation (Laparoscopic Tubal Ligation) and IUD insertion." }
     ],
     benefits: [
       "Personalized maternity care led by senior obstetrician Dr. Jyoti Shah",
       "Safe normal delivery, pain-free labor, and C-section facilities",
-      "Government-registered facility for safe MTP, high-risk care, and family planning"
+      "Government-registered facility for safe MTP, high-risk care, and family planning",
+      "Antenatal and postnatal classes & yoga, with attendance by a team of experienced obstetricians"
+    ],
+    extraSections: [
+      {
+        title: "Services Available",
+        items: [
+          "Maternity care throughout pregnancy and delivery",
+          "Prenatal and postnatal counselling",
+          "Antenatal and postnatal classes & Yoga",
+          "Well-equipped Labour Room & Operation Theatre",
+          "Fetal Medicine & Genetics support",
+          "Attendance by a team of experienced obstetricians",
+          "NST and intrapartum fetal heart rate monitoring"
+        ]
+      },
+      {
+        title: "Pregnancy Check-ups & Family Planning",
+        items: [
+          "Routine pregnancy check-ups and monitoring",
+          "Pre-marital counselling",
+          "Contraception counselling",
+          "Sterilisation - Laparoscopic Tubal Ligation",
+          "Intrauterine Device (IUD) insertion such as Copper-T"
+        ]
+      }
     ]
   },
   laparoscopy: {
@@ -1064,32 +1346,47 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     content: [
       "A key-hole surgical method used to diagnose and treat conditions affecting a woman’s reproductive health.",
       "Laparoscopy is a minimally invasive procedure that allows the doctor to look directly at the uterus, fallopian tubes, ovaries and pelvic structures. It is extremely useful in evaluating unexplained infertility and treating abnormalities that prevent conception.",
-      "The surgeon makes 2–3 small incisions in the abdomen and inserts thin fibre-optic instruments equipped with a light and camera. If abnormalities are found, they can often be corrected during the same procedure, avoiding major surgery."
+      "The surgeon makes 2–3 small incisions in the abdomen and inserts thin fibre-optic instruments equipped with a light and camera. If abnormalities are found, they can often be corrected during the same procedure, avoiding major surgery.",
+      "Laparoscopy is generally a day-care procedure performed under general anaesthesia. It typically takes 20 minutes to 2 hours, depending on the complexity of the case, and most patients go home the same day needing 1-2 days of rest. When performed by expert surgeons, laparoscopy is very safe; mild to moderate discomfort may last up to a week."
     ],
     symptoms: [
       "Unexplained infertility or repeated pregnancy loss",
       "Endometriosis and chronic pelvic pain",
       "Ovarian cysts, fibroids, or pelvic adhesions",
-      "Blocked or damaged fallopian tubes (hydrosalpinx)"
+      "Blocked or damaged fallopian tubes (hydrosalpinx)",
+      "Ectopic pregnancy"
     ],
     causes: [
       "Pelvic inflammatory disease (PID) or genital tuberculosis (TB)",
       "Endometriosis implants causing pelvic adhesions",
-      "PCOS requiring laparoscopic ovarian drilling"
+      "PCOS requiring laparoscopic ovarian drilling",
+      "Uterine prolapse (corrected via Vente suspension) or urinary incontinence (Burch procedure)",
+      "Tubal ligation and other sterilisation procedures"
     ],
     diagnosis: [
       "Direct laparoscopy visualization via 2-3 keyhole abdominal incisions",
       "Diagnostic chromopertubation (tubal dye test) during laparoscopy"
     ],
     treatmentSteps: [
-      { title: "Keyhole Incision & Scope Insertion", description: "2-3 small 5mm incisions made in the abdomen for camera and micro-instrument access." },
+      { title: "Keyhole Incision & Scope Insertion", description: "2-3 small 5mm incisions made in the abdomen for camera and micro-instrument access, performed under general anaesthesia and typically taking 20 minutes to 2 hours depending on complexity." },
       { title: "Diagnostic Survey & Chromopertubation", description: "Inspection of pelvic organs and methylene blue dye injection to confirm tubal patency." },
       { title: "Surgical Correction & Day-Care Recovery", description: "Adhesiolysis, cystectomy, fibroid removal, or tubal clipping performed with same-day discharge." }
     ],
     benefits: [
       "Minimally invasive keyhole surgery with tiny incisions and minimal scarring",
+      "Lower risk of infection with smaller scars and better cosmetic results",
       "Diagnoses and treats root causes of infertility in a single day-care sitting",
-      "Rapid recovery with 1–2 days of rest compared to open abdominal surgery"
+      "Faster recovery and shorter hospital stay, with rapid recovery of 1–2 days compared to open abdominal surgery"
+    ],
+    extraSections: [
+      {
+        title: "Risks Involved",
+        items: [
+          "Injury to the bladder, ureter or bowel",
+          "Damage to blood vessels",
+          "Infection or bleeding (rare)"
+        ]
+      }
     ]
   },
   hysteroscopy: {
@@ -1104,7 +1401,8 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
       "A thin telescope-like instrument is used to examine the cervix and uterus to diagnose and treat reproductive abnormalities.",
       "Hysteroscopy is a short, minimally invasive procedure used when a woman experiences heavy bleeding, painful periods, infertility, or recurrent miscarriages. A hysteroscope (a thin fibre-optic telescope) is inserted through the vagina to directly visualize the uterine cavity.",
       "It is used for both diagnosis and treatment, often helping identify and correct fibroids, endometrial polyps, intrauterine scar tissue (adhesions), uterine septum, tubal block at the utero-tubal junction, and lesions interfering with IVF implantation.",
-      "Diagnostic hysteroscopy usually takes about 30 minutes under local anaesthesia. If abnormalities are found, they can be removed in the same sitting (operative hysteroscopy)."
+      "Diagnostic hysteroscopy usually takes about 30 minutes under local anaesthesia. If abnormalities are found, they can be removed in the same sitting (operative hysteroscopy), which may require general anaesthesia.",
+      "When performed by trained specialists, hysteroscopy is very safe."
     ],
     symptoms: [
       "Heavy bleeding or painful menstrual periods",
@@ -1129,6 +1427,17 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     benefits: [
       "Direct visualization of the uterine cavity without external abdominal incisions",
       "Significantly improves IVF implantation rates and resolves recurrent miscarriages"
+    ],
+    extraSections: [
+      {
+        title: "Risks of Hysteroscopy",
+        items: [
+          "Infection",
+          "Uterine perforation",
+          "Vaginal bleeding",
+          "Fluid overload (very rare)"
+        ]
+      }
     ]
   }
 };

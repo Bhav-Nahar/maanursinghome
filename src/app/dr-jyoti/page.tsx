@@ -30,7 +30,7 @@ export default function DrJyotiPage() {
               Dr Jyoti Shah
             </h1>
             <p className="text-slate-300 text-base max-w-3xl">
-              Maa Nursing Home & NetraJyoti Eyecare Centre — providing advanced eye care and compassionate gynaecology services since 2002. Excellence, accessibility and affordability are the pillars of our care.
+              Maa Nursing Home & NetraJyoti Eyecare Centre - providing advanced eye care and compassionate gynaecology services since 2002. Excellence, accessibility and affordability are the pillars of our care.
             </p>
           </div>
         </section>
@@ -50,7 +50,7 @@ export default function DrJyotiPage() {
                     Compassionate Fertility & Women’s Health Care
                   </h2>
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                    Advanced infertility treatments, high-risk obstetrics and ethical gynaecological care — delivered with empathy, experience and affordability.
+                    Advanced infertility treatments, high-risk obstetrics and ethical gynaecological care - delivered with empathy, experience and affordability.
                   </p>
                 </div>
 

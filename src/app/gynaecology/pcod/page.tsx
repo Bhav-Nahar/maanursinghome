@@ -36,7 +36,7 @@ export default function PCODPage() {
               Polycystic Ovarian Disease (PCOD / PCOS)
             </h1>
             <p className="text-slate-300 text-base max-w-3xl leading-relaxed">
-              A common hormonal disorder in young women that affects ovulation, menstrual cycles, fertility and long-term health — manageable with timely diagnosis, lifestyle changes and medical care.
+              A common hormonal disorder in young women that affects ovulation, menstrual cycles, fertility and long-term health - manageable with timely diagnosis, lifestyle changes and medical care.
             </p>
           </div>
         </section>
@@ -102,9 +102,9 @@ export default function PCODPage() {
                     <p className="text-xs text-slate-600">Diagnosis is based on symptoms, examination, ultrasound and blood tests. Your doctor may:</p>
                     <ul className="space-y-3 text-sm text-slate-700">
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Discuss your <strong>menstrual history</strong> for irregular periods.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Look for signs of <strong>hirsutism</strong> (excess hair) or acne.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Perform a <strong>vaginal ultrasound</strong> to view cysts.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Order <strong>blood tests</strong> for hormone and insulin levels.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Look for signs of <strong>hirsutism</strong> (excess facial and body hair), acne or hair loss - indicators of high androgen levels.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Perform a <strong>vaginal ultrasound</strong> to view enlarged ovaries and multiple small cysts.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Order <strong>blood tests</strong> to check hormone levels, insulin, sugar and lipid profile.</span></li>
                     </ul>
                   </div>
 
@@ -119,9 +119,10 @@ export default function PCODPage() {
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Hereditary tendency</strong> or family history.</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Family history of diabetes</strong>.</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Anovulation</strong> (failure to release eggs).</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Hormonal imbalance</strong> (high androgens).</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Hormonal imbalance</strong> (high androgen and oestrogen levels).</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Obesity</strong> or excess weight.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Insulin resistance</strong>.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Overactive adrenal glands</strong>.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span><strong>Insulin resistance</strong>, leading to high insulin levels and further hormonal imbalance.</span></li>
                     </ul>
                   </div>
                 </div>
@@ -134,7 +135,7 @@ export default function PCODPage() {
                       How is PCOD Treated?
                     </h3>
                     <p className="text-slate-600 text-sm leading-relaxed">
-                      Treatment depends on the patient’s symptoms and goals — especially whether she is trying to conceive. At <strong>Maa Nursing Home and NetraJyoti Eyecare Centre</strong>, our gynaecology and infertility team provides a combination of lifestyle planning and medical/fertility treatments.
+                      Treatment depends on the patient’s symptoms and goals - especially whether she is trying to conceive. At <strong>Maa Nursing Home and NetraJyoti Eyecare Centre</strong>, our gynaecology and infertility team provides a combination of lifestyle planning and medical/fertility treatments.
                     </p>
                   </div>
 
@@ -156,7 +157,7 @@ export default function PCODPage() {
                       </div>
                       <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
                         <strong className="block text-slate-900 mb-1 text-sm">Hormone therapy & Cycle regulation</strong>
-                        <p className="text-xs text-slate-600 leading-relaxed">Medicines to suppress excessive androgen levels, reduce cyst formation, improve egg quality and regularize cycles.</p>
+                        <p className="text-xs text-slate-600 leading-relaxed">Medicines to suppress excessive androgen and oestrogen levels, reduce cyst formation, improve egg quality, regularize cycles and reduce the risk of endometrial thickening.</p>
                       </div>
                     </div>
                   </div>
@@ -175,7 +176,7 @@ export default function PCODPage() {
                         <CheckCircle2 className="w-5 h-5 text-rose-600 mr-3 shrink-0 mt-0.5" />
                         <div>
                           <strong className="block text-slate-900 mb-1">Ovulation induction with IUI (Intrauterine Insemination)</strong>
-                          <span className="text-slate-600 leading-relaxed">Medicines stimulate egg development; timing is closely monitored. IUI is then performed to improve chances of conception. Careful dosing is used to reduce the risk of multiple pregnancy.</span>
+                          <span className="text-slate-600 leading-relaxed">Medicines stimulate egg development; timing is closely monitored. IUI is then performed to improve chances of conception. Careful dosing of HMG is used to reduce the risk of multiple pregnancy and ovarian hyperstimulation syndrome.</span>
                         </div>
                       </li>
                       <li className="flex items-start">

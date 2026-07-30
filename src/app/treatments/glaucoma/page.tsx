@@ -36,7 +36,7 @@ export default function GlaucomaPage() {
               Glaucoma
             </h1>
             <p className="text-slate-300 text-base max-w-3xl leading-relaxed">
-              A progressive disease that damages the optic nerve—usually due to high eye pressure. Early detection prevents vision loss.
+              A progressive disease that damages the optic nerve - usually due to high eye pressure. Early detection prevents vision loss.
             </p>
           </div>
         </section>
@@ -62,7 +62,7 @@ export default function GlaucomaPage() {
                   <div className="space-y-4">
                     <h2 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">What is Glaucoma?</h2>
                     <p className="text-primary-700 font-semibold text-sm sm:text-base border-l-4 border-primary-600 pl-4 py-1">
-                      A group of eye conditions that damage the optic nerve, often due to increased eye pressure — a major cause of irreversible blindness.
+                      A group of eye conditions that damage the optic nerve, often due to increased eye pressure - a major cause of irreversible blindness.
                     </p>
                     <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                       The optic nerve acts like a cable containing over a million nerve fibres, transmitting visual information from the eye to the brain. When eye pressure rises or the nerve becomes weak, these fibres get damaged. If untreated, glaucoma can cause permanent vision loss or total blindness.
@@ -96,6 +96,8 @@ export default function GlaucomaPage() {
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Nearsightedness or farsightedness</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Long-term use of corticosteroids</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Eye injuries or inflammation</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Blocked eye blood vessels</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>After other eye surgeries</span></li>
                     </ul>
                   </div>
 
@@ -105,15 +107,15 @@ export default function GlaucomaPage() {
                     <div className="space-y-3">
                       <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
                         <h4 className="font-heading font-bold text-sm text-primary-700">1. Chronic Open-Angle Glaucoma</h4>
-                        <p className="text-xs text-slate-600 mt-1">A slow, silent disease with gradual vision loss. Symptoms: dimming vision, mild headache, reduced side vision.</p>
+                        <p className="text-xs text-slate-600 mt-1">A slow, silent disease with gradual vision loss. Symptoms: dimming vision, mild headache, reduced side vision, coloured halos around lights.</p>
                       </div>
                       <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
                         <h4 className="font-heading font-bold text-sm text-primary-700">2. Acute Closed-Angle Glaucoma</h4>
-                        <p className="text-xs text-slate-600 mt-1">Sudden blockage causing rapid pressure rise. Symptoms: severe pain, sudden blurred vision, coloured haloes, red eye.</p>
+                        <p className="text-xs text-slate-600 mt-1">Sudden blockage causing rapid pressure rise. Symptoms: severe pain, headache, sudden blurred vision, coloured haloes, red eye.</p>
                       </div>
                       <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
                         <h4 className="font-heading font-bold text-sm text-primary-700">3. Congenital Glaucoma</h4>
-                        <p className="text-xs text-slate-600 mt-1">Occurs in infants due to defective drainage channels.</p>
+                        <p className="text-xs text-slate-600 mt-1">Occurs in infants due to defective drainage channels. Signs include large, cloudy corneas, excessive watering, and light sensitivity.</p>
                       </div>
                       <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
                         <h4 className="font-heading font-bold text-sm text-primary-700">4. Secondary Glaucoma</h4>

@@ -5,7 +5,7 @@ import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { AppointmentForm } from "@/components/ui/AppointmentForm";
-import { Eye, Zap, FileText, CheckCircle2, Phone, Calendar, Clock } from "lucide-react";
+import { Eye, Zap, FileText, CheckCircle2, Phone, Calendar, Clock, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title:
@@ -31,7 +31,7 @@ export default function DrJugalPage() {
               Dr Jugal Shah
             </h1>
             <p className="text-slate-300 text-base max-w-3xl">
-              Maa Nursing Home & NetraJyoti Eyecare Centre — providing advanced eye care and compassionate gynaecology services since 2002. Excellence, accessibility and affordability are the pillars of our care.
+              Maa Nursing Home & NetraJyoti Eyecare Centre - providing advanced eye care and compassionate gynaecology services since 2002. Excellence, accessibility and affordability are the pillars of our care.
             </p>
           </div>
         </section>
@@ -134,11 +134,11 @@ export default function DrJugalPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      <span>Extensive outreach — free surgical camps in rural regions</span>
+                      <span>Extensive outreach - free surgical camps in rural regions</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      <span>Philosophy: “Service before self” — serving all economic sections</span>
+                      <span>Philosophy: “Service before self” - serving all economic sections</span>
                     </li>
                   </ul>
                 </div>
@@ -194,6 +194,24 @@ export default function DrJugalPage() {
                       <span>Sunday</span>
                       <span className="font-semibold">Emergency & Camps</span>
                     </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-3 mt-6">
+                  <h4 className="font-heading font-bold text-lg text-slate-900">Quick Links</h4>
+                  <div className="space-y-2">
+                    <Link href="/treatments" className="flex items-center text-sm text-slate-700 hover:text-primary-700 transition-colors">
+                      <ArrowRight className="w-4 h-4 mr-2 shrink-0" />
+                      <span>All Ophthalmology Services</span>
+                    </Link>
+                    <Link href="/doctors" className="flex items-center text-sm text-slate-700 hover:text-primary-700 transition-colors">
+                      <ArrowRight className="w-4 h-4 mr-2 shrink-0" />
+                      <span>Meet Our Specialists</span>
+                    </Link>
+                    <Link href="/contact" className="flex items-center text-sm text-slate-700 hover:text-primary-700 transition-colors">
+                      <ArrowRight className="w-4 h-4 mr-2 shrink-0" />
+                      <span>Contact & Directions</span>
+                    </Link>
                   </div>
                 </div>
               </div>

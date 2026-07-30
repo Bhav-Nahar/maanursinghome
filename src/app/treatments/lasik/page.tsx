@@ -1,5 +1,4 @@
 import React from "react";
-import Metadata from "next";
 import Link from "next/link";
 import { TopBar } from "@/components/ui/TopBar";
 import { Header } from "@/components/ui/Header";
@@ -154,16 +153,16 @@ export default function LasikLandingPage() {
                 </div>
                 <ul className="space-y-3 text-sm text-slate-700">
                   <li className="flex items-start">
-                    <span className="text-emerald-600 font-bold mr-2">✓</span> Are 18 years of age or older
+                    <span className="text-emerald-600 font-bold mr-2">✓</span> Are above 18 years of age
                   </li>
                   <li className="flex items-start">
-                    <span className="text-emerald-600 font-bold mr-2">✓</span> Have reasonably stable spectacle power for 1+ year
+                    <span className="text-emerald-600 font-bold mr-2">✓</span> Have stable spectacle power for at least 6 months
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-600 font-bold mr-2">✓</span> Have suitable corneal thickness and shape
                   </li>
                   <li className="flex items-start">
-                    <span className="text-emerald-600 font-bold mr-2">✓</span> Have healthy eyes without active infection
+                    <span className="text-emerald-600 font-bold mr-2">✓</span> Do not have uncontrolled diabetes, pregnancy-related hormonal changes or other major systemic issues
                   </li>
                 </ul>
               </div>
@@ -176,16 +175,19 @@ export default function LasikLandingPage() {
                 </div>
                 <ul className="space-y-3 text-sm text-slate-700">
                   <li className="flex items-start">
-                    <span className="text-amber-600 font-bold mr-2">✕</span> Your cornea is too thin or irregular
+                    <span className="text-amber-600 font-bold mr-2">✕</span> You have diseases that cause corneal thinning or bulging, or a strong family history of it
                   </li>
                   <li className="flex items-start">
-                    <span className="text-amber-600 font-bold mr-2">✕</span> You have severe dry eye condition
+                    <span className="text-amber-600 font-bold mr-2">✕</span> Your cornea is too thin, or you have very large pupils
                   </li>
                   <li className="flex items-start">
-                    <span className="text-amber-600 font-bold mr-2">✕</span> You are pregnant or breastfeeding
+                    <span className="text-amber-600 font-bold mr-2">✕</span> You have severe near-sightedness beyond safe limits
                   </li>
                   <li className="flex items-start">
-                    <span className="text-amber-600 font-bold mr-2">✕</span> Active eye infection or cataracts are present
+                    <span className="text-amber-600 font-bold mr-2">✕</span> You have significant age-related eye changes (e.g. advanced cataract, macular disease)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-amber-600 font-bold mr-2">✕</span> You play contact sports with frequent blows to the face
                   </li>
                 </ul>
               </div>
@@ -208,11 +210,19 @@ export default function LasikLandingPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
             <h2 className="font-heading text-3xl font-bold text-slate-900">How is LASIK Performed?</h2>
             <p className="text-slate-700 text-sm md:text-base leading-relaxed">
-              The cornea accounts for about 70% of the eye's focusing power. LASIK uses a computer-controlled excimer LASER (a cool ultraviolet LASER) to reshape the cornea precisely. Local anaesthetic eye drops are used — no injections. A suction ring is applied, and a thin corneal flap is created (either manually or with a Femto-second LASER). The flap is lifted, and the excimer LASER reshapes the underlying corneal tissue. The flap is then repositioned and naturally adheres without stitches.
+              The cornea accounts for about 70% of the eye's focusing power. LASIK uses a computer-controlled excimer LASER (a cool ultraviolet LASER) to reshape the cornea precisely. Local anaesthetic eye drops are used - no injections. A suction ring is applied, and a thin corneal flap is created (either manually or with a Femto-second LASER). The flap is lifted, and the excimer LASER reshapes the underlying corneal tissue. The flap is then repositioned and naturally adheres without stitches.
             </p>
             <p className="text-slate-700 text-sm md:text-base leading-relaxed">
               At our centre, LASIK is performed using <strong>Contoura LASIK</strong> (topography-guided LASIK with a manually created flap) or <strong>Bladeless LASIK</strong> (flap created using Femto-second LASER for enhanced precision). The entire procedure usually takes about 15–20 minutes. Both eyes can often be treated in the same sitting, and no hospitalization is required.
             </p>
+            <div className="bg-emerald-50 border-l-4 border-emerald-600 rounded-lg py-3 px-4">
+              <p className="text-sm text-slate-800 font-medium">
+                <strong>Thinking about getting rid of glasses?</strong> Read our comprehensive guide:{" "}
+                <Link href="/blogs/blog3" className="text-emerald-700 underline font-semibold hover:text-emerald-800">
+                  Is LASIK Surgery Safe? Everything You Need to Know
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -222,14 +232,14 @@ export default function LasikLandingPage() {
             <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-4">
               <h3 className="font-heading font-bold text-xl text-slate-900">Risks & Temporary Side Effects</h3>
               <p className="text-slate-700 text-sm leading-relaxed">
-                LASIK is a safe and widely performed procedure, but as with any surgery some patients may experience temporary dry eyes (managed with lubricating drops), glare, halos or increased light sensitivity, and occasional double or fluctuating vision in the early days. Serious complications or permanent loss of vision are rare — your doctor will discuss all pros and cons before surgery.
+                LASIK is a safe and widely performed procedure, but as with any surgery some patients may experience temporary dry eyes (managed with lubricating drops), glare, halos or increased light sensitivity, and occasional double or fluctuating vision in the early days. Serious complications or permanent loss of vision are rare - your doctor will discuss all pros and cons before surgery.
               </p>
             </div>
             <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-4">
               <h3 className="font-heading font-bold text-xl text-slate-900">Precautions Before & After LASIK</h3>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li>• Stop soft contact lenses 48–72 hours before surgery; RGP lenses at least 15 days before</li>
-                <li>• On the day: avoid eye makeup, creams, perfumes and deodorants</li>
+                <li>• On the day: wash your hair, avoid eye makeup, creams, perfumes and deodorants</li>
                 <li>• Wear sunglasses for about 1 week after surgery</li>
                 <li>• Avoid splashing water directly in the eyes for ~1 month; no head bath for 1 week</li>
                 <li>• No swimming for at least 1 month; use prescribed eye drops exactly as advised</li>
@@ -243,7 +253,7 @@ export default function LasikLandingPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
             <h2 className="font-heading text-3xl font-bold text-slate-900">Recovery & Results</h2>
             <p className="text-slate-700 text-sm md:text-base leading-relaxed">
-              Most patients notice clearer vision within the first 24 hours, with vision typically stabilising within about 2 weeks. You can usually return to routine work in 2–3 days after the procedure, depending on your job profile. While glasses or contact lenses can improve vision, LASIK corrects the underlying focusing issue by reshaping the cornea — addressing the root cause of the refractive error.
+              Most patients notice clearer vision within the first 24 hours, with vision typically stabilising within about 2 weeks. You can usually return to routine work in 2–3 days after the procedure, depending on your job profile. While glasses or contact lenses can improve vision, LASIK corrects the underlying focusing issue by reshaping the cornea - addressing the root cause of the refractive error.
             </p>
           </div>
         </section>

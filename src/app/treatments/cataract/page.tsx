@@ -36,7 +36,7 @@ export default function CataractPage() {
               Cataract Care
             </h1>
             <p className="text-slate-300 text-base max-w-3xl leading-relaxed">
-              Cataract diagnosis, modern laser phacoemulsification surgery and intraocular lens (IOL) options — evidence-based care with fast recovery and compassionate support.
+              Cataract diagnosis, modern laser phacoemulsification surgery and intraocular lens (IOL) options - evidence-based care with fast recovery and compassionate support.
             </p>
           </div>
         </section>
@@ -62,10 +62,10 @@ export default function CataractPage() {
                   <div className="space-y-4">
                     <h2 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">What is a Cataract?</h2>
                     <p className="text-primary-700 font-semibold text-sm sm:text-base border-l-4 border-primary-600 pl-4 py-1">
-                      Clouding of the eye’s natural lens that progressively blurs vision — common with ageing but can affect younger people too.
+                      Clouding of the eye’s natural lens that progressively blurs vision - common with ageing but can affect younger people too.
                     </p>
                     <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                      The lens inside the eye focuses light on the retina to produce clear images. Over years (or sometimes rapidly), insoluble proteins can cloud the lens and cause hazy vision — this condition is called a cataract. No diet, medicine or exercise prevents cataracts; regular eye checks ensure early detection and timely treatment.
+                      The lens inside the eye focuses light on the retina to produce clear images. Over years (or sometimes rapidly), insoluble proteins can cloud the lens and cause hazy vision - this condition is called a cataract. No diet, medicine or exercise prevents cataracts; regular eye checks ensure early detection and timely treatment.
                     </p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function CataractPage() {
                 <div className="space-y-6">
                   <h3 className="font-heading font-bold text-2xl text-slate-900">Treatment & Surgery Options</h3>
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                    Surgery is the only effective treatment. Modern phacoemulsification (laser-assisted when chosen) allows removal at any stage — earlier intervention when the cataract is soft yields easier surgery and faster recovery.
+                    Surgery is the only effective treatment. Modern phacoemulsification (laser-assisted when chosen) allows removal at any stage - earlier intervention when the cataract is soft yields easier surgery and faster recovery.
                   </p>
 
                   <div className="space-y-4">
@@ -161,14 +161,14 @@ export default function CataractPage() {
                   <div className="space-y-4">
                     <h4 className="font-heading font-bold text-lg text-slate-900 text-primary-700">Femto LASER-Assisted Cataract Surgery (FLACS)</h4>
                     <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                      FLACS is a bladeless, automated step that increases precision — patients often experience faster recovery and excellent visual results. Both standard phaco and FLACS are available depending on clinical need and patient preference.
+                      FLACS is a bladeless, automated step that increases precision - patients often experience faster recovery and excellent visual results. Both standard phaco and FLACS are available depending on clinical need and patient preference.
                     </p>
                   </div>
                 </div>
 
                 {/* IOL Types Grid */}
                 <div className="space-y-6">
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">Intraocular Lenses (IOL) — Types</h3>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">Intraocular Lenses (IOL) - Types</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3">
@@ -214,8 +214,8 @@ export default function CataractPage() {
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Use prescribed eye drops exactly as instructed.</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Wear sunglasses outdoors to protect from sunlight.</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Maintain eye hygiene; do not rub or scratch the eye.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Avoid water, dust and pollution entering the eye for ~1 month.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Attend scheduled follow-ups for vision checks.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Avoid water, dust and pollution entering the eye for ~1 month; no head baths for 5 days.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Attend scheduled follow-ups for vision checks and IOP monitoring.</span></li>
                     </ul>
                   </div>
 
@@ -228,7 +228,7 @@ export default function CataractPage() {
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Stitchless, micro-incision operation (minimal cut).</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Faster healing and early return to work.</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Less ocular trauma and reduced infection risk.</span></li>
-                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Topical anaesthesia (drops) — safe for most patients.</span></li>
+                      <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Topical anaesthesia (drops) - safe for most patients.</span></li>
                       <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 shrink-0" /><span>Better night and low-light vision with good quality IOLs.</span></li>
                     </ul>
                   </div>

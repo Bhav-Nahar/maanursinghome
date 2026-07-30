@@ -5,7 +5,7 @@ import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { AppointmentForm } from "@/components/ui/AppointmentForm";
-import { ChevronRight, Calendar, Clock, PhoneCall } from "lucide-react";
+import { ChevronRight, Calendar, Clock, PhoneCall, Zap, ShieldCheck } from "lucide-react";
 
 export const metadata = {
   title:
@@ -47,6 +47,45 @@ export default function AppointmentPage() {
               {/* Left Column - Instructions & Info */}
               <div className="lg:col-span-5 space-y-6">
                 <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm space-y-4">
+                  <h3 className="font-heading font-bold text-xl text-slate-900">Quick & Easy Online Booking</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Book your appointment in just a few simple steps. Our healthcare professionals are ready to provide you with the best medical care tailored to your needs.
+                  </p>
+
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="p-2 rounded-lg bg-primary-50 text-primary-700 shrink-0">
+                        <Calendar className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-bold text-sm text-slate-900">Flexible Scheduling</h4>
+                        <p className="text-xs text-slate-600 mt-0.5">Choose from available time slots that fit your busy schedule</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <div className="p-2 rounded-lg bg-primary-50 text-primary-700 shrink-0">
+                        <Zap className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-bold text-sm text-slate-900">Quick Response</h4>
+                        <p className="text-xs text-slate-600 mt-0.5">Get confirmation within 15 minutes of submitting your request</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <div className="p-2 rounded-lg bg-primary-50 text-primary-700 shrink-0">
+                        <ShieldCheck className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-bold text-sm text-slate-900">Expert Medical Care</h4>
+                        <p className="text-xs text-slate-600 mt-0.5">Board-certified doctors and specialists at your service</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm space-y-4">
                   <h3 className="font-heading font-bold text-xl text-slate-900 flex items-center">
                     <Clock className="w-5 h-5 text-primary-700 mr-2" />
                     OPD Consultation Hours
@@ -77,6 +116,40 @@ export default function AppointmentPage() {
                 <AppointmentForm title="Schedule Clinical Appointment" />
               </div>
 
+            </div>
+
+            {/* HOW IT WORKS / PROCESS STEPS */}
+            <div className="mt-16 pt-16 border-t border-slate-200">
+              <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
+                <h2 className="font-heading text-3xl font-extrabold text-slate-900">How It Works</h2>
+                <p className="text-slate-600 text-sm">Booking your appointment is quick and simple</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm text-center space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-700 text-white font-heading font-bold flex items-center justify-center mx-auto">1</div>
+                  <h4 className="font-heading font-bold text-sm text-slate-900">Fill Details</h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">Provide your personal information and select your preferred department</p>
+                </div>
+
+                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm text-center space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-700 text-white font-heading font-bold flex items-center justify-center mx-auto">2</div>
+                  <h4 className="font-heading font-bold text-sm text-slate-900">Choose Date</h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">Select your preferred date and time slot from available options</p>
+                </div>
+
+                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm text-center space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-700 text-white font-heading font-bold flex items-center justify-center mx-auto">3</div>
+                  <h4 className="font-heading font-bold text-sm text-slate-900">Confirmation</h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">Receive instant confirmation and appointment details via email or SMS</p>
+                </div>
+
+                <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm text-center space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-700 text-white font-heading font-bold flex items-center justify-center mx-auto">4</div>
+                  <h4 className="font-heading font-bold text-sm text-slate-900">Get Treatment</h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">Visit our clinic at your scheduled time and receive quality healthcare</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

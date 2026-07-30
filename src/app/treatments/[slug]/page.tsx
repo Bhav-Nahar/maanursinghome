@@ -7,7 +7,7 @@ import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { AppointmentForm } from "@/components/ui/AppointmentForm";
 import { TREATMENTS_DATA } from "@/data/treatments";
-import { CheckCircle2, ShieldCheck, ChevronRight, Stethoscope, AlertCircle, HelpCircle, Activity } from "lucide-react";
+import { CheckCircle2, ShieldCheck, ChevronRight, Stethoscope, AlertCircle, HelpCircle, Activity, Info } from "lucide-react";
 
 export const revalidate = 31536000; // 1 year ISR
 
@@ -176,6 +176,24 @@ export default async function TreatmentDetailPage({ params }: { params: Promise<
                     </div>
                   </div>
                 )}
+
+                {/* Additional Named Sections (types, risks, recovery, who's at risk, etc.) */}
+                {treatment.extraSections && treatment.extraSections.length > 0 && treatment.extraSections.map((section, sIdx) => (
+                  <div key={sIdx} className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+                    <h3 className="font-heading font-bold text-xl text-slate-900 flex items-center">
+                      <Info className="w-5 h-5 text-primary-700 mr-2" />
+                      {section.title}
+                    </h3>
+                    <ul className="space-y-2.5 text-sm text-slate-700">
+                      {section.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <CheckCircle2 className="w-4 h-4 text-primary-700 mr-2.5 mt-0.5 shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
 
                 {/* Key Benefits */}
                 <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-md space-y-6">
