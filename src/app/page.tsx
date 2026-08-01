@@ -21,10 +21,6 @@ import {
 } from "lucide-react";
 
 export default function HomePage() {
-  const eyeCampWhatsappUrl = `https://wa.me/918828068727?text=${encodeURIComponent(
-    "Hi Dr. Jugal Shah, I would like to register for the Free Eye Camp on 11th July 2026."
-  )}`;
-
   const onlineConsultWhatsappUrl = `https://wa.me/919820072543?text=${encodeURIComponent(
     "Hi, I would like to book an Online Consultation."
   )}`;
@@ -95,89 +91,6 @@ export default function HomePage() {
                       <span className="text-xs text-slate-400 font-medium">Years Experience</span>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FREE EYE CAMP SECTION */}
-        <section id="eye-camp" className="py-12 bg-rose-50/60 border-b-4 border-rose-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Camp Banner Images */}
-              <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-xl overflow-hidden shadow-sm border border-rose-200">
-                  <img
-                    src="/assets/img/WhatsApp Image 2026-07-07 at 12.15.55 PM.jpeg"
-                    alt="Free Eye Camp Banner - Dr. Jugal Shah"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-sm border border-rose-200">
-                  <img
-                    src="/assets/img/WhatsApp Image 2026-07-07 at 12.15.55 PM (1).jpeg"
-                    alt="Free Eye Camp Flyer - Dr. Jugal Shah"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform"
-                  />
-                </div>
-              </div>
-
-              {/* Camp Details */}
-              <div className="lg:col-span-7 space-y-4">
-                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-rose-800 bg-rose-200 rounded-full">
-                  Special Charitable Initiative
-                </span>
-                <h2 className="font-heading text-3xl font-extrabold text-slate-900">
-                  FREE EYE CAMP <br />
-                  <span className="text-rose-600">For Unaffording Patients</span>
-                </h2>
-                <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                  Maa Nursing Home & NetraJyoti Eyecare Centre, in association with Sadbhavana Kendra (A unit of Shri Trilokchand Papriwal Charitable Trust), is conducting a Free Eye Camp on <strong>11th July 2026, Saturday</strong> from <strong>9:00 AM to 1:00 PM</strong>.
-                </p>
-
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-2 text-xs font-semibold text-slate-800">
-                  <span className="flex items-center text-rose-700">
-                    <CheckCircle2 className="w-4 h-4 mr-1.5 shrink-0" /> FREE Eye Check-up
-                  </span>
-                  <span className="flex items-center text-rose-700">
-                    <CheckCircle2 className="w-4 h-4 mr-1.5 shrink-0" /> FREE Cataract Operations
-                  </span>
-                  <span className="flex items-center text-rose-700">
-                    <CheckCircle2 className="w-4 h-4 mr-1.5 shrink-0" /> FREE Reading Spectacles
-                  </span>
-                  <span className="flex items-center text-rose-700">
-                    <CheckCircle2 className="w-4 h-4 mr-1.5 shrink-0" /> FREE IOL Master (A-Scan)
-                  </span>
-                  <span className="flex items-center text-rose-700">
-                    <CheckCircle2 className="w-4 h-4 mr-1.5 shrink-0" /> FREE Blood Test for Patients
-                  </span>
-                  <span className="flex items-center text-rose-700">
-                    <CheckCircle2 className="w-4 h-4 mr-1.5 shrink-0" /> FREE Eye Drops
-                  </span>
-                </div>
-
-                <div className="p-4 bg-white rounded-xl border-l-4 border-rose-600 shadow-sm text-xs space-y-1 text-slate-700">
-                  <p><strong>📍 Venue:</strong> Maa Nursing Home, Himachal Bldg, S.V. Road, Opp. Sundar Nagar, Malad-Goregaon (West), Mumbai 400064</p>
-                  <p><strong>📅 Date & Time:</strong> 11th July 2026, Saturday (9:00 AM - 1:00 PM)</p>
-                  <p><strong>📞 Helpline Contacts:</strong> 8828068727 / 8850118725 / 8828328726 / 8823328766</p>
-                </div>
-
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <a
-                    href={eyeCampWhatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-5 py-3 rounded-full text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 shadow-sm transition-all"
-                  >
-                    <MessageCircle className="w-4 h-4 mr-1.5" /> Register Free on WhatsApp
-                  </a>
-                  <a
-                    href="tel:8828068727"
-                    className="inline-flex items-center px-5 py-3 rounded-full text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 border border-slate-300 shadow-sm transition-all"
-                  >
-                    <Phone className="w-4 h-4 mr-1.5" /> Call to Register
-                  </a>
                 </div>
               </div>
             </div>

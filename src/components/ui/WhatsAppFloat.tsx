@@ -37,7 +37,7 @@ export function WhatsAppFloat() {
   const [badge, setBadge] = useState(true);
 
   return (
-    <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end">
+    <div id="wa-float" className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end">
       {open && (
         <div className="mb-3 w-72 sm:w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-[fadeInUp_0.2s_ease-out]">
           <div className="bg-gradient-to-r from-emerald-600 to-emerald-500 px-4 py-3.5 flex items-start gap-3">
