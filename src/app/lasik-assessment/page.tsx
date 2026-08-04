@@ -8,6 +8,11 @@ const PHOTO = "/assets/img/images/dr jugal.jpg";
 const PHONE = "+919820072543";
 const MAPS = "https://maps.google.com/?q=Maa+Nursing+Home+Malad+West";
 const GOOGLE_REVIEWS = "https://share.google/njxziK17eRXjHqV0I";
+// Direct permalinks to individual Google reviews supplied by the clinic.
+const GOOGLE_REVIEW_LINKS = [
+  "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25OMFl6WlVkWGhUYTFkc1FsQkdUa2w0VUdkcVMwRRAB!2m1!1s0x0:0x7200122d9896a762!3m1!1s2@1:CAIQACodChtycF9oOnN0YzZUdXhTa1dsQlBGTkl4UGdqS0E%7C%7C?hl=en-GB",
+  "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ZMlVUTk5ObmQyTlRKWlUzUm9jVlZMTUUxalNHYxAB!2m1!1s0x0:0x7200122d9896a762!3m1!1s2@1:CAIQACodChtycF9oOmY2UTNNNnd2NTJZU3RocVVLME1jSGc%7C%7C?hl=en-GB",
+];
 const PRACTO_CLINIC =
   "https://www.practo.com/mumbai/clinic/maa-nursing-home-netra-jyoti-eyecare-centre-malad-west";
 
@@ -82,7 +87,14 @@ const REVIEWS = [
   },
 ];
 
-const VIDEOS = ["DZpXAcvuIOM", "DZW1ynEIVRt", "DXZQdeACGph", "DWN1ivACFl5"];
+// ponytail: shortcodes only — /p/<code>/ works for reels too, so no per-item type field.
+const VIDEOS = [
+  "DXG_Up9FvwH",
+  "DRe2_LwCCBK",
+  "DOnrVYwD1dl",
+  "DN92LVlCMUr",
+  "DLXYIi9o6WK",
+];
 
 export default function LasikAssessmentPage() {
   return (
@@ -115,11 +127,19 @@ export default function LasikAssessmentPage() {
           <h1>
             Considering <em>LASIK Surgery</em> in Mumbai?
           </h1>
+          <p className="hero-flag">
+            Trusted for Complex Eye Surgeries When Other Doctors Refused
+          </p>
           <p className="hero-lead">
             Get a detailed LASIK eligibility assessment with Dr Jugal Shah, Senior Ophthalmologist
             and Refractive Surgeon with over 30 years of experience.
           </p>
           <ul className="check-list">
+            <li>15 Min Painless Surgery</li>
+            <li>Cashless Treatment Available</li>
+            <li>
+              <a href="#reviews">2,500+ Reviews on Google →</a>
+            </li>
             <li>Personalised eye and corneal evaluation</li>
             <li>Contoura and Bladeless Femto-LASIK options</li>
             <li>Clear guidance on suitability, risks and recovery</li>
@@ -163,7 +183,7 @@ export default function LasikAssessmentPage() {
           <div className="featured-proof">
             <span className="laurel">❬</span>
             <p>
-              <strong>98,000+</strong>
+              <strong>99,000+</strong>
               <span>Cataract surgeries performed*</span>
             </p>
             <span className="laurel right">❭</span>
@@ -246,7 +266,7 @@ export default function LasikAssessmentPage() {
         </div>
         <aside className="surgery-stat">
           <small>Clinical experience includes</small>
-          <strong>98,000+</strong>
+          <strong>99,000+</strong>
           <span>Cataract surgeries performed*</span>
           <p>Extensive surgical experience applied to every assessment.</p>
         </aside>
@@ -358,26 +378,13 @@ export default function LasikAssessmentPage() {
             <small>View verified stories →</small>
           </a>
         </div>
-        <div className="reviews-grid">
-          {REVIEWS.map((r) => (
-            <article className="review-card" key={r.name}>
-              <div className="review-top">
-                <span className={`avatar ${r.tone}`}>{r.initial}</span>
-                <p>
-                  <strong>{r.name}</strong>
-                  <small>{r.meta}</small>
-                </p>
-                <b className={r.source === "G" ? "google-mini" : undefined}>{r.source}</b>
-              </div>
-              <div className="stars">★★★★★</div>
-              <blockquote>{r.quote}</blockquote>
-              <a href={r.href} target="_blank" rel="noreferrer">
-                {r.cta}
-              </a>
-            </article>
+        <p className="more-google-reviews">
+          {GOOGLE_REVIEW_LINKS.map((href, i) => (
+            <a key={href} href={href} target="_blank" rel="noreferrer">
+              <span className="google-mini">G</span> Verified Google review {i + 1} ↗
+            </a>
           ))}
-        </div>
-
+        </p>
         <div className="video-title">
           <div className="eyebrow">Real hospital content</div>
           <h2>Watch Patient and Doctor Videos</h2>
@@ -402,6 +409,26 @@ export default function LasikAssessmentPage() {
           Patient videos should be used in paid advertising only where documented promotional
           consent is available. Individual experiences and outcomes vary.
         </p>
+
+        <div className="reviews-grid">
+          {REVIEWS.map((r) => (
+            <article className="review-card" key={r.name}>
+              <div className="review-top">
+                <span className={`avatar ${r.tone}`}>{r.initial}</span>
+                <p>
+                  <strong>{r.name}</strong>
+                  <small>{r.meta}</small>
+                </p>
+                <b className={r.source === "G" ? "google-mini" : undefined}>{r.source}</b>
+              </div>
+              <div className="stars">★★★★★</div>
+              <blockquote>{r.quote}</blockquote>
+              <a href={r.href} target="_blank" rel="noreferrer">
+                {r.cta}
+              </a>
+            </article>
+          ))}
+        </div>
       </section>
 
       {/* BENEFITS / RISKS */}
@@ -513,7 +540,7 @@ export default function LasikAssessmentPage() {
         <strong>Maa Nursing Home &amp; NetraJyoti Eyecare Centre</strong>
         <span>© 2026 | Malad West, Mumbai</span>
         <p>
-          *98,000+ cataract surgeries is a figure stated by the hospital. It is not the number of
+          *99,000+ cataract surgeries is a figure stated by the hospital. It is not the number of
           LASIK procedures. Treatment suitability, recovery and outcomes vary by patient.
         </p>
       </footer>

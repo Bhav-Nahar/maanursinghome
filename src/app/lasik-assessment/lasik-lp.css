@@ -208,6 +208,20 @@ body:has(.lasik-lp) #wa-float {
   margin-bottom: 22px;
   font-size: clamp(2.6rem, 4.4vw, 4.2rem);
 }
+.lasik-lp .hero-flag {
+  color: var(--navy);
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-left: 5px solid var(--gold);
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
 .lasik-lp .hero-lead {
   color: #475569;
   max-width: 700px;
@@ -224,6 +238,10 @@ body:has(.lasik-lp) #wa-float {
   padding-left: 34px;
   font-weight: 600;
   position: relative;
+}
+.lasik-lp .check-list a {
+  color: var(--teal);
+  text-decoration: underline;
 }
 .lasik-lp .check-list li:before {
   content: "✓";
@@ -935,9 +953,29 @@ body:has(.lasik-lp) #wa-float {
   font-weight: 900;
   display: grid;
 }
+.lasik-lp .more-google-reviews {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 26px;
+  margin: -18px 0 38px;
+  display: flex;
+}
+.lasik-lp .more-google-reviews a {
+  color: var(--navy);
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+}
 .lasik-lp .reviews-grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+  margin-top: 90px;
   display: grid;
 }
 .lasik-lp .review-card {
@@ -1019,9 +1057,6 @@ body:has(.lasik-lp) #wa-float {
   font-weight: 800;
   margin-top: 22px;
   display: inline-block;
-}
-.lasik-lp .video-title {
-  margin-top: 90px;
 }
 .lasik-lp .video-grid {
   grid-template-columns: repeat(4, 1fr);
@@ -1284,7 +1319,7 @@ body:has(.lasik-lp) #wa-float {
   .lasik-lp .reviews-grid .review-card:last-child {
     grid-column: auto;
   }
-  .lasik-lp .video-title {
+  .lasik-lp .reviews-grid {
     margin-top: 65px;
   }
   .lasik-lp .insta-card iframe {
