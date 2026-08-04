@@ -1,0 +1,70 @@
+{
+  "property": {
+    "measurementId": "G-XLBLF66Q81",
+    "page": "/lasik-assessment",
+    "implementedIn": [
+      "src/app/layout.tsx (gtag.js loader)",
+      "src/app/lasik-assessment/LeadForm.tsx (generate_lead)",
+      "src/app/lasik-assessment/CtaTracking.tsx (whatsapp_click, call_click)"
+    ]
+  },
+
+  "events": [
+    {
+      "name": "generate_lead",
+      "trigger": "Request Appointment form submitted",
+      "keyEvent": true,
+      "adsRole": "primary",
+      "params": {
+        "form_location": ["hero", "main"],
+        "page": "lasik-assessment"
+      }
+    },
+    {
+      "name": "whatsapp_click",
+      "trigger": "Click on any wa.me / api.whatsapp.com link",
+      "keyEvent": true,
+      "adsRole": "secondary",
+      "params": {
+        "link_text": "<button text, max 60 chars>",
+        "page": "lasik-assessment"
+      }
+    },
+    {
+      "name": "call_click",
+      "trigger": "Click on any tel: link",
+      "keyEvent": true,
+      "adsRole": "secondary",
+      "params": {
+        "link_text": "<button text, max 60 chars>",
+        "page": "lasik-assessment"
+      }
+    }
+  ],
+
+  "customDimensions": [
+    { "displayName": "Form location", "parameterName": "form_location", "scope": "EVENT" },
+    { "displayName": "Link text", "parameterName": "link_text", "scope": "EVENT" }
+  ],
+
+  "adminApi": {
+    "note": "Verify field names against the current Google Analytics Admin API docs before running; the key-event resource was renamed from conversionEvents and lives on v1alpha.",
+    "keyEvents": {
+      "method": "POST",
+      "url": "https://analyticsadmin.googleapis.com/v1alpha/properties/{PROPERTY_ID}/keyEvents",
+      "bodies": [
+        { "eventName": "generate_lead", "countingMethod": "ONCE_PER_EVENT" },
+        { "eventName": "whatsapp_click", "countingMethod": "ONCE_PER_SESSION" },
+        { "eventName": "call_click", "countingMethod": "ONCE_PER_SESSION" }
+      ]
+    },
+    "customDimensions": {
+      "method": "POST",
+      "url": "https://analyticsadmin.googleapis.com/v1beta/properties/{PROPERTY_ID}/customDimensions",
+      "bodies": [
+        { "parameterName": "form_location", "displayName": "Form location", "scope": "EVENT" },
+        { "parameterName": "link_text", "displayName": "Link text", "scope": "EVENT" }
+      ]
+    }
+  }
+}

@@ -44,7 +44,7 @@ export default function TermsPage() {
 
             <div className="text-center">
               <span className="inline-block text-xs font-semibold uppercase tracking-wide text-emerald-600">
-                Last Updated: May 2025
+                Last Updated: August 2026
               </span>
             </div>
 
@@ -85,6 +85,56 @@ export default function TermsPage() {
               </h2>
               <p>
                 Maa Nursing Home is committed to protecting patient privacy and personal health information. Details submitted through appointment forms, contact inquiries, or WhatsApp messages are kept strictly confidential. We do not sell, rent, or distribute patient contact details to third parties, except as required by law.
+              </p>
+            </div>
+
+            {/* Section 5 */}
+            <div className="space-y-3">
+              <h2 className="font-heading font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
+                5. Information You Submit To Us
+              </h2>
+              <p>
+                When you submit an appointment or assessment request, we collect the details you enter in the form — your name, mobile number, age and preferred appointment date. These details are used only to contact you about your enquiry and to schedule your visit.
+              </p>
+              <p>
+                Your request is delivered to our team over WhatsApp and is also recorded in a private spreadsheet hosted on Google Workspace so that no enquiry is missed. Access is restricted to authorised hospital staff. We do not sell, rent or share these details with third parties for marketing purposes.
+              </p>
+              <p>
+                To have your enquiry details removed from our records, contact our hospital administration and we will delete them.
+              </p>
+            </div>
+
+            {/* Section 6 */}
+            <div className="space-y-3">
+              <h2 className="font-heading font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
+                6. Cookies, Analytics & Advertising
+              </h2>
+              <p>
+                This website uses Google Analytics to understand how visitors use our pages, and Google Ads to measure the performance of our advertising. These services set cookies and may collect your device type, browser, approximate location, referring website and the pages and buttons you interact with.
+              </p>
+              <p>
+                We record when a visitor submits an appointment form or taps a call or WhatsApp button, so we can tell which pages help patients reach us. We do not send your name, mobile number or any other personal or health information to Google.
+              </p>
+              <p>
+                If you have arrived from one of our advertisements, Google may use this activity to measure that advertisement and to show you our ads on other websites. You can opt out of personalised advertising through{" "}
+                <a
+                  href="https://myadcenter.google.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-emerald-700 underline hover:text-emerald-800"
+                >
+                  Google My Ad Center
+                </a>{" "}
+                and prevent Google Analytics collection with the{" "}
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-emerald-700 underline hover:text-emerald-800"
+                >
+                  Google Analytics Opt-out Browser Add-on
+                </a>
+                . You can also block or delete cookies in your browser settings; the website will continue to work.
               </p>
             </div>
 

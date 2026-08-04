@@ -3,6 +3,12 @@
 import React, { useState } from "react";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppFloat";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export function LeadForm({ compact = false }: { compact?: boolean }) {
   const [sent, setSent] = useState(false);
 
@@ -19,8 +25,24 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
       .filter(Boolean)
       .join("\n");
 
+    // GA4 conversion. Mark generate_lead as a key event in GA to count it.
+    // ponytail: no PII in the payload — GA terms forbid it.
+    window.gtag?.("event", "generate_lead", {
+      form_location: compact ? "hero" : "main",
+      page: "lasik-assessment",
+    });
+
+    // Open WhatsApp in the same tick as the click, or popup blockers eat it.
     window.open(`https://wa.me/919820072543?text=${encodeURIComponent(message)}`, "_blank");
     setSent(true);
+
+    // Log the lead regardless of whether they actually send the WhatsApp message.
+    fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(f)),
+      keepalive: true,
+    }).catch(() => {});
   };
 
   return (

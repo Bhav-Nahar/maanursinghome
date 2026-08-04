@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Manrope, Inter } from "next/font/google";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import "./globals.css";
@@ -112,6 +113,17 @@ export default function RootLayout({
           {children}
         </div>
         <WhatsAppFloat />
+        {/* GA4 — conversions are fired as gtag events from the forms. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XLBLF66Q81"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XLBLF66Q81');`}
+        </Script>
       </body>
     </html>
   );

@@ -889,6 +889,21 @@ body:has(.lasik-lp) #wa-float {
   margin: 0;
   padding-top: 14px;
 }
+.lasik-lp .footer-links {
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 8px 22px;
+  display: flex;
+}
+.lasik-lp .footer-links a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+.lasik-lp .footer-links a:hover,
+.lasik-lp .footer-links a:focus-visible {
+  text-decoration: underline;
+}
 
 /* social proof */
 .lasik-lp .social-proof {
@@ -952,25 +967,6 @@ body:has(.lasik-lp) #wa-float {
   font-size: 23px;
   font-weight: 900;
   display: grid;
-}
-.lasik-lp .more-google-reviews {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px 26px;
-  margin: -18px 0 38px;
-  display: flex;
-}
-.lasik-lp .more-google-reviews a {
-  color: var(--navy);
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 999px;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 18px;
-  font-size: 14px;
-  font-weight: 700;
-  display: inline-flex;
 }
 .lasik-lp .reviews-grid {
   grid-template-columns: repeat(3, 1fr);

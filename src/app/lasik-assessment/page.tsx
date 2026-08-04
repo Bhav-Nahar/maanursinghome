@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CalendarCheck, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppFloat";
 import { LeadForm } from "./LeadForm";
+import { CtaTracking } from "./CtaTracking";
 import "./lasik-lp.css";
 
 const PHOTO = "/assets/img/images/dr jugal.jpg";
@@ -53,6 +54,28 @@ const FAQS = [
 
 const REVIEWS = [
   {
+    initial: "K",
+    tone: "gold",
+    name: "Khushi Doshi",
+    meta: "Google Review · LASIK",
+    source: "G",
+    quote:
+      "“I got my LASIK surgery done yesterday, and the entire experience was honestly much smoother than I expected. The procedure took barely 15 minutes. Dr. Jugal was incredibly kind and reassuring throughout — you can tell he’s very experienced. By the evening I could already see clearly…”",
+    href: GOOGLE_REVIEW_LINKS[0],
+    cta: "Read more on Google →",
+  },
+  {
+    initial: "M",
+    tone: "gold",
+    name: "Madhav Aware",
+    meta: "Google Review · LASIK",
+    source: "G",
+    quote:
+      "“Before the procedure the doctor clearly explained the process. By the very next day I noticed a significant improvement — no pain, swelling or discomfort. My vision has now returned to normal and being able to see clearly without glasses has made a big difference in my daily life…”",
+    href: GOOGLE_REVIEW_LINKS[1],
+    cta: "Read more on Google →",
+  },
+  {
     initial: "A",
     tone: "teal",
     name: "Adil Ansari",
@@ -99,6 +122,7 @@ const VIDEOS = [
 export default function LasikAssessmentPage() {
   return (
     <main className="lasik-lp">
+      <CtaTracking />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="NetraJyoti Eyecare Centre home">
           <span className="eye-mark">
@@ -184,7 +208,7 @@ export default function LasikAssessmentPage() {
             <span className="laurel">❬</span>
             <p>
               <strong>99,000+</strong>
-              <span>Cataract surgeries performed*</span>
+              <span>Surgeries performed*</span>
             </p>
             <span className="laurel right">❭</span>
           </div>
@@ -267,7 +291,7 @@ export default function LasikAssessmentPage() {
         <aside className="surgery-stat">
           <small>Clinical experience includes</small>
           <strong>99,000+</strong>
-          <span>Cataract surgeries performed*</span>
+          <span>Surgeries performed*</span>
           <p>Extensive surgical experience applied to every assessment.</p>
         </aside>
       </section>
@@ -378,13 +402,6 @@ export default function LasikAssessmentPage() {
             <small>View verified stories →</small>
           </a>
         </div>
-        <p className="more-google-reviews">
-          {GOOGLE_REVIEW_LINKS.map((href, i) => (
-            <a key={href} href={href} target="_blank" rel="noreferrer">
-              <span className="google-mini">G</span> Verified Google review {i + 1} ↗
-            </a>
-          ))}
-        </p>
         <div className="video-title">
           <div className="eyebrow">Real hospital content</div>
           <h2>Watch Patient and Doctor Videos</h2>
@@ -539,8 +556,15 @@ export default function LasikAssessmentPage() {
       <footer>
         <strong>Maa Nursing Home &amp; NetraJyoti Eyecare Centre</strong>
         <span>© 2026 | Malad West, Mumbai</span>
+        <nav className="footer-links" aria-label="Legal and contact">
+          <a href="/terms">Privacy Policy &amp; Terms</a>
+          <a href="/contact">Contact</a>
+          <a href={MAPS} target="_blank" rel="noreferrer">
+            Find Us
+          </a>
+        </nav>
         <p>
-          *99,000+ cataract surgeries is a figure stated by the hospital. It is not the number of
+          *99,000+ surgeries is a figure stated by the hospital. It is not the number of
           LASIK procedures. Treatment suitability, recovery and outcomes vary by patient.
         </p>
       </footer>
