@@ -118,11 +118,17 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-XLBLF66Q81"
           strategy="afterInteractive"
         />
+        {/* Google Ads tag — kept as its own <script src> so Google's install checker detects it. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18328226456"
+          strategy="afterInteractive"
+        />
         <Script id="ga4-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-XLBLF66Q81');`}
+gtag('config', 'G-XLBLF66Q81');
+gtag('config', 'AW-18328226456');`}
         </Script>
       </body>
     </html>
