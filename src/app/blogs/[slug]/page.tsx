@@ -5,31 +5,33 @@ import { TopBar } from "@/components/ui/TopBar";
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
-import { BLOGS_DATA } from "@/data/blogs";
+import { getAllBlogs } from "@/lib/sanity";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 
-export const revalidate = 31536000; // 1 year ISR
+export const revalidate = 60;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return BLOGS_DATA.map((blog) => ({
+  return (await getAllBlogs()).map((blog) => ({
     slug: blog.slug,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const blog = BLOGS_DATA.find((b) => b.slug === slug);
+  const blog = (await getAllBlogs()).find((b) => b.slug === slug);
   if (!blog) return {};
 
   return {
     title: `${blog.seoTitle} | Maa Nursing Home`,
     description: blog.seoDescription,
+    keywords: blog.seoKeywords || undefined,
   };
 }
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const blog = BLOGS_DATA.find((b) => b.slug === slug);
+  const blog = (await getAllBlogs()).find((b) => b.slug === slug);
 
   if (!blog) {
     notFound();

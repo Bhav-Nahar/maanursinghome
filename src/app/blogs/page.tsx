@@ -4,7 +4,7 @@ import { TopBar } from "@/components/ui/TopBar";
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
-import { BLOGS_DATA } from "@/data/blogs";
+import { getAllBlogs } from "@/lib/sanity";
 import { Calendar, User, ArrowRight, ChevronRight } from "lucide-react";
 
 export const metadata = {
@@ -14,9 +14,10 @@ export const metadata = {
     "Explore our health blogs for expert advice on eye care, gynaecology, and infertility. Stay informed with tips from Maa Nursing Home and NetraJyoti Eyecare Centre, Malad. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
-export const revalidate = 31536000; // 1 year ISR
+export const revalidate = 60;
 
-export default function BlogsListingPage() {
+export default async function BlogsListingPage() {
+  const blogs = await getAllBlogs();
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-body">
       <TopBar />
@@ -45,7 +46,7 @@ export default function BlogsListingPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {BLOGS_DATA.map((blog) => (
+              {blogs.map((blog) => (
                 <article
                   key={blog.id}
                   className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group"
