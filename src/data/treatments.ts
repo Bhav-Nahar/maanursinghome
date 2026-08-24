@@ -84,7 +84,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     category: "Eye Care",
     summary:
       "Cataract diagnosis, modern laser phacoemulsification surgery and intraocular lens (IOL) options - evidence-based care with fast recovery and compassionate support.",
-    image: "/assets/img/images/carastact.png",
+    image: "/assets/img/images/carastact.webp",
     content: [
       "Clouding of the eye’s natural lens that progressively blurs vision - common with ageing but can affect younger people too.",
       "The lens inside the eye focuses light on the retina to produce clear images. Over years (or sometimes rapidly), insoluble proteins can cloud the lens and cause hazy vision - this condition is called a cataract. No diet, medicine or exercise prevents cataracts; regular eye checks ensure early detection and timely treatment.",
@@ -912,7 +912,7 @@ export const TREATMENTS_DATA: Record<string, Treatment> = {
     category: "IVF & Infertility",
     summary:
       "A highly advanced fertilization technique used to overcome severe male infertility and improve IVF success.",
-    image: "/assets/img/images/ICSI.png",
+    image: "/assets/img/images/ICSI.webp",
     content: [
       "A single healthy sperm is directly injected into an egg to achieve fertilization.",
       "ICSI (Intra-Cytoplasmic Sperm Injection) is an advanced ART (Assisted Reproductive Technology) procedure, primarily used for severe male infertility. Unlike standard IVF - where eggs and sperms are mixed together - ICSI requires only one good sperm, which is manually injected into the egg by an embryologist.",

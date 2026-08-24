@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { getAllBlogs, getHomepage } from "@/lib/sanity";
 
-export const revalidate = 60;
+export const revalidate = 31536000; // 1 year ISR
 
 export async function generateMetadata() {
   const hp = await getHomepage();
@@ -367,7 +367,7 @@ export default async function HomePage() {
               <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row">
                 <div className="sm:w-2/5 h-48 sm:h-auto shrink-0 overflow-hidden">
                   <img
-                    src="/assets/img/images/imgi_6_infertility_intro.png"
+                    src="/assets/img/images/imgi_6_infertility_intro.webp"
                     alt="Infertility Clinic"
                     className="w-full h-full object-cover"
                   />

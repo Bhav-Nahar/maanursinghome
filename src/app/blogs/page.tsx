@@ -14,7 +14,7 @@ export const metadata = {
     "Explore our health blogs for expert advice on eye care, gynaecology, and infertility. Stay informed with tips from Maa Nursing Home and NetraJyoti Eyecare Centre, Malad. Maa Nursing Home is the trusted choice for the best eye surgeon, ophthalmologist, cataract surgeon, and LASIK surgeon in Malad, Kandivali, Borivali, Goregaon, Andheri, Parle, and Santacruz.",
 };
 
-export const revalidate = 60;
+export const revalidate = 31536000; // 1 year ISR
 
 export default async function BlogsListingPage() {
   const blogs = await getAllBlogs();

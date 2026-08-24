@@ -8,7 +8,7 @@ import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { getAllBlogs } from "@/lib/sanity";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 
-export const revalidate = 60;
+export const revalidate = 31536000; // 1 year ISR
 export const dynamicParams = true;
 
 export async function generateStaticParams() {

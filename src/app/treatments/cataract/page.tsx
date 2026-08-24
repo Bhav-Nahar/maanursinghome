@@ -53,7 +53,7 @@ export default function CataractPage() {
                 <div className="space-y-6">
                   <div className="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
                     <img 
-                      src="/assets/img/images/carastact.png" 
+                      src="/assets/img/images/carastact.webp" 
                       alt="Cataract Surgery" 
                       className="w-full h-auto object-cover max-h-96"
                     />
